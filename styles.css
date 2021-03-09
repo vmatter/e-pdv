@@ -246,27 +246,6 @@ pre {
   overflow: auto;
 }
 
-.banner {
-  max-width: 825px;
-  margin: 0 auto;
-  font-size: 14px;
-  background: var(--body-color);
-  color: #6a7c94;
-  border-radius: 50px;
-  box-shadow: -20px 20px 60px #abacad, 20px -20px 60px #ffffff;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 15px;
-  line-height: 1.15;
-  position: fixed;
-  bottom: 2vh;
-  left: 0;
-  right: 0;
-  text-align: center;
-  justify-content: center;
-}
-
 @media only screen and (max-width: 980px) {
   .container {
     flex-direction: column;
@@ -287,10 +266,6 @@ pre {
     padding-top: 0;
   }
 
-  .banner {
-    box-shadow: none;
-    bottom: 0;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -319,8 +294,4 @@ pre {
     display: none;
   }
 
-  .banner {
-    box-shadow: none;
-    bottom: 0;
-  }
 }

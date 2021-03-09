@@ -10,6 +10,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log('process.env.STRIPE_SECRET_KEY', process.env.STRIPE_SECRET_KEY)
   const id: string = req.query.id as string
   try {
     if (!id.startsWith('cs_')) {
