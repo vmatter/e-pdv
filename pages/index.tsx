@@ -1,11 +1,15 @@
 import { NextPage } from 'next'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Layout from '../components/Layout'
+
+import Cart from '../components/Cart'
+import CartSummary from '../components/CartSummary'
+import Products from '../components/Products'
 
 const IndexPage: NextPage = () => {
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
-      <ul className="card-list">
+    <Layout title="Home | e-PDV">
+      {/* <ul className="card-list">
         <li>
           <Link href="/use-shopping-cart">
             <a className="card cart-style-background">
@@ -14,7 +18,11 @@ const IndexPage: NextPage = () => {
             </a>
           </Link>
         </li>
-      </ul>
+      </ul> */}
+      <Cart>
+        <Products />
+        <CartSummary />
+      </Cart>
     </Layout>
   )
 }

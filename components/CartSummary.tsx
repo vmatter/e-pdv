@@ -36,31 +36,33 @@ const CartSummary = () => {
   }
 
   return (
-    <form onSubmit={handleCheckout}>
-      <h2>Cart summary</h2>
-      {/* This is where we'll render our cart */}
-      <p suppressHydrationWarning>
-        <strong>Number of Items:</strong> {cartCount}
-      </p>
-      <p suppressHydrationWarning>
-        <strong>Total:</strong> {formattedTotalPrice}
-      </p>
+    <aside className="cart-summary">
+      <form onSubmit={handleCheckout}>
+        <h2>Cart summary</h2>
+        {/* This is where we'll render our cart */}
+        <p suppressHydrationWarning>
+          <strong>Number of Items:</strong> {cartCount}
+        </p>
+        <p suppressHydrationWarning>
+          <strong>Total:</strong> {formattedTotalPrice}
+        </p>
 
-      <button
-        className="cart-style-background"
-        type="submit"
-        disabled={cartEmpty || loading}
-      >
-        Checkout
-      </button>
-      <button
-        className="cart-style-background"
-        type="button"
-        onClick={clearCart}
-      >
-        Clear Cart
-      </button>
-    </form>
+        <button
+          className="cart-style-background"
+          type="submit"
+          disabled={cartEmpty || loading}
+        >
+          Checkout
+          </button>
+        <button
+          className="cart-style-background"
+          type="button"
+          onClick={clearCart}
+        >
+          Clear Cart
+          </button>
+      </form>
+    </aside>
   )
 }
 

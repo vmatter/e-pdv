@@ -1,44 +1,11 @@
-# Example using Stripe with TypeScript and react-stripe-js
-
-This is a full-stack TypeScript example using:
-
-- Frontend:
-  - Next.js and [SWR](https://github.com/zeit/swr)
-  - [react-stripe-js](https://github.com/stripe/react-stripe-js) for [Checkout](https://stripe.com/checkout) and [Elements](https://stripe.com/elements)
-- Backend
-  - Next.js [API routes](https://nextjs.org/docs/api-routes/introduction)
-  - [stripe-node with TypeScript](https://github.com/stripe/stripe-node#usage-with-typescript)
+# E-PDV is a POS using TypeScript, Nextjs, and react-stripe-js
 
 ## Demo
-
-- Live demo: https://nextjs-typescript-react-stripe-js.now.sh/
-- CodeSandbox: https://codesandbox.io/s/github/stripe-samples/nextjs-typescript-react-stripe-js
-- Tutorial: https://dev.to/thorwebdev/type-safe-payments-with-next-js-typescript-and-stripe-4jo7
-
 The demo is running in test mode -- use `4242424242424242` as a test card number with any CVC + future expiration date.
 
 Use the `4000000000003220` test card number to trigger a 3D Secure challenge flow.
 
 Read more about testing on Stripe at https://stripe.com/docs/testing.
-
-<details open><summary>Shopping Cart Checkout Demo</summary>
-<img src="./public/shopping_cart_demo.gif" alt="A gif of the Shopping Cart Checkout payment page." align="center">
-</details>
-
-<details><summary>Checkout Donations Demo</summary>
-<img src="./public/checkout_demo.gif" alt="A gif of the Checkout payment page." align="center">
-</details>
-
-<details><summary>Elements Donations Demo</summary>
-<img src="./public/elements_demo.gif" alt="A gif of the custom Elements checkout page." align="center">
-</details>
-
-## Deploy your own
-
-Once you have access to [the environment variables you'll need](#required-configuration) from the [Stripe Dashboard](https://dashboard.stripe.com/apikeys), deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript&project-name=with-stripe-typescript&repository-name=with-stripe-typescript&env=NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,STRIPE_SECRET_KEY&envDescription=Enter%20your%20Stripe%20Keys&envLink=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript%23required-configuration)
-
 ## Included functionality
 
 - [Global CSS styles](https://nextjs.org/blog/next-9-2#built-in-css-support-for-global-stylesheets)
@@ -60,16 +27,6 @@ Once you have access to [the environment variables you'll need](#required-config
   - [utils/stripe-helpers.ts](utils/stripe-helpers.ts)
     - Format amount strings properly using `Intl.NumberFormat`.
     - Format amount for usage with Stripe, including zero decimal currency detection.
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-stripe-typescript with-stripe-typescript-app
-# or
-yarn create next-app --example with-stripe-typescript with-stripe-typescript-app
-```
 
 ### Required configuration
 
@@ -119,24 +76,3 @@ Once created, you can click to reveal your webhook's signing secret. Copy the we
 - In the general settings scroll to the "Environment Variables" section.
 
 After adding an environment variable you will need to rebuild your project for it to become within your code. Within your project Dashboard, navigate to the "Deployments" tab, select the most recent deployment, click the overflow menu button (next to the "Visit" button) and select "Redeploy".
-
-### Deploy on Vercel
-
-You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-#### Deploy Your Local Project
-
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example).
-
-**Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
-
-#### Deploy from Our Template
-
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript&project-name=with-stripe-typescript&repository-name=with-stripe-typescript&env=NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,STRIPE_SECRET_KEY&envDescription=Enter%20your%20Stripe%20Keys&envLink=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript%23required-configuration)
-
-## Authors
-
-- [@thorsten-stripe](https://twitter.com/thorwebdev)
-- [@lfades](https://twitter.com/luis_fades)
