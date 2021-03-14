@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 import { useShoppingCart } from 'use-shopping-cart'
-import { fetchPostJSON } from '../utils/api-helpers'
+import { fetchPostJSON } from '../../utils/api-helpers'
+import { Container } from './styles'
 
 const CartSummary = () => {
   const [loading, setLoading] = useState(false)
@@ -36,7 +37,7 @@ const CartSummary = () => {
   }
 
   return (
-    <aside className="cart-summary">
+    <Container>
       <form onSubmit={handleCheckout}>
         <h2>Cart summary</h2>
         {/* This is where we'll render our cart */}
@@ -62,7 +63,7 @@ const CartSummary = () => {
           Clear Cart
           </button>
       </form>
-    </aside>
+    </Container>
   )
 }
 

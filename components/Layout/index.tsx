@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { Container, Header, Content, LogoWrapper, LogoImg } from './styles'
 
 type Props = {
   children: ReactNode
@@ -17,18 +18,18 @@ const Layout = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <div className="container">
-      <header>
-        <div className="header-content">
+    <Container>
+      <Header>
+        <Content>
           <Link href="/">
-            <a className="logo">
-              <img src="/pdv-logo.png" />
-            </a>
+            <LogoWrapper>
+              <LogoImg src="/pdv-logo.png" />
+            </LogoWrapper>
           </Link>
-        </div>
-      </header>
+        </Content>
+      </Header>
       {children}
-    </div>
+    </Container>
   </>
 )
 
