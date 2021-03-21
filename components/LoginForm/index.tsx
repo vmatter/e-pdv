@@ -1,7 +1,5 @@
 
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { Button, TextField, Typography } from '@material-ui/core';
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { FormWrapper, InputWrapper } from "./styles";
@@ -43,9 +41,10 @@ const LoginForm = () => {
           id="input-email"
           data-testid="input-email"
           variant="outlined"
+          type="text"
           name="username"
           label="username"
-          onChange={e => {
+          onChange={(e: any) => {
             setEmail(e.target.value);
           }}
         />
@@ -56,7 +55,7 @@ const LoginForm = () => {
           type="password"
           name="password"
           label="password"
-          onChange={e => {
+          onChange={(e: any) => {
             setPassword(e.target.value);
           }}
         />

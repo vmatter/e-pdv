@@ -1,12 +1,13 @@
-import { createGlobalStyle } from 'styled-components';
+import { css, Global } from '@emotion/react'
 
-export default createGlobalStyle`
+const globalCss = css(`
 * {
   box-sizing: border-box;
   font-family: var(--body-font-family);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-body {
+  }
+
+  body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,15 +15,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.text};
+  background: ${(props: any) => props.theme.colors.background};
+  color: ${(props: any) => props.theme.colors.text};
   overflow-y: scroll;
-}
-a {
+  }
+
+  a {
   text-decoration: none;
-}
-#__next {
+  }
+
+  #__next {
   display: flex;
   justify-content: center;
-}
-`;
+  }
+`)
+
+export const globalStyles = (
+  <Global
+    styles={globalCss}
+  />
+)
+

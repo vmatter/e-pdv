@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 
 export const FormWrapper = styled.section`
   max-width: 480px;
@@ -11,7 +11,7 @@ export const FormWrapper = styled.section`
   justify-content: center;
 `;
 
-export const InputWrapper = styled.div`
+export const InputWrapper = styled.form`
   display: flex;
   flex-direction: column;
   padding: 12px;
