@@ -1,9 +1,7 @@
-
 import { Button, TextField, Typography } from '@material-ui/core';
-import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
-import { FormWrapper, InputWrapper } from "./styles";
-
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { FormWrapper, InputWrapper } from './styles';
 
 const LoginForm = () => {
   const router = useRouter();
@@ -16,7 +14,6 @@ const LoginForm = () => {
     loggedIn && router.push('/');
   }, [loggedIn]);
 
-
   const onSubmit = async (e: any) => {
     e?.preventDefault();
 
@@ -26,10 +23,9 @@ const LoginForm = () => {
 
     setTimeout(() => {
       setLoading(false);
-      setLoggedIn(true)
-    }, 2000)
-
-  }
+      setLoggedIn(true);
+    }, 2000);
+  };
 
   return (
     <FormWrapper>
@@ -67,10 +63,10 @@ const LoginForm = () => {
           onClick={onSubmit}
         >
           Login
-      </Button>
+        </Button>
       </InputWrapper>
     </FormWrapper>
-  )
-}
+  );
+};
 
-export default LoginForm
+export default LoginForm;

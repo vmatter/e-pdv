@@ -1,4 +1,4 @@
-export const emotionTheme =  {
+export const emotionTheme = {
   colors: {
     primary: '#0070f3',
     secondary: '#8f6ed5',

@@ -1,10 +1,9 @@
-import { NextPage } from 'next'
-import Layout from '../components/Layout'
+import { NextPage } from 'next';
+import Layout from '../components/Layout';
 
-
-import CartContainer from '../components/CartContainer'
-import CartSummary from '../components/CartSummary'
-import Products from '../components/Products'
+import CartContainer from '../components/CartContainer';
+import CartSummary from '../components/CartSummary';
+import Products from '../components/Products';
 
 const IndexPage: NextPage = () => {
   return (
@@ -14,7 +13,7 @@ const IndexPage: NextPage = () => {
         <CartSummary />
       </CartContainer>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

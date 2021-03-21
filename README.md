@@ -1,11 +1,13 @@
 # E-PDV is a POS using TypeScript, Nextjs, and react-stripe-js
 
 ## Demo
+
 The demo is running in test mode -- use `4242424242424242` as a test card number with any CVC + future expiration date.
 
 Use the `4000000000003220` test card number to trigger a 3D Secure challenge flow.
 
 Read more about testing on Stripe at https://stripe.com/docs/testing.
+
 ## Included functionality
 
 - [Global CSS styles](https://nextjs.org/blog/next-9-2#built-in-css-support-for-global-stylesheets)

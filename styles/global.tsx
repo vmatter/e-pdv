@@ -1,4 +1,4 @@
-import { css, Global } from '@emotion/react'
+import { css, Global } from '@emotion/react';
 
 const globalCss = css(`
 * {
@@ -28,11 +28,6 @@ const globalCss = css(`
   display: flex;
   justify-content: center;
   }
-`)
+`);
 
-export const globalStyles = (
-  <Global
-    styles={globalCss}
-  />
-)
-
+export const globalStyles = <Global styles={globalCss} />;

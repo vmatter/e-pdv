@@ -1,48 +1,44 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 
-
-import { useShoppingCart } from 'use-shopping-cart'
-import { fetchPostJSON } from '../../utils/api-helpers'
-import { Container, Form, FormContent, FormActions } from './styles'
+import { useShoppingCart } from 'use-shopping-cart';
+import { fetchPostJSON } from '../../utils/api-helpers';
+import { Container, Form, FormContent, FormActions } from './styles';
 
 const CartSummary = () => {
-  const [loading, setLoading] = useState(false)
-  const [cartEmpty, setCartEmpty] = useState(true)
+  const [loading, setLoading] = useState(false);
+  const [cartEmpty, setCartEmpty] = useState(true);
   const {
     formattedTotalPrice,
     cartCount,
     clearCart,
     cartDetails,
     redirectToCheckout,
-  } = useShoppingCart()
+  } = useShoppingCart();
 
-  useEffect(() => setCartEmpty(!cartCount), [cartCount])
+  useEffect(() => setCartEmpty(!cartCount), [cartCount]);
 
-  const handleCheckout: React.FormEventHandler<HTMLFormElement> = async (
-    event
-  ) => {
-    event.preventDefault()
-    setLoading(true)
+  const handleCheckout: React.FormEventHandler<HTMLFormElement> = async event => {
+    event.preventDefault();
+    setLoading(true);
 
     const response = await fetchPostJSON(
       '/api/checkout_sessions/cart',
       cartDetails
-    )
+    );
 
     if (response.statusCode === 500) {
-      console.error(response.message)
-      return
+      console.error(response.message);
+      return;
     }
 
-    redirectToCheckout({ sessionId: response.id })
-  }
+    redirectToCheckout({ sessionId: response.id });
+  };
 
   return (
     <Container>
       <Form onSubmit={handleCheckout}>
         <FormContent>
-
           <h2>Cart summary</h2>
           {/* This is where we'll render our cart */}
           <p suppressHydrationWarning>
@@ -53,17 +49,21 @@ const CartSummary = () => {
           </p>
         </FormContent>
         <FormActions>
-          <Button variant="contained" color="primary" type="submit" disabled={cartEmpty || loading}>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            disabled={cartEmpty || loading}
+          >
             Checkout
           </Button>
-          <Button variant="contained" color="secondary"
-            onClick={clearCart}>
+          <Button variant="contained" color="secondary" onClick={clearCart}>
             Clear Cart
           </Button>
         </FormActions>
       </Form>
     </Container>
-  )
-}
+  );
+};
 
-export default CartSummary
+export default CartSummary;

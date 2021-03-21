@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const Container = styled.div`
   width: 100%;
@@ -8,16 +8,16 @@ export const Container = styled.div`
 export const Header = styled.header`
   height: 60px;
   position: sticky;
-`
+`;
 
 export const Content = styled.div`
   margin: 0 auto;
-`
+`;
 
 export const LogoWrapper = styled.a`
   height: 100%;
-`
+`;
 
 export const LogoImg = styled.img`
-height: 45px;
-`
+  height: 45px;
+`;

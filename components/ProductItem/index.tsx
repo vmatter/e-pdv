@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart'
+import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -16,19 +16,18 @@ const useStyles = makeStyles({
 
 type Props = {
   product: {
-    "name": string,
-    "description"?: string,
-    "sku": string,
-    "price": number,
-    "image": string,
-    "attribution": string,
-    "currency": string
-  }
-}
-
+    name: string;
+    description?: string;
+    sku: string;
+    price: number;
+    image: string;
+    attribution: string;
+    currency: string;
+  };
+};
 
 const ProductItem = ({ product }: Props) => {
-  const { addItem, removeItem } = useShoppingCart()
+  const { addItem, removeItem } = useShoppingCart();
   const classes = useStyles();
 
   return (
@@ -53,7 +52,11 @@ const ProductItem = ({ product }: Props) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" onClick={() => removeItem(product.sku)}>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => removeItem(product.sku)}
+        >
           Remove
         </Button>
         <Button size="small" color="primary" onClick={() => addItem(product)}>
@@ -62,7 +65,7 @@ const ProductItem = ({ product }: Props) => {
       </CardActions>
     </Card>
   );
-}
+};
 
 // <Product key={product.sku}>
 //   <ProductImg src={product.image} alt={product.name} />
@@ -86,4 +89,4 @@ const ProductItem = ({ product }: Props) => {
 //     Remove
 //   </button>
 // </Product>
-export default ProductItem
+export default ProductItem;

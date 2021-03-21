@@ -1,17 +1,14 @@
-import React, { ReactNode } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { Container, Header, Content, LogoWrapper, LogoImg } from './styles'
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Container, Header, Content, LogoWrapper, LogoImg } from './styles';
 
 type Props = {
-  children: ReactNode
-  title?: string
-}
+  children: ReactNode;
+  title?: string;
+};
 
-const Layout = ({
-  children,
-  title = 'e-PDV',
-}: Props) => (
+const Layout = ({ children, title = 'e-PDV' }: Props) => (
   <>
     <Head>
       <title>{title}</title>
@@ -31,6 +28,6 @@ const Layout = ({
       {children}
     </Container>
   </>
-)
+);
 
-export default Layout
+export default Layout;

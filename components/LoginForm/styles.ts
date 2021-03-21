@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const FormWrapper = styled.section`
   max-width: 480px;
@@ -17,5 +17,3 @@ export const InputWrapper = styled.form`
   padding: 12px;
   gap: 12px;
 `;
-
-

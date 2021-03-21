@@ -1,15 +1,14 @@
-import {useEffect} from 'react'
-import { AppProps } from 'next/app'
-import { CacheProvider} from "@emotion/react";
+import { useEffect } from 'react';
+import { AppProps } from 'next/app';
+import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 
 import { ThemedApp } from '../styles';
 
 export const cache = createCache({ key: 'css', prepend: true });
 
-
 function MyApp({ Component, pageProps }: AppProps) {
-useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
@@ -23,7 +22,7 @@ useEffect(() => {
         <Component {...pageProps} />
       </ThemedApp>
     </CacheProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
