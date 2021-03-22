@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Container, Header, Content, LogoWrapper, LogoImg } from './styles';
