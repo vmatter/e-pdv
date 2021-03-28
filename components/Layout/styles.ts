@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
+import { ContainerProps } from '.';
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   width: 100%;
   height: 100vh;
+  background-color: ${props =>
+    props.hasBgColor ? props.theme.colors.backgroundGray : 'none'};
 `;
 
 export const Header = styled.header`
