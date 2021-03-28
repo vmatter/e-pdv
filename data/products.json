@@ -1,70 +1,137 @@
 [
-  {
-    "name": "Bananas",
-    "description": "Yummy yellow fruit",
-    "sku": "sku_GBJ2Ep8246qeeT",
-    "price": 400,
-    "image": "https://images.unsplash.com/photo-1574226516831-e1dff420e562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Priscilla Du Preez on Unsplash",
-    "currency": "USD"
+  { 
+    "name": "Notebook Dell XPS",
+    "description": "Notebook Dell XPS",
+    "sku": "sku_not_dell",
+    "price": 540000,
+    "image": "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by XPS on Unsplash",
+    "currency": "BRL"
   },
   {
-    "name": "Tangerines",
+    "name": "Mouse sem fio",
+    "description": "Mouse sem fio",
     "sku": "sku_GBJ2WWfMaGNC2Z",
-    "price": 100,
-    "image": "https://images.unsplash.com/photo-1482012792084-a0c3725f289f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Jonathan Pielmayer on Unsplash",
-    "currency": "USD"
+    "price": 6490,
+    "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=401&q=80",
+    "attribution": "Photo by Pascal M. on Unsplash",
+    "currency": "BRL"
   },
   {
-    "name": "Bananas",
-    "description": "Yummy yellow fruit",
-    "sku": "sku_GBJ2Ep8246qee2",
-    "price": 400,
-    "image": "https://images.unsplash.com/photo-1574226516831-e1dff420e562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Priscilla Du Preez on Unsplash",
-    "currency": "USD"
+    "name": "Fone de ouvido",
+    "description": "Fone de ouvido",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 140.17,
+    "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by Lee Campbell on Unsplash",
+    "currency": "BRL"
   },
   {
-    "name": "Tangerines",
-    "sku": "sku_GBJ2WafMaGNC2Z",
-    "price": 100,
-    "image": "https://images.unsplash.com/photo-1482012792084-a0c3725f289f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Jonathan Pielmayer on Unsplash",
-    "currency": "USD"
+    "name": "Carregador de celular",
+    "description": "Carregador de celular",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 140.17,
+    "image": "https://images.unsplash.com/photo-1586254116648-d33e0fada133?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by Markus Winkler on Unsplash",
+    "currency": "BRL"
   },
   {
-    "name": "Bananas",
-    "description": "Yummy yellow fruit",
-    "sku": "sku_GBJ2Ep8246q1eT",
-    "price": 400,
-    "image": "https://images.unsplash.com/photo-1574226516831-e1dff420e562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Priscilla Du Preez on Unsplash",
-    "currency": "USD"
+    "name": "Caixa de som portátil",
+    "description": "Caixa de som portátil",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 140.17,
+    "image": "https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by Nicolas J Leclercq on Unsplash",
+    "currency": "BRL"
   },
   {
-    "name": "Tangerines",
-    "sku": "sku_GBJ2WWfMaGNC3Z",
-    "price": 100,
-    "image": "https://images.unsplash.com/photo-1482012792084-a0c3725f289f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Jonathan Pielmayer on Unsplash",
-    "currency": "USD"
+    "name": "Teclado sem fio",
+    "description": "Teclado sem fio",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 127.90,
+    "image": "https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
+    "attribution": "Photo by Lee Campbell on Unsplash",
+    "currency": "BRL"
   },
   {
-    "name": "Bananas",
-    "description": "Yummy yellow fruit",
-    "sku": "sku_GBJ2Ep8246qesT",
-    "price": 400,
-    "image": "https://images.unsplash.com/photo-1574226516831-e1dff420e562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Priscilla Du Preez on Unsplash",
-    "currency": "USD"
+    "name": "Câmera de ação",
+    "description": "Câmera de ação",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 282.34,
+    "image": "https://images.unsplash.com/photo-1513193643083-07325d25a4b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80",
+    "attribution": "Photo by Trent Erwin on Unsplash",
+    "currency": "BRL"
   },
   {
-    "name": "Tangerines",
-    "sku": "sku_GBJ2WWfMaaNC2Z",
-    "price": 100,
-    "image": "https://images.unsplash.com/photo-1482012792084-a0c3725f289f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=225&q=80",
-    "attribution": "Photo by Jonathan Pielmayer on Unsplash",
-    "currency": "USD"
+    "name": "Controle para vídeo game",
+    "description": "Controle para vídeo game",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 205.76,
+    "image": "https://images.unsplash.com/photo-1616341316831-9197de0a88dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by Moises Gonzalez on Unsplash",
+    "currency": "BRL"
+  },
+  {
+    "name": "Relógio Inteligente",
+    "description": "Relógio Inteligente",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 226.90,
+    "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80",
+    "attribution": "Photo by Lloyd Dirks on Unsplash",
+    "currency": "BRL"
+  },
+  {
+    "name": "Roteador WiFi",
+    "description": "Roteador WiFi",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 7945,
+    "image": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by Compare Fibre on Unsplash",
+    "currency": "BRL"
+  },
+  {
+    "name": "Monitor",
+    "description": "Monitor",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 68090,
+    "image": "https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=375&q=80",
+    "attribution": "Photo by Kitai Jogia on Unsplash",
+    "currency": "BRL"
+  },
+  {
+    "name": "Drone",
+    "description": "Drone",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 76862,
+    "image": "https://images.unsplash.com/photo-1555867358-2745816780e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by Thomas Galler on Unsplash",
+    "currency": "BRL"
+  },
+  {
+    "name": "Tablet",
+    "description": "Tablet",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 87900,
+    "image": "https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80",
+    "attribution": "Photo by Roberto Nickson on Unsplash",
+    "currency": "BRL"
+  },
+  {
+    "name": "Impressora",
+    "description": "Impressora",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 136590,
+    "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+    "attribution": "Photo by Lloyd Dirks on Unsplash",
+    "currency": "BRL"
+  },
+  {
+    "name": "Calculadora Científica",
+    "description": "Calculadora Científica",
+    "sku": "sku_GBJ2WWfMaGNC2Z",
+    "price": 5999,
+    "image": "https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80",
+    "attribution": "Photo by Annie Spratt on Unsplash",
+    "currency": "BRL"
   }
 ]
