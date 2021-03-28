@@ -3,13 +3,7 @@ import Button from '@material-ui/core/Button';
 
 import { useShoppingCart } from 'use-shopping-cart';
 import { fetchPostJSON } from '../../utils/api-helpers';
-import {
-  Container,
-  Form,
-  FormContent,
-  FormActions,
-  SummaryWrapper,
-} from './styles';
+import { Container, Form, FormContent, FormActions } from './styles';
 
 const CartSummary = () => {
   const [loading, setLoading] = useState(false);
@@ -41,35 +35,32 @@ const CartSummary = () => {
     redirectToCheckout({ sessionId: response.id });
   };
 
-  console.log(`cartDetails`, cartDetails);
-
   return (
     <Container>
       <Form onSubmit={handleCheckout}>
         <FormContent>
-          <h2>Resumo do Carrinho</h2>
+          <h2>Cart summary</h2>
+          {/* This is where we'll render our cart */}
+          <p suppressHydrationWarning>
+            <strong>Number of Items:</strong> {cartCount}
+          </p>
+          <p suppressHydrationWarning>
+            <strong>Total:</strong> {formattedTotalPrice}
+          </p>
         </FormContent>
-        <SummaryWrapper>
-          <p suppressHydrationWarning>
-            <strong>Total de Itens:</strong> {cartCount}
-          </p>
-          <p suppressHydrationWarning>
-            <strong>Valor Total:</strong> {formattedTotalPrice}
-          </p>
-          <FormActions>
-            <Button
-              variant="contained"
-              color="primary"
-              type="submit"
-              disabled={cartEmpty || loading}
-            >
-              Finalizar Compra
-            </Button>
-            <Button variant="contained" color="secondary" onClick={clearCart}>
-              Limpar Carrinho
-            </Button>
-          </FormActions>
-        </SummaryWrapper>
+        <FormActions>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            disabled={cartEmpty || loading}
+          >
+            Checkout
+          </Button>
+          <Button variant="contained" color="secondary" onClick={clearCart}>
+            Clear Cart
+          </Button>
+        </FormActions>
       </Form>
     </Container>
   );

@@ -18,8 +18,3 @@ export const FormActions = styled.div`
   display: flex;
   justify-content: space-around;
 `;
-
-export const SummaryWrapper = styled.div`
-  padding: 40px 20px;
-  background-color: ${props => props.theme.colors.backgroundGray};
-`;
