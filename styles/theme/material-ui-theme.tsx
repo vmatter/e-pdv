@@ -17,6 +17,18 @@ const MuiTheme = createMuiTheme({
       default: '#fff',
     },
   },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Helvetica',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+    ].join(','),
+  },
 });
 
 export default MuiTheme;
