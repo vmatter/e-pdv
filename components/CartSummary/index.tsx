@@ -1,14 +1,19 @@
 import { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 import { useShoppingCart } from 'use-shopping-cart';
 import { fetchPostJSON } from '../../utils/api-helpers';
+import { SummaryItems } from './SummaryItems';
 import {
   Container,
   Form,
   FormContent,
   FormActions,
   SummaryWrapper,
+  InfoWrapper,
+  InfoItem,
 } from './styles';
 
 const CartSummary = () => {
@@ -41,37 +46,42 @@ const CartSummary = () => {
     redirectToCheckout({ sessionId: response.id });
   };
 
-  console.log(`cartDetails`, cartDetails);
-
   return (
-    <Container>
-      <Form onSubmit={handleCheckout}>
-        <FormContent>
-          <h2>Resumo do Carrinho</h2>
-        </FormContent>
-        <SummaryWrapper>
-          <p suppressHydrationWarning>
-            <strong>Total de Itens:</strong> {cartCount}
-          </p>
-          <p suppressHydrationWarning>
-            <strong>Valor Total:</strong> {formattedTotalPrice}
-          </p>
-          <FormActions>
-            <Button
-              variant="contained"
-              color="primary"
-              type="submit"
-              disabled={cartEmpty || loading}
-            >
-              Finalizar Compra
-            </Button>
-            <Button variant="contained" color="secondary" onClick={clearCart}>
-              Limpar Carrinho
-            </Button>
-          </FormActions>
-        </SummaryWrapper>
-      </Form>
-    </Container>
+    <Paper elevation={3}>
+      <Container>
+        <Form onSubmit={handleCheckout}>
+          <FormContent>
+            <Typography component="h2" variant="h6" align="center" padding={1}>
+              Resumo do Carrinho
+            </Typography>
+            <SummaryItems cartDetails={cartDetails} />
+          </FormContent>
+          <SummaryWrapper>
+            <InfoWrapper>
+              <InfoItem>
+                <strong>Total de Itens:</strong> {cartCount}
+              </InfoItem>
+              <InfoItem>
+                <strong>Valor Total:</strong> {formattedTotalPrice}
+              </InfoItem>
+            </InfoWrapper>
+            <FormActions>
+              <Button
+                variant="contained"
+                color="primary"
+                type="submit"
+                disabled={cartEmpty || loading}
+              >
+                Finalizar Compra
+              </Button>
+              <Button variant="contained" color="secondary" onClick={clearCart}>
+                Limpar Carrinho
+              </Button>
+            </FormActions>
+          </SummaryWrapper>
+        </Form>
+      </Container>
+    </Paper>
   );
 };
 
