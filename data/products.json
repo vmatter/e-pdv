@@ -1,5 +1,5 @@
 [
-  { 
+  {
     "name": "Notebook Dell XPS",
     "description": "Notebook Dell XPS",
     "sku": "sku_notebook",
@@ -43,7 +43,7 @@
     "name": "Teclado sem fio",
     "description": "Teclado sem fio",
     "sku": "sku_teclado",
-    "price": 127.90,
+    "price": 127.9,
     "image": "https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
     "currency": "BRL"
   },
@@ -67,7 +67,7 @@
     "name": "Relógio Inteligente",
     "description": "Relógio Inteligente",
     "sku": "sku_relogio",
-    "price": 226.90,
+    "price": 226.9,
     "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80",
     "currency": "BRL"
   },
