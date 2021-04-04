@@ -13,14 +13,16 @@ export const Header = styled.header`
   position: sticky;
 `;
 
-export const Content = styled.div`
-  margin: 0 auto;
+export const DesktopSection = styled.div`
+  display: none;
+  ${({ theme }) => `${theme.breakpoints.up('md')} {
+   display: flex;
+  }`}
 `;
 
-export const LogoWrapper = styled.a`
-  height: 100%;
-`;
-
-export const LogoImg = styled.img`
-  height: 45px;
+export const MobileSection = styled.div`
+  display: flex;
+  ${({ theme }) => `${theme.breakpoints.up('md')} {
+   display: none;
+  }`}
 `;

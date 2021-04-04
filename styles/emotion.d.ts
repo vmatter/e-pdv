@@ -1,13 +1,6 @@
 import '@emotion/react';
 
 declare module '@emotion/react' {
-  export interface Theme {
-    colors: {
-      primary: string;
-      secondary: string;
-      text: string;
-      background: string;
-      backgroundGray: string;
-    };
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Theme extends Record<string, any> {}
 }
