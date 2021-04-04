@@ -1,4 +1,3 @@
-import { makeStyles } from '@material-ui/core/styles';
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -7,37 +6,23 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-});
+import { Product } from '../Products';
 
 type Props = {
-  product: {
-    name: string;
-    description?: string;
-    sku: string;
-    price: number;
-    image: string;
-    attribution: string;
-    currency: string;
-  };
+  product: Product;
 };
 
 const ProductItem = ({ product }: Props) => {
   const { addItem, removeItem } = useShoppingCart();
-  const classes = useStyles();
-
   return (
-    <Card className={classes.root}>
+    <Card>
       <CardActionArea>
         <CardMedia
           component="img"
           alt={product.name}
-          height="140"
           image={product.image}
+          height="140"
+          width="140"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
