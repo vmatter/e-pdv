@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
 import { Container, Header } from './styles';
-import HeaderBar from 'components/HeaderBar';
+import HeaderBar from '../HeaderBar';
 
 export type ContainerProps = {
   hasBgColor?: boolean;

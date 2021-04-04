@@ -18,7 +18,7 @@ import {
   CustomInput,
   MenuButton,
 } from './styles';
-import { DesktopSection, MobileSection } from 'components/Layout/styles';
+import { DesktopSection, MobileSection } from '../Layout/styles';
 
 const HeaderBar = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
