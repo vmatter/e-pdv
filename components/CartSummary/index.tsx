@@ -15,7 +15,7 @@ import {
   InfoWrapper,
   InfoItem,
 } from './styles';
-import { DesktopSection } from 'components/Layout/styles';
+import { DesktopSection } from '../Layout/styles';
 
 const CartSummary = () => {
   const [loading, setLoading] = useState(false);
