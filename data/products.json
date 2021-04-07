@@ -1,5 +1,5 @@
 [
-  { 
+  {
     "name": "Notebook Dell XPS",
     "description": "Notebook Dell XPS",
     "sku": "sku_notebook",
@@ -19,7 +19,7 @@
     "name": "Fone de ouvido",
     "description": "Fone de ouvido",
     "sku": "sku_fone",
-    "price": 140.17,
+    "price": 12017,
     "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     "currency": "BRL"
   },
@@ -27,7 +27,7 @@
     "name": "Carregador de celular",
     "description": "Carregador de celular",
     "sku": "sku_carregador",
-    "price": 140.17,
+    "price": 140,
     "image": "https://images.unsplash.com/photo-1586254116648-d33e0fada133?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     "currency": "BRL"
   },
@@ -35,7 +35,7 @@
     "name": "Caixa de som portátil",
     "description": "Caixa de som portátil",
     "sku": "sku_caixa",
-    "price": 140.17,
+    "price": 1400,
     "image": "https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     "currency": "BRL"
   },
@@ -43,7 +43,7 @@
     "name": "Teclado sem fio",
     "description": "Teclado sem fio",
     "sku": "sku_teclado",
-    "price": 127.90,
+    "price": 12790,
     "image": "https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
     "currency": "BRL"
   },
@@ -51,15 +51,15 @@
     "name": "Câmera de ação",
     "description": "Câmera de ação",
     "sku": "dku_camera",
-    "price": 282.34,
+    "price": 28234,
     "image": "https://images.unsplash.com/photo-1513193643083-07325d25a4b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80",
     "currency": "BRL"
   },
   {
-    "name": "Controle para vídeo game",
-    "description": "Controle para vídeo game",
+    "name": "Controle de vídeo game",
+    "description": "Controle de vídeo game",
     "sku": "sku_controle",
-    "price": 205.76,
+    "price": 20576,
     "image": "https://images.unsplash.com/photo-1616341316831-9197de0a88dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     "currency": "BRL"
   },
@@ -67,7 +67,7 @@
     "name": "Relógio Inteligente",
     "description": "Relógio Inteligente",
     "sku": "sku_relogio",
-    "price": 226.90,
+    "price": 22609,
     "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80",
     "currency": "BRL"
   },

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { Container, Header, Content, LogoWrapper, LogoImg } from './styles';
+import { Container, Header } from './styles';
+import HeaderBar from '../HeaderBar';
 
 export type ContainerProps = {
   hasBgColor?: boolean;
@@ -27,15 +27,11 @@ const Layout = ({
     </Head>
     <Container hasBgColor={hasBgColor}>
       {hasHeader && (
-        <Header>
-          <Content>
-            <Link href="/">
-              <LogoWrapper>
-                <LogoImg src="/pdv-logo.png" />
-              </LogoWrapper>
-            </Link>
-          </Content>
-        </Header>
+        <>
+          <Header>
+            <HeaderBar />
+          </Header>
+        </>
       )}
       {children}
     </Container>
