@@ -78,7 +78,6 @@ const LoginForm = () => {
         <InputWrapper noValidate autoComplete="off">
           <TextField
             id="input-user"
-            data-testid="input-user"
             variant="outlined"
             type="text"
             name="username"
@@ -92,10 +91,12 @@ const LoginForm = () => {
               setShowWarning(false);
               setUser(e.target.value);
             }}
+            inputProps={{
+              'data-testid': 'input-user',
+            }}
           />
           <TextField
             id="input-password"
-            data-testid="input-password"
             variant="outlined"
             type="password"
             name="password"
@@ -108,9 +109,13 @@ const LoginForm = () => {
               setShowWarning(false);
               setPassword(e.target.value);
             }}
+            inputProps={{
+              'data-testid': 'input-password',
+            }}
           />
           <Button
             id="button-login"
+            data-testid="button-login"
             variant="contained"
             color="primary"
             disabled={loading}
