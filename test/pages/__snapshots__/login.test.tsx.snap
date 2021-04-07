@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home page matches snapshot 1`] = `
+exports[`Login matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-du2dme-Container e1sq2t0a4"
@@ -31,7 +31,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -101,7 +101,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -171,7 +171,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -241,7 +241,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -311,7 +311,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -381,7 +381,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -451,7 +451,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -521,7 +521,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -591,7 +591,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -661,7 +661,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -731,7 +731,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -801,7 +801,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -871,7 +871,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -941,7 +941,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1011,7 +1011,7 @@ exports[`Home page matches snapshot 1`] = `
           class="css-11i6oe8-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-4 css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
             <button
               class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1139,7 +1139,7 @@ exports[`Home page matches snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Home page renders correctly 1`] = `
+exports[`Login renders correctly 1`] = `
 <div
   className="css-du2dme-Container e1sq2t0a4"
 >
@@ -1171,7 +1171,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1273,7 +1273,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1375,7 +1375,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1477,7 +1477,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1579,7 +1579,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1681,7 +1681,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1783,7 +1783,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1885,7 +1885,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -1987,7 +1987,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -2089,7 +2089,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -2191,7 +2191,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -2293,7 +2293,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -2395,7 +2395,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -2497,7 +2497,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
@@ -2599,7 +2599,7 @@ exports[`Home page renders correctly 1`] = `
         className="css-11i6oe8-ProductWrapper eay5je70"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-5 css-bhp9pd-MuiPaper-root-MuiCard-root"
         >
           <button
             className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"

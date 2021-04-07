@@ -111,6 +111,7 @@ const LoginForm = () => {
           />
           <Button
             id="button-login"
+            data-testid="button-login"
             variant="contained"
             color="primary"
             disabled={loading}

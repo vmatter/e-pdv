@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home page matches snapshot 1`] = `
+exports[`Checkout matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-du2dme-Container e1sq2t0a4"
@@ -1139,7 +1139,7 @@ exports[`Home page matches snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Home page renders correctly 1`] = `
+exports[`Checkout renders correctly 1`] = `
 <div
   className="css-du2dme-Container e1sq2t0a4"
 >
