@@ -195,7 +195,7 @@ exports[`Checkout matches snapshot 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
                 >
-                  R$140.17
+                  R$1.40
                 </p>
               </div>
               <span
@@ -265,7 +265,7 @@ exports[`Checkout matches snapshot 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
                 >
-                  R$140.17
+                  R$1.40
                 </p>
               </div>
               <span
@@ -335,7 +335,7 @@ exports[`Checkout matches snapshot 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
                 >
-                  R$140.17
+                  R$1.40
                 </p>
               </div>
               <span
@@ -405,7 +405,7 @@ exports[`Checkout matches snapshot 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
                 >
-                  R$127.90
+                  R$1.27
                 </p>
               </div>
               <span
@@ -475,7 +475,7 @@ exports[`Checkout matches snapshot 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
                 >
-                  R$282.34
+                  R$2.82
                 </p>
               </div>
               <span
@@ -545,7 +545,7 @@ exports[`Checkout matches snapshot 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
                 >
-                  R$205.76
+                  R$2.05
                 </p>
               </div>
               <span
@@ -615,7 +615,7 @@ exports[`Checkout matches snapshot 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
                 >
-                  R$226.90
+                  R$2.26
                 </p>
               </div>
               <span
@@ -1412,7 +1412,7 @@ exports[`Checkout renders correctly 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                R$140.17
+                R$1.40
               </p>
             </div>
             <span
@@ -1514,7 +1514,7 @@ exports[`Checkout renders correctly 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                R$140.17
+                R$1.40
               </p>
             </div>
             <span
@@ -1616,7 +1616,7 @@ exports[`Checkout renders correctly 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                R$140.17
+                R$1.40
               </p>
             </div>
             <span
@@ -1718,7 +1718,7 @@ exports[`Checkout renders correctly 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                R$127.90
+                R$1.27
               </p>
             </div>
             <span
@@ -1820,7 +1820,7 @@ exports[`Checkout renders correctly 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                R$282.34
+                R$2.82
               </p>
             </div>
             <span
@@ -1922,7 +1922,7 @@ exports[`Checkout renders correctly 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                R$205.76
+                R$2.05
               </p>
             </div>
             <span
@@ -2024,7 +2024,7 @@ exports[`Checkout renders correctly 1`] = `
               <p
                 className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
               >
-                R$226.90
+                R$2.26
               </p>
             </div>
             <span
