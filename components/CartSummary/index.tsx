@@ -26,6 +26,8 @@ const CartSummary = () => {
     clearCart,
     cartDetails,
     redirectToCheckout,
+    incrementItem,
+    decrementItem,
   } = useShoppingCart();
 
   useEffect(() => setCartEmpty(!cartCount), [cartCount]);
@@ -61,7 +63,11 @@ const CartSummary = () => {
               >
                 Resumo do Carrinho
               </Typography>
-              <SummaryItems cartDetails={cartDetails} />
+              <SummaryItems
+                cartDetails={cartDetails}
+                incrementItem={incrementItem}
+                decrementItem={decrementItem}
+              />
             </FormContent>
             <SummaryWrapper>
               <InfoWrapper>
