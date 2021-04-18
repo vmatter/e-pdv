@@ -28,7 +28,7 @@ export const ItemsList = styled(List)`
   }
 `;
 
-export const ItemWrapper = styled(ListItem)`
+export const ItemWrapper = styled(ListItem as any)`
   padding-right: 8rem;
 `;
 
