@@ -68,7 +68,6 @@ const CartSummary = () => {
                 cartEmpty={cartEmpty}
                 loading={loading}
                 clearCart={clearCart}
-                isMobile={false}
               />
             </Form>
           </Container>
@@ -81,7 +80,6 @@ const CartSummary = () => {
           cartEmpty={cartEmpty}
           loading={loading}
           clearCart={clearCart}
-          isMobile
         />
       </MobileSection>
     </>

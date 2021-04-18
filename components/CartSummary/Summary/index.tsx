@@ -7,7 +7,6 @@ type Props = {
   cartEmpty: boolean;
   loading: boolean;
   clearCart: () => void;
-  isMobile: boolean;
 };
 
 export const Summary = ({
@@ -16,10 +15,9 @@ export const Summary = ({
   cartEmpty,
   loading,
   clearCart,
-  isMobile,
 }: Props) => {
   return (
-    <SummaryWrapper isMobile={isMobile}>
+    <SummaryWrapper>
       <InfoWrapper>
         <InfoItem>
           <strong>Total de Itens:</strong> {cartCount}
