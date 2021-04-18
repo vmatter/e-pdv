@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-y9ds5f-Wrapper e16kqbw65"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="css-5m6oo8-HeaderWrapper e16kqbw64"
+      >
+        <div
+          class="css-sdubf6-FormHeader e16kqbw63"
+        >
+          <h4
+            class="MuiTypography-root MuiTypography-h4 css-ggtcmo-MuiTypography-root"
+          >
+            Log in
+          </h4>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+          >
+            Faça log in na plataforma e-PDV
+          </p>
+        </div>
+        <a
+          class="css-5dglsj-LogoWrapper e16kqbw61"
+        >
+          <img
+            class="css-1l9u5cb-LogoImg e16kqbw60"
+            src="/pdv-logo.png"
+          />
+        </a>
+      </div>
+      <form
+        autocomplete="off"
+        class="css-1dpfc4n-InputWrapper e16kqbw62"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-user"
+            id="input-user-label"
+          >
+            usuário
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-user"
+              id="input-user"
+              name="username"
+              placeholder="ex: giselamd"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-2s9zix"
+              >
+                <span>
+                  usuário
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-password"
+            id="input-password-label"
+          >
+            senha
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-password"
+              id="input-password"
+              name="password"
+              type="password"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-2s9zix"
+              >
+                <span>
+                  senha
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <button
+          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1iqv7g7-MuiButtonBase-root-MuiButton-root"
+          data-testid="button-login"
+          id="button-login"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label css-8xplcm-MuiButton-label"
+          >
+            Log In
+          </span>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Login renders correctly 1`] = `
+<div
+  className="css-y9ds5f-Wrapper e16kqbw65"
+>
+  <div
+    className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      className="css-5m6oo8-HeaderWrapper e16kqbw64"
+    >
+      <div
+        className="css-sdubf6-FormHeader e16kqbw63"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-f48ptm-MuiTypography-root"
+        >
+          Log in
+        </h4>
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+        >
+          Faça log in na plataforma e-PDV
+        </p>
+      </div>
+      <a
+        className="css-5dglsj-LogoWrapper e16kqbw61"
+      >
+        <img
+          className="css-1l9u5cb-LogoImg e16kqbw60"
+          src="/pdv-logo.png"
+        />
+      </a>
+    </div>
+    <form
+      autoComplete="off"
+      className="css-1dpfc4n-InputWrapper e16kqbw62"
+      noValidate={true}
+    >
+      <div
+        className="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+      >
+        <label
+          className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-emi4wi-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink={false}
+          htmlFor="input-user"
+          id="input-user-label"
+        >
+          usuário
+        </label>
+        <div
+          className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-zokxp0-MuiInputBase-root-MuiOutlinedInput-root"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoFocus={false}
+            className="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+            data-testid="input-user"
+            disabled={false}
+            id="input-user"
+            name="username"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            placeholder="ex: giselamd"
+            required={false}
+            type="text"
+          />
+          <fieldset
+            aria-hidden={true}
+            className="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              className="css-2s9zix"
+            >
+              <span>
+                usuário
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+      >
+        <label
+          className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-emi4wi-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink={false}
+          htmlFor="input-password"
+          id="input-password-label"
+        >
+          senha
+        </label>
+        <div
+          className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-zokxp0-MuiInputBase-root-MuiOutlinedInput-root"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoFocus={false}
+            className="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+            data-testid="input-password"
+            disabled={false}
+            id="input-password"
+            name="password"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="password"
+          />
+          <fieldset
+            aria-hidden={true}
+            className="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              className="css-2s9zix"
+            >
+              <span>
+                senha
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+      <button
+        className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1t4i7pk-MuiButtonBase-root-MuiButton-root"
+        data-testid="button-login"
+        disabled={false}
+        id="button-login"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        <span
+          className="MuiButton-label css-8xplcm-MuiButton-label"
+        >
+          Log In
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+`;

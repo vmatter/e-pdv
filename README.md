@@ -1,34 +1,33 @@
-# E-PDV is a POS using TypeScript, Nextjs, and react-stripe-js
+# E-PDV App (v1)
 
-## Demo
-The demo is running in test mode -- use `4242424242424242` as a test card number with any CVC + future expiration date.
+E-PDV is a POS using TypeScript, Nextjs, and react-stripe-js
 
-Use the `4000000000003220` test card number to trigger a 3D Secure challenge flow.
+## Included
 
-Read more about testing on Stripe at https://stripe.com/docs/testing.
-## Included functionality
+- [Emotion](https://emotion.sh/docs/introduction)
+- [Material-UI](https://next.material-ui.com/)
+- [NextJS](https://nextjs.org/)
+- [Jest](https://jestjs.io)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Stripe](https://stripe.com/)
+- TypeScript
 
-- [Global CSS styles](https://nextjs.org/blog/next-9-2#built-in-css-support-for-global-stylesheets)
-- Implementation of a Layout component that loads and sets up Stripe.js and Elements for usage with SSR via `loadStripe` helper: [components/Layout.tsx](components/Layout.tsx).
-- Stripe Checkout
-  - Custom Amount Donation with redirect to Stripe Checkout:
-    - Frontend: [pages/donate-with-checkout.tsx](pages/donate-with-checkout.tsx)
-    - Backend: [pages/api/checkout_sessions/](pages/api/checkout_sessions/)
-    - Checkout payment result page that uses [SWR](https://github.com/zeit/swr) hooks to fetch the CheckoutSession status from the API route: [pages/result.tsx](pages/result.tsx).
-- Stripe Elements
-  - Custom Amount Donation with Stripe Elements & PaymentIntents (no redirect):
-    - Frontend: [pages/donate-with-elements.tsx](pages/donate-with-checkout.tsx)
-    - Backend: [pages/api/payment_intents/](pages/api/payment_intents/)
-- Webhook handling for [post-payment events](https://stripe.com/docs/payments/accept-a-payment#web-fulfillment)
-  - By default Next.js API routes are same-origin only. To allow Stripe webhook event requests to reach our API route, we need to add `micro-cors` and [verify the webhook signature](https://stripe.com/docs/webhooks/signatures) of the event. All of this happens in [pages/api/webhooks/index.ts](pages/api/webhooks/index.ts).
-- Helpers
-  - [utils/api-helpers.ts](utils/api-helpers.ts)
-    - helpers for GET and POST requests.
-  - [utils/stripe-helpers.ts](utils/stripe-helpers.ts)
-    - Format amount strings properly using `Intl.NumberFormat`.
-    - Format amount for usage with Stripe, including zero decimal currency detection.
+## How to run the project
 
-### Required configuration
+Install the dependencies and start the development server.
+
+```bash
+yarn
+yarn dev
+```
+
+To run tests you can run:
+
+```bash
+yarn test
+```
+
+## Required configuration to use Stripe
 
 Copy the `.env.local.example` file into a file named `.env.local` in the root directory of this project:
 
@@ -41,16 +40,6 @@ You will need a Stripe account ([register](https://dashboard.stripe.com/register
 ```bash
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=<replace-with-your-publishable-key>
 STRIPE_SECRET_KEY=<replace-with-your-secret-key>
-```
-
-Now install the dependencies and start the development server.
-
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
 ```
 
 ### Forward webhooks to your local dev server
@@ -76,3 +65,11 @@ Once created, you can click to reveal your webhook's signing secret. Copy the we
 - In the general settings scroll to the "Environment Variables" section.
 
 After adding an environment variable you will need to rebuild your project for it to become within your code. Within your project Dashboard, navigate to the "Deployments" tab, select the most recent deployment, click the overflow menu button (next to the "Visit" button) and select "Redeploy".
+
+### Demo
+
+The demo is running in test mode -- use `4242424242424242` as a test card number with any CVC + future expiration date.
+
+Use the `4000000000003220` test card number to trigger a 3D Secure challenge flow.
+
+Read more about testing on Stripe at https://stripe.com/docs/testing.
