@@ -24,6 +24,10 @@ export const FormActions = styled.div`
 export const SummaryWrapper = styled.div`
   padding: 40px 20px;
   background-color: ${props => props.theme.colors.backgroundGray};
+
+  ${({ theme }) => `${theme.breakpoints.down('md')} {
+    width: 100%;
+   }`}
 `;
 
 export const InfoWrapper = styled.div`
