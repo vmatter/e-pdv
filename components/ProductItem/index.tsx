@@ -1,6 +1,5 @@
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -16,26 +15,24 @@ const ProductItem = ({ product }: Props) => {
   const { addItem, removeItem } = useShoppingCart();
   return (
     <Card>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt={product.name}
-          image={product.image}
-          height="140"
-          width="140"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {product.name}
-          </Typography>
-          <Typography component="p">
-            {formatCurrencyString({
-              value: product.price,
-              currency: product.currency,
-            })}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        component="img"
+        alt={product.name}
+        image={product.image}
+        height="140"
+        width="140"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          {product.name}
+        </Typography>
+        <Typography component="p">
+          {formatCurrencyString({
+            value: product.price,
+            currency: product.currency,
+          })}
+        </Typography>
+      </CardContent>
       <CardActions>
         <Button
           size="small"

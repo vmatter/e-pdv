@@ -1,25 +1,17 @@
 import { useState, useEffect } from 'react';
-import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-
 import { useShoppingCart } from 'use-shopping-cart';
 import { fetchPostJSON } from '../../utils/api-helpers';
+import { DesktopSection, MobileSection } from '../Layout/styles';
 import { SummaryItems } from './SummaryItems';
-import {
-  Container,
-  Form,
-  FormContent,
-  FormActions,
-  SummaryWrapper,
-  InfoWrapper,
-  InfoItem,
-} from './styles';
-import { DesktopSection } from '../Layout/styles';
+import { Summary } from './Summary';
+import { Container, Form, FormContent } from './styles';
 
 const CartSummary = () => {
   const [loading, setLoading] = useState(false);
   const [cartEmpty, setCartEmpty] = useState(true);
+
   const {
     formattedTotalPrice,
     cartCount,
@@ -50,56 +42,49 @@ const CartSummary = () => {
   };
 
   return (
-    <DesktopSection>
-      <Paper elevation={3}>
-        <Container>
-          <Form onSubmit={handleCheckout}>
-            <FormContent>
-              <Typography
-                component="h2"
-                variant="h6"
-                align="center"
-                padding={1}
-              >
-                Resumo do Carrinho
-              </Typography>
-              <SummaryItems
-                cartDetails={cartDetails}
-                incrementItem={incrementItem}
-                decrementItem={decrementItem}
+    <>
+      <DesktopSection>
+        <Paper elevation={3}>
+          <Container>
+            <Form onSubmit={handleCheckout}>
+              <FormContent>
+                <Typography
+                  component="h2"
+                  variant="h6"
+                  align="center"
+                  padding={1}
+                >
+                  Resumo do Carrinho
+                </Typography>
+                <SummaryItems
+                  cartDetails={cartDetails}
+                  incrementItem={incrementItem}
+                  decrementItem={decrementItem}
+                />
+              </FormContent>
+              <Summary
+                cartCount={cartCount}
+                formattedTotalPrice={formattedTotalPrice}
+                cartEmpty={cartEmpty}
+                loading={loading}
+                clearCart={clearCart}
+                isMobile={false}
               />
-            </FormContent>
-            <SummaryWrapper>
-              <InfoWrapper>
-                <InfoItem>
-                  <strong>Total de Itens:</strong> {cartCount}
-                </InfoItem>
-                <InfoItem>
-                  <strong>Valor Total:</strong> {formattedTotalPrice}
-                </InfoItem>
-              </InfoWrapper>
-              <FormActions>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  type="submit"
-                  disabled={cartEmpty || loading}
-                >
-                  Finalizar Compra
-                </Button>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  onClick={clearCart}
-                >
-                  Limpar Carrinho
-                </Button>
-              </FormActions>
-            </SummaryWrapper>
-          </Form>
-        </Container>
-      </Paper>
-    </DesktopSection>
+            </Form>
+          </Container>
+        </Paper>
+      </DesktopSection>
+      <MobileSection>
+        <Summary
+          cartCount={cartCount}
+          formattedTotalPrice={formattedTotalPrice}
+          cartEmpty={cartEmpty}
+          loading={loading}
+          clearCart={clearCart}
+          isMobile
+        />
+      </MobileSection>
+    </>
   );
 };
 
