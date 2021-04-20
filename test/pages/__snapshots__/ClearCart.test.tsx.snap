@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClearCart matches snapshot 1`] = `
+<DocumentFragment>
+  <p>
+    Cart cleared.
+  </p>
+</DocumentFragment>
+`;

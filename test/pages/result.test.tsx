@@ -1,7 +1,6 @@
 import React from 'react';
 import ResultPage from '../../pages';
 import { render } from '../testUtils';
-import renderer from 'react-test-renderer';
 
 describe('Checkout', () => {
 
@@ -10,10 +9,4 @@ describe('Checkout', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly', () => {
-    const tree = renderer
-      .create(<ResultPage></ResultPage>)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });

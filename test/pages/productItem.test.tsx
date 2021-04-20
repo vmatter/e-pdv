@@ -1,11 +1,9 @@
 import React from 'react';
 import { render } from '../testUtils';
 import '@testing-library/jest-dom';
-//import renderer from 'react-test-renderer';
-//import IndexPage from 'pages/IndexPage';
 import ProductItem from '../../components/ProductItem';
 
-describe('Index Page', () => {
+describe('ProductItem', () => {
 
     const expectedProps = {
         name: "Notebook Dell XPS",
