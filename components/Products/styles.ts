@@ -27,6 +27,10 @@ export const ProductList = styled.div`
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  ${({ theme }) => `${theme.breakpoints.down('md')} {
+    max-height: calc(100% - 225px);
+   }`}
 `;
 
 export const ProductWrapper = styled.div`
