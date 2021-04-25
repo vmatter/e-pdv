@@ -1,19 +1,16 @@
-import React from 'react';
 import LoginForm from '../../components/LoginForm';
-import '@testing-library/dom';
-import '@testing-library/jest-dom/extend-expect';
 import { render, fireEvent, waitFor } from '../testUtils';
 
 jest.mock('next/router');
 
-describe('Login', () => {
+describe('LoginForm', () => {
 
   const expectedRouterPush = jest.fn();
   const expectedLogin = jest.fn();
   const expectedEmail = 'admin';
   const expectedPassword = 'admin';
 
-  it('should redirect on sign in', async () => {
+  it('should redirect on sign in', () => {
     const { getByTestId } = render(<LoginForm />);
 
     fireEvent.change(getByTestId('input-user'), {
@@ -24,16 +21,16 @@ describe('Login', () => {
     });
     fireEvent.click(getByTestId('button-login'));
 
-    setTimeout(function(){
+    waitFor(() => {
       expect(expectedLogin).toHaveBeenCalledTimes(1);
       expect(expectedLogin).toHaveBeenCalledWith('/login');
 
       expect(expectedRouterPush).toHaveBeenCalledTimes(1);
       expect(expectedRouterPush).toHaveBeenCalledWith('/login');
-    }, 3000);
+    });
   }); 
 
-  it('should show toast error', async () => {
+  it('should show toast error', () => {
     expectedLogin.mockRejectedValue({
       message: 'Usuário ou senha não encontrados, tente novamente.',
     });
@@ -48,7 +45,7 @@ describe('Login', () => {
     fireEvent.click(getByTestId('button-login'));
 
     
-    setTimeout(function(){
+    waitFor(() => {
 
       expect(expectedLogin).toHaveBeenCalledTimes(1);
       expect(expectedLogin).toHaveBeenCalledWith('foo', expectedPassword);
@@ -59,7 +56,7 @@ describe('Login', () => {
         erroMessage
       ).toBeInTheDocument();
       
-    }, 3000);
+    });
 
   });
 

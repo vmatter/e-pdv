@@ -1,8 +1,5 @@
-import React from 'react';
 import IndexPage from '../../pages';
-import { render } from '../testUtils';
-import '@testing-library/dom';
-import '@testing-library/jest-dom/extend-expect';
+import { render, waitFor } from '../testUtils';
 
 describe('Home page', () => {
 
@@ -10,26 +7,29 @@ describe('Home page', () => {
    
     const {getByText} = render(<IndexPage />);
 
-    expect(
-      getByText('Resumo do Carrinho')
-      ).toBeInTheDocument();
+    waitFor(() => {
 
-    expect(
-      getByText('Total de Itens:')
-      ).toBeInTheDocument();
+      expect(
+        getByText('Resumo do Carrinho')
+        ).toBeInTheDocument();
 
-    expect(
-      getByText('Valor Total:')
-      ).toBeInTheDocument();
+      expect(
+        getByText('Total de Itens:')
+        ).toBeInTheDocument();
 
-    expect(
-      getByText('Finalizar Compra')
-      ).toBeInTheDocument();
+      expect(
+        getByText('Valor Total:')
+        ).toBeInTheDocument();
 
-    expect(
-      getByText('Limpar Carrinho')
-      ).toBeInTheDocument();
+      expect(
+        getByText('Finalizar Compra')
+        ).toBeInTheDocument();
 
+      expect(
+        getByText('Limpar Carrinho')
+        ).toBeInTheDocument();
+
+    });
   });
 
   it('matches snapshot', () => {

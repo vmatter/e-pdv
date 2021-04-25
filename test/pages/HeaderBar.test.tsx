@@ -1,8 +1,5 @@
-import React from 'react';
 import { render } from '../testUtils';
 import HeaderBar from '../../components/HeaderBar';
-import '@testing-library/dom';
-import '@testing-library/jest-dom/extend-expect';
 
 describe('HeaderBar', () => {
 

@@ -150,10 +150,10 @@ exports[`Home page matches snapshot 1`] = `
       </div>
     </header>
     <div
-      class="css-icdzq-Wrapper e1u9q05k0"
+      class="css-1v3xme6-Wrapper e1u9q05k0"
     >
       <div
-        class="css-1rvbvdz-ProductList eay5je71"
+        class="css-1fov5n4-ProductList eay5je71"
       >
         <div
           class="css-89zabj-ProductWrapper eay5je70"
@@ -161,39 +161,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Notebook Dell XPS"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Notebook Dell XPS"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Notebook Dell XPS
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$5,400.00
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Notebook Dell XPS
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$5,400.00
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -232,39 +220,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Mouse sem fio"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=401&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Mouse sem fio"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=401&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Mouse sem fio
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$64.90
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Mouse sem fio
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$64.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -303,39 +279,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Fone de ouvido"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Fone de ouvido"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Fone de ouvido
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$120.17
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Fone de ouvido
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$120.17
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -374,39 +338,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Carregador de celular"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1586254116648-d33e0fada133?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Carregador de celular"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1586254116648-d33e0fada133?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Carregador de celular
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$1.40
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Carregador de celular
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$1.40
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -445,39 +397,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Caixa de som portátil"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Caixa de som portátil"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Caixa de som portátil
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$14.00
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Caixa de som portátil
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$14.00
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -516,39 +456,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Teclado sem fio"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Teclado sem fio"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Teclado sem fio
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$127.90
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Teclado sem fio
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$127.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -587,39 +515,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Câmera de ação"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1513193643083-07325d25a4b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Câmera de ação"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1513193643083-07325d25a4b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Câmera de ação
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$282.34
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Câmera de ação
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$282.34
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -658,39 +574,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Controle de vídeo game"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1616341316831-9197de0a88dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Controle de vídeo game"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1616341316831-9197de0a88dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Controle de vídeo game
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$205.76
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Controle de vídeo game
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$205.76
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -729,39 +633,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Relógio Inteligente"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Relógio Inteligente"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Relógio Inteligente
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$226.09
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Relógio Inteligente
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$226.09
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -800,39 +692,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Roteador WiFi"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Roteador WiFi"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Roteador WiFi
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$79.45
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Roteador WiFi
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$79.45
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -871,39 +751,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Monitor"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=375&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Monitor"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=375&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Monitor
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$680.90
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Monitor
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$680.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -942,39 +810,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Drone"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1555867358-2745816780e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Drone"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1555867358-2745816780e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Drone
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$768.62
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Drone
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$768.62
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -1013,39 +869,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Tablet"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Tablet"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Tablet
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$879.00
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Tablet
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$879.00
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -1084,39 +928,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Impressora"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Impressora"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Impressora
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$1,365.90
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Impressora
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$1,365.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -1155,39 +987,27 @@ exports[`Home page matches snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Calculadora Científica"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Calculadora Científica"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80"
-                width="140"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Calculadora Científica
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$59.99
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Calculadora Científica
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$59.99
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -1242,11 +1062,11 @@ exports[`Home page matches snapshot 1`] = `
                   Resumo do Carrinho
                 </h2>
                 <ul
-                  class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+                  class="MuiList-root MuiList-padding e3cnis94 css-whcnl3-MuiList-root-ItemsList"
                 />
               </div>
               <div
-                class="css-t15ilc-SummaryWrapper efmvz2i2"
+                class="css-oxma97-SummaryWrapper efmvz2i2"
               >
                 <div
                   class="css-56fh1v-InfoWrapper efmvz2i1"
@@ -1300,6 +1120,63 @@ exports[`Home page matches snapshot 1`] = `
               </div>
             </form>
           </aside>
+        </div>
+      </div>
+      <div
+        class="css-n5dn9s-MobileSection e1sq2t0a0"
+      >
+        <div
+          class="css-oxma97-SummaryWrapper efmvz2i2"
+        >
+          <div
+            class="css-56fh1v-InfoWrapper efmvz2i1"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 efmvz2i0 css-75rle4-MuiTypography-root-InfoItem"
+            >
+              <strong>
+                Total de Itens:
+              </strong>
+               0
+            </p>
+            <p
+              class="MuiTypography-root MuiTypography-body1 efmvz2i0 css-75rle4-MuiTypography-root-InfoItem"
+            >
+              <strong>
+                Valor Total:
+              </strong>
+               R$0.00
+            </p>
+          </div>
+          <div
+            class="css-1txjylz-FormActions efmvz2i3"
+          >
+            <button
+              class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root Mui-disabled css-1iqv7g7-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              tabindex="-1"
+              type="submit"
+            >
+              <span
+                class="MuiButton-label css-8xplcm-MuiButton-label"
+              >
+                Finalizar Compra
+              </span>
+            </button>
+            <button
+              class="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1prdjlu-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label css-8xplcm-MuiButton-label"
+              >
+                Limpar Carrinho
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
