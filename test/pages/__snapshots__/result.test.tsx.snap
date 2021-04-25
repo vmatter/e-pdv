@@ -3,68 +3,185 @@
 exports[`Checkout matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-du2dme-Container e1sq2t0a4"
+    class="css-du2dme-Container e1sq2t0a3"
   >
     <header
-      class="css-11ljdyz-Header e1sq2t0a3"
+      class="css-11ljdyz-Header e1sq2t0a2"
     >
       <div
-        class="css-1loq5t7-Content e1sq2t0a2"
+        class="css-19op8cy-FlexGrow e9powp66"
       >
-        <a
-          class="css-e68bn9-LogoWrapper e1sq2t0a1"
+        <header
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-eyxyjd-MuiPaper-root-MuiAppBar-root"
         >
-          <img
-            class="css-1l9u5cb-LogoImg e1sq2t0a0"
-            src="/pdv-logo.png"
-          />
-        </a>
+          <div
+            class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+          >
+            <button
+              aria-label="open drawer"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium e9powp65 css-1j7p0oc-MuiButtonBase-root-MuiIconButton-root-MenuButton"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="MenuIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <a
+              class="css-e68bn9-LogoWrapper e9powp64"
+            >
+              <img
+                class="css-1l9u5cb-LogoImg e9powp63"
+                src="/pdv-logo-white.png"
+              />
+            </a>
+            <div
+              class="css-19op8cy-FlexGrow e9powp66"
+            />
+            <div
+              class="css-1rlmors-Search e9powp62"
+            >
+              <div
+                class="css-14y7r15-SearchIconWrapper e9powp61"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="SearchIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiInputBase-root MuiInputBase-colorPrimary e9powp60 css-179im7i-MuiInputBase-root-CustomInput"
+              >
+                <input
+                  aria-label="buscar"
+                  class="MuiInputBase-input css-gga68z-MuiInputBase-input"
+                  placeholder="Buscar..."
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="css-odgcyt-DesktopSection e1sq2t0a1"
+            >
+              <button
+                aria-controls="primary-search-account-menu"
+                aria-haspopup="true"
+                aria-label="conta do usuário"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-e74czq-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountCircleIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="css-n5dn9s-MobileSection e1sq2t0a0"
+            >
+              <button
+                aria-controls="primary-search-account-menu-mobile"
+                aria-haspopup="true"
+                aria-label="mostrar mais"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1drqkcs-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="MoreVertIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </header>
       </div>
     </header>
     <div
-      class="css-128htsh-Wrapper e1u9q05k0"
+      class="css-1v3xme6-Wrapper e1u9q05k0"
     >
       <div
-        class="css-dtx3jt-ProductList eay5je71"
+        class="css-1fov5n4-ProductList eay5je71"
       >
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Notebook Dell XPS"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Notebook Dell XPS"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Notebook Dell XPS
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$5,400.00
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Notebook Dell XPS
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$5,400.00
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -98,43 +215,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Mouse sem fio"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=401&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Mouse sem fio"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=401&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Mouse sem fio
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$64.90
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Mouse sem fio
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$64.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -168,43 +274,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Fone de ouvido"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Fone de ouvido"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Fone de ouvido
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$1.40
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Fone de ouvido
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$120.17
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -238,43 +333,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Carregador de celular"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1586254116648-d33e0fada133?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Carregador de celular"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1586254116648-d33e0fada133?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Carregador de celular
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$1.40
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Carregador de celular
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$1.40
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -308,43 +392,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Caixa de som portátil"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Caixa de som portátil"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Caixa de som portátil
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$1.40
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Caixa de som portátil
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$14.00
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -378,43 +451,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Teclado sem fio"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Teclado sem fio"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Teclado sem fio
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$1.27
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Teclado sem fio
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$127.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -448,43 +510,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Câmera de ação"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1513193643083-07325d25a4b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Câmera de ação"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1513193643083-07325d25a4b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Câmera de ação
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$2.82
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Câmera de ação
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$282.34
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -518,43 +569,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Controle de vídeo game"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1616341316831-9197de0a88dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Controle para vídeo game"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1616341316831-9197de0a88dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Controle para vídeo game
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$2.05
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Controle de vídeo game
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$205.76
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -588,43 +628,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Relógio Inteligente"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Relógio Inteligente"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Relógio Inteligente
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$2.26
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Relógio Inteligente
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$226.09
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -658,43 +687,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Roteador WiFi"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Roteador WiFi"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Roteador WiFi
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$79.45
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Roteador WiFi
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$79.45
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -728,43 +746,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Monitor"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=375&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Monitor"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=375&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Monitor
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$680.90
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Monitor
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$680.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -798,43 +805,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Drone"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1555867358-2745816780e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Drone"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1555867358-2745816780e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Drone
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$768.62
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Drone
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$768.62
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -868,43 +864,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Tablet"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Tablet"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Tablet
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$879.00
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Tablet
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$879.00
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -938,43 +923,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Impressora"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Impressora"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Impressora
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$1,365.90
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Impressora
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$1,365.90
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -1008,43 +982,32 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-11i6oe8-ProductWrapper eay5je70"
+          class="css-89zabj-ProductWrapper eay5je70"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
           >
-            <button
-              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-              tabindex="0"
-              type="button"
+            <img
+              alt="Calculadora Científica"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              height="140"
+              src="https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80"
+              width="140"
+            />
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <img
-                alt="Calculadora Científica"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                height="140"
-                src="https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80"
-              />
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-17fzm4y-MuiTypography-root"
-                >
-                  Calculadora Científica
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-                >
-                  R$59.99
-                </p>
-              </div>
-              <span
-                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-              />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+                Calculadora Científica
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+              >
+                R$59.99
+              </p>
+            </div>
             <div
               class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
             >
@@ -1078,33 +1041,115 @@ exports[`Checkout matches snapshot 1`] = `
           </div>
         </div>
       </div>
-      <aside
-        class="css-b7nr75-Container efmvz2i3"
+      <div
+        class="css-odgcyt-DesktopSection e1sq2t0a1"
       >
-        <form
-          class="css-10hx6wb-Form efmvz2i2"
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-3su884-MuiPaper-root"
+        >
+          <aside
+            class="css-1o4ve3n-Container efmvz2i6"
+          >
+            <form
+              class="css-10hx6wb-Form efmvz2i5"
+            >
+              <div
+                class="css-1p5p4b8-FormContent efmvz2i4"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-ymg5ap-MuiTypography-root"
+                >
+                  Resumo do Carrinho
+                </h2>
+                <ul
+                  class="MuiList-root MuiList-padding e3cnis94 css-whcnl3-MuiList-root-ItemsList"
+                />
+              </div>
+              <div
+                class="css-oxma97-SummaryWrapper efmvz2i2"
+              >
+                <div
+                  class="css-56fh1v-InfoWrapper efmvz2i1"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 efmvz2i0 css-75rle4-MuiTypography-root-InfoItem"
+                  >
+                    <strong>
+                      Total de Itens:
+                    </strong>
+                     0
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 efmvz2i0 css-75rle4-MuiTypography-root-InfoItem"
+                  >
+                    <strong>
+                      Valor Total:
+                    </strong>
+                     R$0.00
+                  </p>
+                </div>
+                <div
+                  class="css-1txjylz-FormActions efmvz2i3"
+                >
+                  <button
+                    class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root Mui-disabled css-1iqv7g7-MuiButtonBase-root-MuiButton-root"
+                    disabled=""
+                    tabindex="-1"
+                    type="submit"
+                  >
+                    <span
+                      class="MuiButton-label css-8xplcm-MuiButton-label"
+                    >
+                      Finalizar Compra
+                    </span>
+                  </button>
+                  <button
+                    class="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1prdjlu-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                  >
+                    <span
+                      class="MuiButton-label css-8xplcm-MuiButton-label"
+                    >
+                      Limpar Carrinho
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </form>
+          </aside>
+        </div>
+      </div>
+      <div
+        class="css-n5dn9s-MobileSection e1sq2t0a0"
+      >
+        <div
+          class="css-oxma97-SummaryWrapper efmvz2i2"
         >
           <div
-            class="css-1p5p4b8-FormContent efmvz2i1"
+            class="css-56fh1v-InfoWrapper efmvz2i1"
           >
-            <h2>
-              Cart summary
-            </h2>
-            <p>
+            <p
+              class="MuiTypography-root MuiTypography-body1 efmvz2i0 css-75rle4-MuiTypography-root-InfoItem"
+            >
               <strong>
-                Number of Items:
+                Total de Itens:
               </strong>
                0
             </p>
-            <p>
+            <p
+              class="MuiTypography-root MuiTypography-body1 efmvz2i0 css-75rle4-MuiTypography-root-InfoItem"
+            >
               <strong>
-                Total:
+                Valor Total:
               </strong>
-               $0.00
+               R$0.00
             </p>
           </div>
           <div
-            class="css-1txjylz-FormActions efmvz2i0"
+            class="css-1txjylz-FormActions efmvz2i3"
           >
             <button
               class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root Mui-disabled css-1iqv7g7-MuiButtonBase-root-MuiButton-root"
@@ -1115,7 +1160,7 @@ exports[`Checkout matches snapshot 1`] = `
               <span
                 class="MuiButton-label css-8xplcm-MuiButton-label"
               >
-                Checkout
+                Finalizar Compra
               </span>
             </button>
             <button
@@ -1125,1665 +1170,16 @@ exports[`Checkout matches snapshot 1`] = `
               <span
                 class="MuiButton-label css-8xplcm-MuiButton-label"
               >
-                Clear Cart
+                Limpar Carrinho
               </span>
               <span
                 class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </button>
           </div>
-        </form>
-      </aside>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>
-`;
-
-exports[`Checkout renders correctly 1`] = `
-<div
-  className="css-du2dme-Container e1sq2t0a4"
->
-  <header
-    className="css-11ljdyz-Header e1sq2t0a3"
-  >
-    <div
-      className="css-1loq5t7-Content e1sq2t0a2"
-    >
-      <a
-        className="css-e68bn9-LogoWrapper e1sq2t0a1"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-      >
-        <img
-          className="css-1l9u5cb-LogoImg e1sq2t0a0"
-          src="/pdv-logo.png"
-        />
-      </a>
-    </div>
-  </header>
-  <div
-    className="css-128htsh-Wrapper e1u9q05k0"
-  >
-    <div
-      className="css-dtx3jt-ProductList eay5je71"
-    >
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Notebook Dell XPS"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Notebook Dell XPS
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$5,400.00
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Mouse sem fio"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=401&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Mouse sem fio
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$64.90
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Fone de ouvido"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Fone de ouvido
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$1.40
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Carregador de celular"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1586254116648-d33e0fada133?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Carregador de celular
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$1.40
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Caixa de som portátil"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Caixa de som portátil
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$1.40
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Teclado sem fio"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Teclado sem fio
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$1.27
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Câmera de ação"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1513193643083-07325d25a4b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Câmera de ação
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$2.82
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Controle para vídeo game"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1616341316831-9197de0a88dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Controle para vídeo game
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$2.05
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Relógio Inteligente"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Relógio Inteligente
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$2.26
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Roteador WiFi"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Roteador WiFi
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$79.45
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Monitor"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=375&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Monitor
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$680.90
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Drone"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1555867358-2745816780e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Drone
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$768.62
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Tablet"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Tablet
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$879.00
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Impressora"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Impressora
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$1,365.90
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="css-11i6oe8-ProductWrapper eay5je70"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-2 css-bhp9pd-MuiPaper-root-MuiCard-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <img
-              alt="Calculadora Científica"
-              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              height="140"
-              src="https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80"
-            />
-            <div
-              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-            >
-              <h2
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Calculadora Científica
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                R$59.99
-              </p>
-            </div>
-            <span
-              className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
-            />
-          </button>
-          <div
-            className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Remove
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-17nxswd-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-            >
-              <span
-                className="MuiButton-label css-8xplcm-MuiButton-label"
-              >
-                Add Item
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <aside
-      className="css-b7nr75-Container efmvz2i3"
-    >
-      <form
-        className="css-10hx6wb-Form efmvz2i2"
-        onSubmit={[Function]}
-      >
-        <div
-          className="css-1p5p4b8-FormContent efmvz2i1"
-        >
-          <h2>
-            Cart summary
-          </h2>
-          <p
-            suppressHydrationWarning={true}
-          >
-            <strong>
-              Number of Items:
-            </strong>
-             
-            0
-          </p>
-          <p
-            suppressHydrationWarning={true}
-          >
-            <strong>
-              Total:
-            </strong>
-             
-            $0.00
-          </p>
-        </div>
-        <div
-          className="css-1txjylz-FormActions efmvz2i0"
-        >
-          <button
-            className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root Mui-disabled css-1t4i7pk-MuiButtonBase-root-MuiButton-root"
-            disabled={true}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={-1}
-            type="submit"
-          >
-            <span
-              className="MuiButton-label css-8xplcm-MuiButton-label"
-            >
-              Checkout
-            </span>
-          </button>
-          <button
-            className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-quddmx-MuiButtonBase-root-MuiButton-root"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-          >
-            <span
-              className="MuiButton-label css-8xplcm-MuiButton-label"
-            >
-              Clear Cart
-            </span>
-          </button>
-        </div>
-      </form>
-    </aside>
-  </div>
-</div>
 `;

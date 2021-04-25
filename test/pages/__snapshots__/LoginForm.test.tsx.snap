@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login matches snapshot 1`] = `
+exports[`LoginForm matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-y9ds5f-Wrapper e16kqbw65"
