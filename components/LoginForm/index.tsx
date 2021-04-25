@@ -54,7 +54,7 @@ const LoginForm = () => {
 
   return (
     <Wrapper>
-      <Card variant="outlined" elevation={2}>
+      <Card variant="outlined">
         <HeaderWrapper>
           <FormHeader>
             <Typography variant="h4" paddingBottom={1}>
