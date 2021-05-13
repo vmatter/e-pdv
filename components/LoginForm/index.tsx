@@ -3,6 +3,7 @@ import { Button, TextField, Typography, Card } from '@material-ui/core';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import { useRouter } from 'next/router';
+import { authRequest } from '../../utils/api-helpers';
 import {
   Wrapper,
   HeaderWrapper,
@@ -41,6 +42,13 @@ const LoginForm = () => {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
+
+        const response = authRequest({
+          email: user,
+          password,
+        });
+
+        console.log(`response`, response);
 
         // TODO: replace this with login validation
         if (user !== 'admin' && password !== 'admin') {
