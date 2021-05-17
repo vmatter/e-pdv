@@ -10,7 +10,7 @@ const IndexPage: NextPage = () => {
   const router = useRouter();
   const validToken = isTokenValid();
 
-  !validToken && router.push('/login');
+  process.browser && !validToken && router.push('/login');
 
   return validToken ? (
     <Layout title="Home | e-PDV">
