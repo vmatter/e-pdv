@@ -20,7 +20,7 @@ import {
   MenuButton,
 } from './styles';
 import { DesktopSection, MobileSection } from '../Layout/styles';
-import { setAccessToken } from 'utils/token';
+import { setAccessToken } from '../../utils/token';
 
 const HeaderBar = () => {
   const router = useRouter();

@@ -125,6 +125,9 @@ exports[`LoginForm matches snapshot 1`] = `
           >
             Log In
           </span>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
         </button>
       </form>
     </div>
