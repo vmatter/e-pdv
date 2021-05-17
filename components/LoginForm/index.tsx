@@ -32,31 +32,23 @@ const LoginForm = () => {
 
     setShowWarning(false);
 
-    console.log(`user`, user);
-    console.log(`password`, password);
-
     if (user === '' || password === '') {
       user === '' && setShowUserError(true);
       password === '' && setShowPassError(true);
     } else {
       setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
 
-        const response = authRequest({
-          email: user,
-          password,
-        });
+      const response = await authRequest({
+        email: user,
+        password,
+      });
 
-        console.log(`response`, response);
-
-        // TODO: replace this with login validation
-        if (user !== 'admin' && password !== 'admin') {
-          setShowWarning(true);
-        } else {
-          setLoggedIn(true);
-        }
-      }, 2000);
+      if (!response.message) {
+        setLoggedIn(true);
+      } else {
+        setShowWarning(true);
+      }
+      setLoading(false);
     }
   };
 
