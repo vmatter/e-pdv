@@ -1,4 +1,4 @@
-import { getAccessToken } from './token';
+import { getAccessToken, setAccessToken } from './token';
 
 const { API_URL } = process.env;
 
@@ -28,7 +28,9 @@ export const authRequest = async (data?: Record<string, unknown>) => {
       referrerPolicy: 'no-referrer', // no-referrer, *client
       body: JSON.stringify(data || {}), // body data type must match "Content-Type" header
     });
-    return await response.json(); // parses JSON response into native JavaScript objects
+    const jsonRes = (await response.json()) as any; // parses JSON response into native JavaScript objects
+    setAccessToken(jsonRes['auth-token']);
+    return jsonRes;
   } catch (err) {
     throw new Error(err.message);
   }

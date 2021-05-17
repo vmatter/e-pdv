@@ -3,13 +3,10 @@
 ACCESS TOKEN
 
 */
-
-let accessToken = '';
-
 export const setAccessToken = (value: string) => {
-  accessToken = value;
+  localStorage.setItem('token', value);
 };
 
 export const getAccessToken = () => {
-  return accessToken;
+  return typeof window !== 'undefined' ? localStorage.getItem('token') : '';
 };

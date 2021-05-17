@@ -18,9 +18,9 @@ const LoginForm = () => {
   const [showWarning, setShowWarning] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showUserError, setShowUserError] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
   const [showPassError, setShowPassError] = useState(false);
 
   useEffect(() => {
@@ -32,14 +32,14 @@ const LoginForm = () => {
 
     setShowWarning(false);
 
-    if (user === '' || password === '') {
-      user === '' && setShowUserError(true);
+    if (email === '' || password === '') {
+      email === '' && setShowEmailError(true);
       password === '' && setShowPassError(true);
     } else {
       setLoading(true);
 
       const response = await authRequest({
-        email: user,
+        email,
         password,
       });
 
@@ -77,22 +77,22 @@ const LoginForm = () => {
         )}
         <InputWrapper noValidate autoComplete="off">
           <TextField
-            id="input-user"
+            id="input-email"
             variant="outlined"
             type="text"
-            name="username"
-            label="usuário"
-            placeholder="ex: giselamd"
+            name="email"
+            label="email"
+            placeholder="ex: johndoe@gmail.com"
             fullWidth
-            helperText={showUserError && 'Este campo deve ser preenchido.'}
-            error={showUserError || showWarning}
+            helperText={showEmailError && 'Este campo deve ser preenchido.'}
+            error={showEmailError || showWarning}
             onChange={(e: any) => {
-              setShowUserError(false);
+              setShowEmailError(false);
               setShowWarning(false);
-              setUser(e.target.value);
+              setEmail(e.target.value);
             }}
             inputProps={{
-              'data-testid': 'input-user',
+              'data-testid': 'input-email',
             }}
           />
           <TextField
