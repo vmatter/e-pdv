@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login matches snapshot 1`] = `
+exports[`LoginForm matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-y9ds5f-Wrapper e16kqbw65"
@@ -45,10 +45,10 @@ exports[`Login matches snapshot 1`] = `
           <label
             class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="input-user"
-            id="input-user-label"
+            for="input-email"
+            id="input-email-label"
           >
-            usuário
+            email
           </label>
           <div
             class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
@@ -56,10 +56,10 @@ exports[`Login matches snapshot 1`] = `
             <input
               aria-invalid="false"
               class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-              data-testid="input-user"
-              id="input-user"
-              name="username"
-              placeholder="ex: giselamd"
+              data-testid="input-email"
+              id="input-email"
+              name="email"
+              placeholder="ex: johndoe@gmail.com"
               type="text"
               value=""
             />
@@ -71,7 +71,7 @@ exports[`Login matches snapshot 1`] = `
                 class="css-2s9zix"
               >
                 <span>
-                  usuário
+                  email
                 </span>
               </legend>
             </fieldset>
@@ -125,9 +125,6 @@ exports[`Login matches snapshot 1`] = `
           >
             Log In
           </span>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </form>
     </div>

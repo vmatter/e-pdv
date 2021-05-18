@@ -3,6 +3,7 @@ import { Button, TextField, Typography, Card } from '@material-ui/core';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import { useRouter } from 'next/router';
+import { authRequest } from '../../utils/api-helpers';
 import {
   Wrapper,
   HeaderWrapper,
@@ -17,9 +18,9 @@ const LoginForm = () => {
   const [showWarning, setShowWarning] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showUserError, setShowUserError] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
   const [showPassError, setShowPassError] = useState(false);
 
   useEffect(() => {
@@ -31,30 +32,29 @@ const LoginForm = () => {
 
     setShowWarning(false);
 
-    console.log(`user`, user);
-    console.log(`password`, password);
-
-    if (user === '' || password === '') {
-      user === '' && setShowUserError(true);
+    if (email === '' || password === '') {
+      email === '' && setShowEmailError(true);
       password === '' && setShowPassError(true);
     } else {
       setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
 
-        // TODO: replace this with login validation
-        if (user !== 'admin' && password !== 'admin') {
-          setShowWarning(true);
-        } else {
-          setLoggedIn(true);
-        }
-      }, 2000);
+      const response = await authRequest({
+        email,
+        password,
+      });
+
+      if (!response.message) {
+        setLoggedIn(true);
+      } else {
+        setShowWarning(true);
+      }
+      setLoading(false);
     }
   };
 
   return (
     <Wrapper>
-      <Card variant="outlined" elevation={2}>
+      <Card variant="outlined">
         <HeaderWrapper>
           <FormHeader>
             <Typography variant="h4" paddingBottom={1}>
@@ -77,22 +77,22 @@ const LoginForm = () => {
         )}
         <InputWrapper noValidate autoComplete="off">
           <TextField
-            id="input-user"
+            id="input-email"
             variant="outlined"
             type="text"
-            name="username"
-            label="usuário"
-            placeholder="ex: giselamd"
+            name="email"
+            label="email"
+            placeholder="ex: johndoe@gmail.com"
             fullWidth
-            helperText={showUserError && 'Este campo deve ser preenchido.'}
-            error={showUserError || showWarning}
+            helperText={showEmailError && 'Este campo deve ser preenchido.'}
+            error={showEmailError || showWarning}
             onChange={(e: any) => {
-              setShowUserError(false);
+              setShowEmailError(false);
               setShowWarning(false);
-              setUser(e.target.value);
+              setEmail(e.target.value);
             }}
             inputProps={{
-              'data-testid': 'input-user',
+              'data-testid': 'input-email',
             }}
           />
           <TextField

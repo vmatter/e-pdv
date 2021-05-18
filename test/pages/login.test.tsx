@@ -4,7 +4,6 @@ import { render, fireEvent, waitFor } from '../testUtils';
 jest.mock('next/router');
 
 describe('LoginForm', () => {
-
   const expectedRouterPush = jest.fn();
   const expectedLogin = jest.fn();
   const expectedEmail = 'admin';
@@ -13,7 +12,7 @@ describe('LoginForm', () => {
   it('should redirect on sign in', () => {
     const { getByTestId } = render(<LoginForm />);
 
-    fireEvent.change(getByTestId('input-user'), {
+    fireEvent.change(getByTestId('input-email'), {
       target: { value: expectedEmail },
     });
     fireEvent.change(getByTestId('input-password'), {
@@ -28,7 +27,7 @@ describe('LoginForm', () => {
       expect(expectedRouterPush).toHaveBeenCalledTimes(1);
       expect(expectedRouterPush).toHaveBeenCalledWith('/login');
     });
-  }); 
+  });
 
   it('should show toast error', () => {
     expectedLogin.mockRejectedValue({
@@ -36,7 +35,7 @@ describe('LoginForm', () => {
     });
 
     const { getByTestId, getByText } = render(<LoginForm />);
-    fireEvent.change(getByTestId('input-user'), {
+    fireEvent.change(getByTestId('input-email'), {
       target: { value: 'foo' },
     });
     fireEvent.change(getByTestId('input-password'), {
@@ -44,20 +43,16 @@ describe('LoginForm', () => {
     });
     fireEvent.click(getByTestId('button-login'));
 
-    
     waitFor(() => {
-
       expect(expectedLogin).toHaveBeenCalledTimes(1);
       expect(expectedLogin).toHaveBeenCalledWith('foo', expectedPassword);
-    
-      const erroMessage = getByText('Usuário ou senha não encontrados, tente novamente.');
 
-      expect(
-        erroMessage
-      ).toBeInTheDocument();
-      
+      const erroMessage = getByText(
+        'Usuário ou senha não encontrados, tente novamente.'
+      );
+
+      expect(erroMessage).toBeInTheDocument();
     });
-
   });
 
   it('should show erros for required fields', async () => {
@@ -79,5 +74,4 @@ describe('LoginForm', () => {
     const { asFragment } = render(<LoginForm />, {});
     expect(asFragment()).toMatchSnapshot();
   });
-
 });

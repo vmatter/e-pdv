@@ -1,5 +1,6 @@
 import { useState, MouseEvent } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -19,8 +20,10 @@ import {
   MenuButton,
 } from './styles';
 import { DesktopSection, MobileSection } from '../Layout/styles';
+import { setAccessToken } from '../../utils/token';
 
 const HeaderBar = () => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [
     mobileMoreAnchorEl,
@@ -41,6 +44,12 @@ const HeaderBar = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
+  };
+
+  const handleLogout = () => {
+    handleMenuClose();
+    setAccessToken('');
+    router.push('/login');
   };
 
   const handleMobileMenuOpen = (event: MouseEvent<HTMLElement>) => {
@@ -66,6 +75,7 @@ const HeaderBar = () => {
     >
       <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
       <MenuItem onClick={handleMenuClose}>Minha conta</MenuItem>
+      <MenuItem onClick={handleLogout}>Sair</MenuItem>
     </Menu>
   );
 
