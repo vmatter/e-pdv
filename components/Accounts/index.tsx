@@ -13,13 +13,13 @@ const Accounts = () => {
   const [showWarning, setShowWarning] = useState(false);
   const [showNameError, setShowNameError] = useState(false);
   const [showPersonError, setShowPersonError] = useState(false);
-  const [name, setName] = useState('');
+  const [name] = useState('');
   const [person, setPerson] = useState('');
   const [displayFisica, setDisplayFisica] = useState('none');
   const [displayJuridica, setDisplayJuridica] = useState('none');
   const [displayEstrangeiro, setDisplayEstrangeiro] = useState('none');
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setPerson(event.target.value);
 
     if(event.target.value == "fisica"){
@@ -76,7 +76,7 @@ const Accounts = () => {
             fullWidth
             helperText={showNameError && 'Este campo deve ser preenchido.'}
             error={showNameError || showWarning}
-            onChange={(e: any) => {
+            onChange={() => {
               setShowNameError(false);
               setShowWarning(false);
             }}
