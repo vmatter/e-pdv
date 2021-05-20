@@ -3,7 +3,7 @@ import { render, fireEvent, waitFor } from '../testUtils';
 
 describe('Accounts', () => {
 
-  const expectedFisica      = 'fisica';
+  /*const expectedFisica      = 'fisica';
   const expectedJuridica    = 'juridica';
   const expectedEstrangeiro = 'estrangeiro';
 
@@ -45,6 +45,28 @@ describe('Accounts', () => {
         getByText('Nº Passaporte')
       ).toBeVisible();
     });
+
+  }); */
+
+  it('visible fields', async () => {
+    const { getByTestId } = render(<Accounts />);
+
+    expect(
+      getByTestId('input-name')
+    ).toBeInTheDocument();
+
+    expect(
+      getByTestId('select-type-person')
+    ).toBeInTheDocument();
+
+    expect(
+      getByTestId('input-email')
+    ).toBeInTheDocument();
+
+    expect(
+      getByTestId('input-password')
+    ).toBeInTheDocument();
+
 
   });
 

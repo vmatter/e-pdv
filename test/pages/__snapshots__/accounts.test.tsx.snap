@@ -17,18 +17,15 @@ exports[`Accounts matches snapshot 1`] = `
           <h4
             class="MuiTypography-root MuiTypography-h4 css-ggtcmo-MuiTypography-root"
           >
-            Gerenciar pessoa
+            Gerenciar contas
           </h4>
           <p
             class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
           >
-            Informações Principais
+            Crie usuários do tipo Administrador ou Operador de Caixa
           </p>
         </div>
       </div>
-      <div
-        class="css-1a8w37c"
-      />
       <form
         autocomplete="off"
         class="css-1dpfc4n-InputWrapper e18dzjix2"
@@ -132,230 +129,81 @@ exports[`Accounts matches snapshot 1`] = `
             </fieldset>
           </div>
         </div>
-      </form>
-      <div
-        class="css-10huji"
-        id="box-fisica"
-      >
-        <form
-          autocomplete="off"
-          class="css-1dpfc4n-InputWrapper e18dzjix2"
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
         >
-          <div
-            class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-email"
+            id="input-email-label"
           >
-            <label
-              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="input-cpf"
-              id="input-cpf-label"
+            E-mail
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-email"
+              id="input-email"
+              name="email"
+              placeholder="ex: exemplo@gmail.com"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
             >
-              CPF
-            </label>
-            <div
-              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
-            >
-              <input
-                aria-invalid="false"
-                class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-                data-testid="input-cpf"
-                id="input-cpf"
-                name="cpf"
-                placeholder="ex: 999.999.999-99"
-                type="text"
-                value=""
-              />
-              <fieldset
-                aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+              <legend
+                class="css-2s9zix"
               >
-                <legend
-                  class="css-2s9zix"
-                >
-                  <span>
-                    CPF
-                  </span>
-                </legend>
-              </fieldset>
-            </div>
+                <span>
+                  E-mail
+                </span>
+              </legend>
+            </fieldset>
           </div>
-        </form>
-      </div>
-      <div
-        class="css-10huji"
-        id="box-juridica"
-      >
-        <form
-          autocomplete="off"
-          class="css-1dpfc4n-InputWrapper e18dzjix2"
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
         >
-          <div
-            class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-password"
+            id="input-password-label"
           >
-            <label
-              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="input-cnpj"
-              id="input-cnpj-label"
-            >
-              CNPJ
-            </label>
-            <div
-              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
-            >
-              <input
-                aria-invalid="false"
-                class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-                data-testid="input-cnpj"
-                id="input-cnpj"
-                name="cnpj"
-                placeholder="ex: 99.999.999/9999-99"
-                type="text"
-                value=""
-              />
-              <fieldset
-                aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
-              >
-                <legend
-                  class="css-2s9zix"
-                >
-                  <span>
-                    CNPJ
-                  </span>
-                </legend>
-              </fieldset>
-            </div>
-          </div>
+            Senha
+          </label>
           <div
-            class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <label
-              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="input-razao-social"
-              id="input-razao-social-label"
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-password"
+              id="input-password"
+              name="password"
+              type="password"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
             >
-              Razão Social
-            </label>
-            <div
-              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
-            >
-              <input
-                aria-invalid="false"
-                class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-                data-testid="input-razao-social"
-                id="input-razao-social"
-                name="razaoSocial"
-                placeholder="Razão Social"
-                type="text"
-                value=""
-              />
-              <fieldset
-                aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+              <legend
+                class="css-2s9zix"
               >
-                <legend
-                  class="css-2s9zix"
-                >
-                  <span>
-                    Razão Social
-                  </span>
-                </legend>
-              </fieldset>
-            </div>
+                <span>
+                  Senha
+                </span>
+              </legend>
+            </fieldset>
           </div>
-          <div
-            class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
-          >
-            <label
-              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="input-nome-fantasia"
-              id="input-nome-fantasia-label"
-            >
-              Nome Fantasia
-            </label>
-            <div
-              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
-            >
-              <input
-                aria-invalid="false"
-                class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-                data-testid="input-nome-fantasia"
-                id="input-nome-fantasia"
-                name="nomeFantasia"
-                placeholder="Nome Fantasia"
-                type="text"
-                value=""
-              />
-              <fieldset
-                aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
-              >
-                <legend
-                  class="css-2s9zix"
-                >
-                  <span>
-                    Nome Fantasia
-                  </span>
-                </legend>
-              </fieldset>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div
-        class="css-10huji"
-        id="box-fisica"
-      >
-        <form
-          autocomplete="off"
-          class="css-1dpfc4n-InputWrapper e18dzjix2"
-        >
-          <div
-            class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
-          >
-            <label
-              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="input-passaporte"
-              id="input-passaporte-label"
-            >
-              Nº Passaporte
-            </label>
-            <div
-              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
-            >
-              <input
-                aria-invalid="false"
-                class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-                data-testid="input-passaporte"
-                id="input-passaporte"
-                name="passaporte"
-                placeholder="Nº Passaporte"
-                type="text"
-                value=""
-              />
-              <fieldset
-                aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
-              >
-                <legend
-                  class="css-2s9zix"
-                >
-                  <span>
-                    Nº Passaporte
-                  </span>
-                </legend>
-              </fieldset>
-            </div>
-          </div>
-        </form>
-      </div>
-      <form
-        class="css-1dpfc4n-InputWrapper e18dzjix2"
-      >
+        </div>
         <button
           class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1iqv7g7-MuiButtonBase-root-MuiButton-root"
           data-testid="button-save"
