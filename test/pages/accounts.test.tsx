@@ -3,51 +3,6 @@ import { render, fireEvent, waitFor } from '../testUtils';
 
 describe('Accounts', () => {
 
-  /*const expectedFisica      = 'fisica';
-  const expectedJuridica    = 'juridica';
-  const expectedEstrangeiro = 'estrangeiro';
-
-  it('change type person', () => {
-    const { getByTestId, getByText } = render(<Accounts />);
-
-    fireEvent.change(getByTestId('select-type-person'), {
-      target: { value: expectedFisica },
-    });
-
-    waitFor(() => {
-      expect(
-        getByText('CPF')
-      ).toBeVisible();
-    });
-
-    fireEvent.change(getByTestId('select-type-person'), {
-      target: { value: expectedJuridica },
-    });
-
-    waitFor(() => {
-      expect(
-        getByText('CNPJ')
-      ).toBeVisible();
-      expect(
-        getByText('Razão Social')
-      ).toBeVisible();
-      expect(
-        getByText('Nome Fantasia')
-      ).toBeVisible();
-    });
-
-    fireEvent.change(getByTestId('select-type-person'), {
-      target: { value: expectedEstrangeiro },
-    });
-
-    waitFor(() => {
-      expect(
-        getByText('Nº Passaporte')
-      ).toBeVisible();
-    });
-
-  }); */
-
   it('visible fields', async () => {
     const { getByTestId } = render(<Accounts />);
 
