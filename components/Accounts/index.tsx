@@ -36,7 +36,7 @@ const Accounts = () => {
         <HeaderWrapper>
           <FormHeader>
             <Typography variant="h4" paddingBottom={1}>
-              Gerenciar contas
+              Gerenciar usuários
             </Typography>
             <Typography component="p">
               Crie usuários do tipo Administrador ou Operador de Caixa
@@ -69,7 +69,7 @@ const Accounts = () => {
             id="select-type-person"
             variant="outlined"
             name="typePerson"
-            label="Tipo Pessoa"
+            label="Tipo Usuário"
             fullWidth
             value={person}
             select

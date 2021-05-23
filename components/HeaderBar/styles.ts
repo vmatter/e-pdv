@@ -17,6 +17,7 @@ export const LogoWrapper = styled.a`
 
 export const LogoImg = styled.img`
   height: 45px;
+  cursor:pointer;
 `;
 
 export const Search = styled.div`
