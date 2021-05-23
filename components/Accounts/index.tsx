@@ -43,29 +43,8 @@ const Accounts = () => {
             </Typography>
           </FormHeader>
         </HeaderWrapper>
-        
-        <InputWrapper autoComplete="off">
-          <TextField
-            id="input-name"
-            variant="outlined"
-            type="text"
-            name="name"
-            label="Nome"
-            placeholder="ex: João da Silva"
-            fullWidth
-            helperText={showNameError && 'Este campo deve ser preenchido.'}
-            error={showNameError || showWarning}
-            onChange={(e: any) => {
-              setShowNameError(false);
-              setShowWarning(false);
-              setName(e.target.value);
-            }}
-            inputProps={{
-              'data-testid': 'input-name',
-            }}
-          />
-         
-          <TextField
+
+        <TextField
             id="select-type-person"
             variant="outlined"
             name="typePerson"
@@ -87,7 +66,28 @@ const Accounts = () => {
             <MenuItem value="">Selecione</MenuItem>
             <MenuItem value={"admin"}>Administrador</MenuItem>
             <MenuItem value={"buyer"}>Operador de Caixa</MenuItem>
-          </TextField>        
+          </TextField> 
+        
+        <InputWrapper autoComplete="off">
+          <TextField
+            id="input-name"
+            variant="outlined"
+            type="text"
+            name="name"
+            label="Nome"
+            placeholder="ex: João da Silva"
+            fullWidth
+            helperText={showNameError && 'Este campo deve ser preenchido.'}
+            error={showNameError || showWarning}
+            onChange={(e: any) => {
+              setShowNameError(false);
+              setShowWarning(false);
+              setName(e.target.value);
+            }}
+            inputProps={{
+              'data-testid': 'input-name',
+            }}
+          />       
          
           <TextField
             id="input-email"
