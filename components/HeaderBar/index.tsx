@@ -7,16 +7,16 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+// import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import {
   FlexGrow,
   LogoImg,
   LogoWrapper,
-  Search,
-  SearchIconWrapper,
-  CustomInput,
+  // Search,
+  // SearchIconWrapper,
+  // CustomInput,
   MenuButton,
 } from './styles';
 import { DesktopSection, MobileSection } from '../Layout/styles';
@@ -52,6 +52,11 @@ const HeaderBar = () => {
     router.push('/login');
   };
 
+  const hendleProducts = () => {
+    handleMenuClose();
+    router.push('/products');
+  };
+
   const handleMobileMenuOpen = (event: MouseEvent<HTMLElement>) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
@@ -73,8 +78,8 @@ const HeaderBar = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Minha conta</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Usuários</MenuItem>
+      <MenuItem onClick={hendleProducts}>Produtos</MenuItem>
       <MenuItem onClick={handleLogout}>Sair</MenuItem>
     </Menu>
   );
@@ -123,7 +128,7 @@ const HeaderBar = () => {
             </LogoWrapper>
           </Link>
           <FlexGrow />
-          <Search>
+          {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -131,7 +136,7 @@ const HeaderBar = () => {
               placeholder="Buscar..."
               inputProps={{ 'aria-label': 'buscar' }}
             />
-          </Search>
+          </Search> */}
           <DesktopSection>
             <IconButton
               edge="end"

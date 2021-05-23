@@ -15,7 +15,7 @@ export type Product = {
   images?: string;
 };
 
-const Products = () => {
+const Products = ({ isAdmin = false }) => {
   const [products, setProducts]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
 
@@ -38,7 +38,7 @@ const Products = () => {
         products ? (
           products.map((product: Product) => (
             <ProductWrapper key={product.id}>
-              <ProductItem product={product} />
+              <ProductItem product={product} isAdmin={isAdmin} />
             </ProductWrapper>
           ))
         ) : (
