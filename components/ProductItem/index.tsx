@@ -6,6 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Product } from '../Products';
+import { CURRENCY } from '../../config';
 
 type Props = {
   product: Product;
@@ -18,7 +19,7 @@ const ProductItem = ({ product }: Props) => {
       <CardMedia
         component="img"
         alt={product.name}
-        image={product.image}
+        image={product.images?.[0] || '/placeholder-image.png'}
         height="140"
         width="140"
       />
@@ -29,7 +30,7 @@ const ProductItem = ({ product }: Props) => {
         <Typography component="p">
           {formatCurrencyString({
             value: product.price,
-            currency: product.currency,
+            currency: CURRENCY,
           })}
         </Typography>
       </CardContent>
@@ -41,7 +42,11 @@ const ProductItem = ({ product }: Props) => {
         >
           Remove
         </Button>
-        <Button size="small" color="primary" onClick={() => addItem(product)}>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => addItem(product as any)}
+        >
           Add Item
         </Button>
       </CardActions>

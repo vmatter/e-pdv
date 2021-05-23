@@ -8,8 +8,8 @@ export async function fetchGetJSON(url: string) {
     const data = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `bearer ${accessToken}`,
-      },
+        'x-access-token': accessToken,
+      } as any,
     }).then(res => res.json());
     return data;
   } catch (err) {
@@ -48,8 +48,8 @@ export async function fetchPostJSON(
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `bearer ${accessToken}`,
-      },
+        'x-access-token': accessToken,
+      } as any,
       referrerPolicy: 'no-referrer', // no-referrer, *client
       body: JSON.stringify(data || {}), // body data type must match "Content-Type" header
     });
