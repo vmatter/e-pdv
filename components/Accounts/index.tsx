@@ -1,12 +1,7 @@
 import { useState } from 'react';
 import { Button, TextField, Typography, Card } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
-import {
-  Wrapper,
-  HeaderWrapper,
-  InputWrapper,
-  FormHeader
-} from './styles';
+import { Wrapper, HeaderWrapper, InputWrapper, FormHeader } from './styles';
 
 const Accounts = () => {
   const [showWarning, setShowWarning] = useState(false);
@@ -32,7 +27,7 @@ const Accounts = () => {
 
   return (
     <Wrapper>
-      <Card variant="outlined" elevation={2}>
+      <Card variant="outlined">
         <HeaderWrapper>
           <FormHeader>
             <Typography variant="h4" paddingBottom={1}>
@@ -43,7 +38,7 @@ const Accounts = () => {
             </Typography>
           </FormHeader>
         </HeaderWrapper>
-        
+
         <InputWrapper autoComplete="off">
           <TextField
             id="input-name"
@@ -64,7 +59,7 @@ const Accounts = () => {
               'data-testid': 'input-name',
             }}
           />
-         
+
           <TextField
             id="select-type-person"
             variant="outlined"
@@ -85,10 +80,10 @@ const Accounts = () => {
             }}
           >
             <MenuItem value="">Selecione</MenuItem>
-            <MenuItem value={"admin"}>Administrador</MenuItem>
-            <MenuItem value={"buyer"}>Operador de Caixa</MenuItem>
-          </TextField>        
-         
+            <MenuItem value={'admin'}>Administrador</MenuItem>
+            <MenuItem value={'buyer'}>Operador de Caixa</MenuItem>
+          </TextField>
+
           <TextField
             id="input-email"
             variant="outlined"
@@ -108,7 +103,7 @@ const Accounts = () => {
               'data-testid': 'input-email',
             }}
           />
-         
+
           <TextField
             id="input-password"
             variant="outlined"
@@ -127,7 +122,7 @@ const Accounts = () => {
               'data-testid': 'input-password',
             }}
           />
-          
+
           <Button
             id="button-save"
             data-testid="button-save"
