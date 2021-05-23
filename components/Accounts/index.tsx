@@ -43,8 +43,10 @@ const Accounts = () => {
             </Typography>
           </FormHeader>
         </HeaderWrapper>
+        
+        <InputWrapper autoComplete="off">
 
-        <TextField
+          <TextField
             id="select-type-person"
             variant="outlined"
             name="typePerson"
@@ -67,8 +69,7 @@ const Accounts = () => {
             <MenuItem value={"admin"}>Administrador</MenuItem>
             <MenuItem value={"buyer"}>Operador de Caixa</MenuItem>
           </TextField> 
-        
-        <InputWrapper autoComplete="off">
+
           <TextField
             id="input-name"
             variant="outlined"
