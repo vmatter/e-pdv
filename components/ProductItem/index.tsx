@@ -42,7 +42,11 @@ const ProductItem = ({ product }: Props) => {
         >
           Remove
         </Button>
-        <Button size="small" color="primary" onClick={() => addItem(product)}>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => addItem(product as any)}
+        >
           Add Item
         </Button>
       </CardActions>
