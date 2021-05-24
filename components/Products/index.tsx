@@ -1,24 +1,52 @@
-import products from '../../data/products.json';
+import { useEffect, useState } from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { ProductList, ProductWrapper } from './styles';
 import ProductItem from '../ProductItem';
+import { fetchGetJSON } from '../../utils/api-helpers';
+
+const { API_URL } = process.env;
 
 export type Product = {
   name: string;
-  description?: string;
+  quantity: number;
   sku: string;
+  id: string;
   price: number;
-  image: string;
-  currency: string;
+  images?: string;
 };
 
 const Products = () => {
+  const [products, setProducts]: any = useState(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetchGetJSON(`${API_URL}products`);
+
+      if (!response.message) {
+        setProducts(response.docs);
+      }
+      setLoaded(true);
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <ProductList>
-      {products.map((product: Product) => (
-        <ProductWrapper key={product.sku}>
-          <ProductItem product={product} />
-        </ProductWrapper>
-      ))}
+      {loaded ? (
+        products ? (
+          products.map((product: Product) => (
+            <ProductWrapper key={product.id}>
+              <ProductItem product={product} />
+            </ProductWrapper>
+          ))
+        ) : (
+          <div>Sem produtos</div>
+        )
+      ) : (
+        <CircularProgress />
+      )}
     </ProductList>
   );
 };

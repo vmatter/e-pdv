@@ -7,6 +7,7 @@ export const ProductList = styled.div`
   padding: 1.5rem;
   justify-content: center;
   overflow-y: auto;
+  width: 100%;
 
   /* width */
   ::-webkit-scrollbar {
