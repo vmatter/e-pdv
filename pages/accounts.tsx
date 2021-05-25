@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import Accounts from '../components/Accounts';
 
 const AccountsPage: NextPage = () => (
-  <Layout title="Contas | e-PDV">
+  <Layout title="Usuários | e-PDV">
     <Container maxWidth="xl">
       <Accounts />
     </Container>
