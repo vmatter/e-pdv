@@ -4,7 +4,6 @@ import { render, fireEvent, waitFor } from '../testUtils';
 jest.mock('next/router');
 
 describe('LoginForm', () => {
-  const expectedRouterPush = jest.fn();
   const expectedLogin = jest.fn();
   const expectedEmail = 'admin';
   const expectedPassword = 'admin';
@@ -23,9 +22,6 @@ describe('LoginForm', () => {
     waitFor(() => {
       expect(expectedLogin).toHaveBeenCalledTimes(1);
       expect(expectedLogin).toHaveBeenCalledWith('/login');
-
-      expect(expectedRouterPush).toHaveBeenCalledTimes(1);
-      expect(expectedRouterPush).toHaveBeenCalledWith('/login');
     });
   });
 
@@ -66,7 +62,6 @@ describe('LoginForm', () => {
       ).toBeInTheDocument();
 
       expect(expectedLogin).not.toHaveBeenCalled();
-      expect(expectedRouterPush).not.toHaveBeenCalled();
     });
   });
 
