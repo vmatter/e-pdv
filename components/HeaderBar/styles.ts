@@ -13,6 +13,7 @@ export const MenuButton = styled(IconButton)`
 
 export const LogoWrapper = styled.a`
   height: 100%;
+  cursor: pointer;
 `;
 
 export const LogoImg = styled.img`
