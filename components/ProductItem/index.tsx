@@ -13,7 +13,7 @@ type Props = {
 };
 
 const ProductItem = ({ product }: Props) => {
-  const { addItem, removeItem } = useShoppingCart();
+  const { addItem, decrementItem } = useShoppingCart();
   return (
     <Card>
       <CardMedia
@@ -38,7 +38,7 @@ const ProductItem = ({ product }: Props) => {
         <Button
           size="small"
           color="primary"
-          onClick={() => removeItem(product.sku)}
+          onClick={() => decrementItem(product.sku, 1)}
         >
           Remove
         </Button>
