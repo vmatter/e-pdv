@@ -46,6 +46,11 @@ const HeaderBar = () => {
     handleMobileMenuClose();
   };
 
+  const handleUsers = () => {
+    handleMenuClose();
+    router.push('/accounts');
+  };
+
   const handleLogout = () => {
     handleMenuClose();
     setAccessToken('');
@@ -78,8 +83,7 @@ const HeaderBar = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Usuários</MenuItem>
-      <MenuItem onClick={hendleProducts}>Produtos</MenuItem>
+      <MenuItem onClick={handleUsers}>Usuários</MenuItem>
       <MenuItem onClick={handleLogout}>Sair</MenuItem>
     </Menu>
   );
