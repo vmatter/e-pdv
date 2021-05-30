@@ -39,7 +39,7 @@ const ProductItem = ({
   updateList,
   handleAlerts,
 }: Props) => {
-  const { addItem, removeItem } = useShoppingCart();
+  const { addItem, decrementItem } = useShoppingCart();
   const [changedValues, setChangedValues] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
   const [imgValue, setImgValue] = useState('');
@@ -219,7 +219,7 @@ const ProductItem = ({
             <Button
               size="small"
               color="primary"
-              onClick={() => removeItem(product.sku)}
+              onClick={() => decrementItem(product.sku, 1)}
             >
               Remover
             </Button>
