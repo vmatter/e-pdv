@@ -86,8 +86,9 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
     handleAlerts(response);
   };
 
-  const inactivateProduct = async () => {
-    const response = await fetchPutProduct({ active: false });
+  const toggleActive = async () => {
+    const response = await fetchPutProduct({ active: !product.active });
+    !response.message && updateList();
     handleAlerts(response);
   };
 
@@ -131,7 +132,7 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
   return (
     <div>
       <Card>
-        {isAdmin ? (
+        {isAdmin && product.active ? (
           <CardActionArea onClick={() => setOpenDialog(true)}>
             <Tooltip disableFocusListener title="Clique para editar a imagem">
               <CardMedia
@@ -156,6 +157,7 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
           {isAdmin ? (
             <TextField
               defaultValue={product.name}
+              disabled={!product.active}
               name="name"
               fullWidth
               variant="standard"
@@ -174,6 +176,7 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
             <NumberInput
               defaultValue={product.price}
               handleChange={handleChange}
+              disabled={!product.active}
             />
           ) : (
             <Typography component="p">R${product.price}</Typography>
@@ -182,12 +185,8 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
 
         {isAdmin ? (
           <CardActions>
-            <Button
-              size="small"
-              color="primary"
-              onClick={() => inactivateProduct()}
-            >
-              Inativar produto
+            <Button size="small" color="primary" onClick={() => toggleActive()}>
+              {product.active ? 'Inativar' : 'Ativar'} Produto
             </Button>
           </CardActions>
         ) : (

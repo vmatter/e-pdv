@@ -13,14 +13,16 @@ export type Product = {
   id: string;
   price: number;
   images?: Array<string>;
+  active: boolean;
 };
 
 const Products = ({ isAdmin = false }) => {
   const [products, setProducts]: any = useState(null);
+  const [renderedProducts, setRenderedProducts]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
+
   const fetchProducts = async () => {
     const response = await fetchGetJSON(`${API_URL}products`);
-
     if (!response.message) {
       setProducts(response.docs);
     }
@@ -31,11 +33,18 @@ const Products = ({ isAdmin = false }) => {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    products &&
+      setRenderedProducts(
+        isAdmin ? products : products.filter((product: any) => !!product.active)
+      );
+  }, [products]);
+
   return (
     <ProductList>
       {loaded ? (
-        products ? (
-          products.map((product: Product) => (
+        renderedProducts ? (
+          renderedProducts.map((product: Product) => (
             <ProductWrapper key={product.id}>
               <ProductItem
                 product={product}

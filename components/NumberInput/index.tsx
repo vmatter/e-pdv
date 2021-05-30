@@ -36,9 +36,14 @@ export const NumberFormatCustom = forwardRef<
 type Props = {
   defaultValue: number;
   handleChange: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  disabled: boolean;
 };
 
-export const NumberInput = ({ defaultValue, handleChange }: Props) => {
+export const NumberInput = ({
+  defaultValue,
+  handleChange,
+  disabled,
+}: Props) => {
   return (
     <TextField
       variant="standard"
@@ -50,6 +55,7 @@ export const NumberInput = ({ defaultValue, handleChange }: Props) => {
       InputProps={{
         inputComponent: NumberFormatCustom as any,
       }}
+      disabled={disabled}
     />
   );
 };
