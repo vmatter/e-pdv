@@ -1,19 +1,30 @@
+import Router from 'next/router';
 import { getAccessToken, setAccessToken } from './token';
+import { isTokenValid } from './token-validation';
 
 const { API_URL } = process.env;
 
 export async function fetchGetJSON(url: string) {
   const accessToken = getAccessToken();
-  try {
-    const data = await fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        'x-access-token': accessToken,
-      } as any,
-    }).then(res => res.json());
-    return data;
-  } catch (err) {
-    throw new Error(err.message);
+  const valid = isTokenValid();
+  console.log(`valid`, valid);
+  if (!valid) {
+    Router.push('/login');
+    return {
+      message: 'Invalid token',
+    };
+  } else {
+    try {
+      const data = await fetch(url, {
+        headers: {
+          'Content-Type': 'application/json',
+          'x-access-token': accessToken,
+        } as any,
+      }).then(res => res.json());
+      return data;
+    } catch (err) {
+      throw new Error(err.message);
+    }
   }
 }
 
@@ -42,20 +53,27 @@ export async function fetchPostJSON(
   isPut?: boolean
 ) {
   const accessToken = getAccessToken();
-
-  try {
-    // Default options are marked with *
-    const response = await fetch(url, {
-      method: isPut ? 'PUT' : 'POST', // *GET, POST, PUT, DELETE, etc.
-      headers: {
-        'Content-Type': 'application/json',
-        'x-access-token': accessToken,
-      } as any,
-      referrerPolicy: 'no-referrer', // no-referrer, *client
-      body: JSON.stringify(data || {}), // body data type must match "Content-Type" header
-    });
-    return await response.json(); // parses JSON response into native JavaScript objects
-  } catch (err) {
-    throw new Error(err.message);
+  const valid = isTokenValid();
+  if (!valid) {
+    Router.push('/login');
+    return {
+      message: 'Invalid token',
+    };
+  } else {
+    try {
+      // Default options are marked with *
+      const response = await fetch(url, {
+        method: isPut ? 'PUT' : 'POST', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          'Content-Type': 'application/json',
+          'x-access-token': accessToken,
+        } as any,
+        referrerPolicy: 'no-referrer', // no-referrer, *client
+        body: JSON.stringify(data || {}), // body data type must match "Content-Type" header
+      });
+      return await response.json(); // parses JSON response into native JavaScript objects
+    } catch (err) {
+      throw new Error(err.message);
+    }
   }
 }
