@@ -18,7 +18,6 @@ export const NumberFormatCustom = forwardRef<
       {...other}
       getInputRef={ref}
       onValueChange={values => {
-        console.log(`values`, values);
         onChange({
           target: {
             name: props.name,
@@ -34,15 +33,23 @@ export const NumberFormatCustom = forwardRef<
 });
 
 type Props = {
-  defaultValue: number;
   handleChange: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
-  disabled: boolean;
+  defaultValue?: number;
+  disabled?: boolean;
+  label?: string;
+  placeholder?: string;
+  value?: string;
+  error?: boolean;
 };
 
 export const NumberInput = ({
   defaultValue,
   handleChange,
-  disabled,
+  disabled = false,
+  label = 'Preço',
+  placeholder = '',
+  value,
+  error = false,
 }: Props) => {
   return (
     <TextField
@@ -51,11 +58,15 @@ export const NumberInput = ({
       defaultValue={defaultValue}
       onChange={handleChange}
       name="price"
+      label={label}
+      placeholder={placeholder}
       id="formatted-numberformat-input"
       InputProps={{
         inputComponent: NumberFormatCustom as any,
       }}
       disabled={disabled}
+      value={value}
+      error={error}
     />
   );
 };

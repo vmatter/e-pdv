@@ -7,7 +7,6 @@ const { API_URL } = process.env;
 export async function fetchGetJSON(url: string) {
   const accessToken = getAccessToken();
   const valid = isTokenValid();
-  console.log(`valid`, valid);
   if (!valid) {
     Router.push('/login');
     return {
