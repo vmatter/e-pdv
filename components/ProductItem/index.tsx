@@ -11,11 +11,10 @@ import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import { fetchPostJSON } from 'utils/api-helpers';
 import { Product } from '../Products';
-import { Alert } from '../../components/Alert';
 import { NumberInput } from '../../components/NumberInput';
 import { ReponsiveDialog } from '../../components/Dialog';
 import { useDebounce } from '../../hooks/useDebounce';
-import { ProductName, StyledSnackBar } from './styles';
+import { ProductName } from './styles';
 
 const { API_URL } = process.env;
 
@@ -23,18 +22,24 @@ type Props = {
   product: Product;
   isAdmin: boolean;
   updateList: () => Promise<void>;
+  handleAlerts: (res: any) => void;
 };
 
 type FormValues = {
   image: string;
   name: string;
   price: number;
+  sku: string;
+  quantity: number;
 };
 
-const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
+const ProductItem = ({
+  product,
+  isAdmin = false,
+  updateList,
+  handleAlerts,
+}: Props) => {
   const { addItem, removeItem } = useShoppingCart();
-  const [openSucessAlert, setOpenSucessAlert] = useState(false);
-  const [openErrorAlert, setOpenErrorAlert] = useState(false);
   const [changedValues, setChangedValues] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
   const [imgValue, setImgValue] = useState('');
@@ -43,6 +48,8 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
       image: product.images?.[0] || '',
       name: product.name,
       price: product.price,
+      sku: product.sku,
+      quantity: product.quantity,
     },
     1000
   );
@@ -53,7 +60,13 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
 
   useEffect(() => {
     changedValues && editProduct();
-  }, [debouncedValue.price, debouncedValue.image, debouncedValue.name]);
+  }, [
+    debouncedValue.price,
+    debouncedValue.image,
+    debouncedValue.name,
+    debouncedValue.sku,
+    debouncedValue.quantity,
+  ]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValues({
@@ -63,23 +76,8 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
     setChangedValues(true);
   };
 
-  const handleClose = () => {
-    setOpenSucessAlert(false);
-    setOpenErrorAlert(false);
-  };
-
   const fetchPutProduct = (body: any) =>
     fetchPostJSON(`${API_URL}products/${product.id}`, body, true);
-
-  const handleAlerts = (res: any) => {
-    if (!res.message) {
-      openSucessAlert && setOpenSucessAlert(false);
-      setOpenSucessAlert(true);
-    } else {
-      openErrorAlert && setOpenErrorAlert(false);
-      setOpenErrorAlert(true);
-    }
-  };
 
   const editProduct = async () => {
     const response = await fetchPutProduct(values);
@@ -159,6 +157,7 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
               defaultValue={product.name}
               disabled={!product.active}
               name="name"
+              label="Nome do produto"
               fullWidth
               variant="standard"
               margin="dense"
@@ -180,6 +179,32 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
             />
           ) : (
             <Typography component="p">R${product.price}</Typography>
+          )}
+          {isAdmin && (
+            <>
+              <TextField
+                name="quantity"
+                type="number"
+                label="Quantidade"
+                variant="standard"
+                margin="dense"
+                inputProps={{ 'aria-label': 'Quantidade do produto' }}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                defaultValue={product.quantity}
+                disabled={!product.active}
+              />
+
+              <TextField
+                name="sku"
+                label="SKU do produto"
+                variant="standard"
+                margin="dense"
+                inputProps={{ 'aria-label': 'Quantidade do produto' }}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                defaultValue={product.sku}
+                disabled={!product.active}
+              />
+            </>
           )}
         </CardContent>
 
@@ -208,24 +233,6 @@ const ProductItem = ({ product, isAdmin = false, updateList }: Props) => {
           </CardActions>
         )}
       </Card>
-      <StyledSnackBar
-        open={openSucessAlert}
-        autoHideDuration={6000}
-        onClose={handleClose}
-      >
-        <Alert onClose={handleClose} severity="success">
-          Produto atualizado com sucesso!
-        </Alert>
-      </StyledSnackBar>
-      <StyledSnackBar
-        open={openErrorAlert}
-        autoHideDuration={6000}
-        onClose={handleClose}
-      >
-        <Alert onClose={handleClose} severity="error">
-          Houve um erro ao atualizar o produto :(
-        </Alert>
-      </StyledSnackBar>
       <ReponsiveDialog
         title="Editar Imagem"
         content={dialogContent}
