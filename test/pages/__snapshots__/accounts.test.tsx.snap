@@ -17,7 +17,7 @@ exports[`Accounts matches snapshot 1`] = `
           <h4
             class="MuiTypography-root MuiTypography-h4 css-ggtcmo-MuiTypography-root"
           >
-            Gerenciar contas
+            Gerenciar usuários
           </h4>
           <p
             class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
@@ -36,48 +36,10 @@ exports[`Accounts matches snapshot 1`] = `
           <label
             class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="input-name"
-            id="input-name-label"
-          >
-            Nome
-          </label>
-          <div
-            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
-          >
-            <input
-              aria-invalid="false"
-              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-              data-testid="input-name"
-              id="input-name"
-              name="name"
-              placeholder="ex: João da Silva"
-              type="text"
-              value=""
-            />
-            <fieldset
-              aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
-            >
-              <legend
-                class="css-2s9zix"
-              >
-                <span>
-                  Nome
-                </span>
-              </legend>
-            </fieldset>
-          </div>
-        </div>
-        <div
-          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
-        >
-          <label
-            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
             for="select-type-person"
             id="select-type-person-label"
           >
-            Tipo Pessoa
+            Tipo Usuário
           </label>
           <div
             class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
@@ -123,7 +85,45 @@ exports[`Accounts matches snapshot 1`] = `
                 class="css-2s9zix"
               >
                 <span>
-                  Tipo Pessoa
+                  Tipo Usuário
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-name"
+            id="input-name-label"
+          >
+            Nome
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-name"
+              id="input-name"
+              name="name"
+              placeholder="ex: João da Silva"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-2s9zix"
+              >
+                <span>
+                  Nome
                 </span>
               </legend>
             </fieldset>
