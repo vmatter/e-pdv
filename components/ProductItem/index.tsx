@@ -33,15 +33,13 @@ type FormValues = {
   quantity: number;
 };
 
-const ProductItem = ({ product }: Props) => {
-  const { addItem, decrementItem } = useShoppingCart();
 const ProductItem = ({
   product,
   isAdmin = false,
   updateList,
   handleAlerts,
 }: Props) => {
-  const { addItem, removeItem } = useShoppingCart();
+  const { addItem, decrementItem } = useShoppingCart();
   const [changedValues, setChangedValues] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
   const [imgValue, setImgValue] = useState('');
@@ -221,7 +219,7 @@ const ProductItem = ({
             <Button
               size="small"
               color="primary"
-              onClick={() => removeItem(product.sku)}
+              onClick={() => decrementItem(product.sku, 1)}
             >
               Remover
             </Button>
@@ -242,35 +240,6 @@ const ProductItem = ({
         open={openDialog}
         handleClose={() => setOpenDialog(false)}
       />
-
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
-          {product.name}
-        </Typography>
-        <Typography component="p">
-          {formatCurrencyString({
-            value: product.price,
-            currency: CURRENCY,
-          })}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button
-          size="small"
-          color="primary"
-          onClick={() => decrementItem(product.sku, 1)}
-        >
-          Remove
-        </Button>
-        <Button
-          size="small"
-          color="primary"
-          onClick={() => addItem(product as any)}
-        >
-          Add Item
-        </Button>
-      </CardActions>
-    </Card>
     </div>
   );
 };
