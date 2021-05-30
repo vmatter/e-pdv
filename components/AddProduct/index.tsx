@@ -110,7 +110,7 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
             <FieldContext>
               <TextField
                 name="name"
-                label="Nome do produto"
+                label="Nome do produto *"
                 placeholder="Meu produto X"
                 variant="standard"
                 margin="dense"
@@ -121,7 +121,7 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
               />
 
               <NumberInput
-                label="Preço do produto"
+                label="Preço do produto *"
                 placeholder="R$ 50.00"
                 handleChange={handleChange}
                 value={values?.price || ''}
@@ -132,7 +132,7 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
                 name="quantity"
                 type="number"
                 placeholder="0"
-                label="Quantidade"
+                label="Quantidade *"
                 variant="standard"
                 margin="dense"
                 inputProps={{ 'aria-label': 'Quantidade do produto' }}
@@ -144,7 +144,7 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
               <TextField
                 name="sku"
                 placeholder="sku_do_produto"
-                label="SKU do produto"
+                label="SKU do produto *"
                 variant="standard"
                 margin="dense"
                 inputProps={{ 'aria-label': 'Quantidade do produto' }}
