@@ -12,23 +12,22 @@ export type Product = {
   sku: string;
   id: string;
   price: number;
-  images?: string;
+  images?: Array<string>;
 };
 
 const Products = ({ isAdmin = false }) => {
   const [products, setProducts]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const fetchProducts = async () => {
+    const response = await fetchGetJSON(`${API_URL}products`);
+
+    if (!response.message) {
+      setProducts(response.docs);
+    }
+    setLoaded(true);
+  };
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetchGetJSON(`${API_URL}products`);
-
-      if (!response.message) {
-        setProducts(response.docs);
-      }
-      setLoaded(true);
-    };
-
     fetchProducts();
   }, []);
 
@@ -38,7 +37,11 @@ const Products = ({ isAdmin = false }) => {
         products ? (
           products.map((product: Product) => (
             <ProductWrapper key={product.id}>
-              <ProductItem product={product} isAdmin={isAdmin} />
+              <ProductItem
+                product={product}
+                isAdmin={isAdmin}
+                updateList={fetchProducts}
+              />
             </ProductWrapper>
           ))
         ) : (
