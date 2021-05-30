@@ -1,7 +1,13 @@
+// comment
 import { useState } from 'react';
 import { Button, TextField, Typography, Card } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
-import { Wrapper, HeaderWrapper, InputWrapper, FormHeader } from './styles';
+import {
+  Wrapper,
+  HeaderWrapper,
+  InputWrapper,
+  FormHeader
+} from './styles';
 
 const Accounts = () => {
   const [showWarning, setShowWarning] = useState(false);
@@ -27,19 +33,44 @@ const Accounts = () => {
 
   return (
     <Wrapper>
-      <Card variant="outlined">
+      <Card variant="outlined" elevation={2}>
         <HeaderWrapper>
           <FormHeader>
             <Typography variant="h4" paddingBottom={1}>
-              Gerenciar contas
+              Gerenciar usuários
             </Typography>
             <Typography component="p">
               Crie usuários do tipo Administrador ou Operador de Caixa
             </Typography>
           </FormHeader>
         </HeaderWrapper>
-
+        
         <InputWrapper autoComplete="off">
+
+          <TextField
+            id="select-type-person"
+            variant="outlined"
+            name="typePerson"
+            label="Tipo Usuário"
+            fullWidth
+            value={person}
+            select
+            helperText={showPersonError && 'Este campo deve ser preenchido.'}
+            error={showPersonError || showWarning}
+            onChange={(e: any) => {
+              setShowPersonError(false);
+              setShowWarning(false);
+              setPerson(e.target.value);
+            }}
+            inputProps={{
+              'data-testid': 'select-type-person',
+            }}
+          >
+            <MenuItem value="">Selecione</MenuItem>
+            <MenuItem value={"admin"}>Administrador</MenuItem>
+            <MenuItem value={"buyer"}>Operador de Caixa</MenuItem>
+          </TextField> 
+
           <TextField
             id="input-name"
             variant="outlined"
@@ -58,32 +89,8 @@ const Accounts = () => {
             inputProps={{
               'data-testid': 'input-name',
             }}
-          />
-
-          <TextField
-            id="select-type-person"
-            variant="outlined"
-            name="typePerson"
-            label="Tipo Pessoa"
-            fullWidth
-            value={person}
-            select
-            helperText={showPersonError && 'Este campo deve ser preenchido.'}
-            error={showPersonError || showWarning}
-            onChange={(e: any) => {
-              setShowPersonError(false);
-              setShowWarning(false);
-              setPerson(e.target.value);
-            }}
-            inputProps={{
-              'data-testid': 'select-type-person',
-            }}
-          >
-            <MenuItem value="">Selecione</MenuItem>
-            <MenuItem value={'admin'}>Administrador</MenuItem>
-            <MenuItem value={'buyer'}>Operador de Caixa</MenuItem>
-          </TextField>
-
+          />       
+         
           <TextField
             id="input-email"
             variant="outlined"
@@ -103,7 +110,7 @@ const Accounts = () => {
               'data-testid': 'input-email',
             }}
           />
-
+         
           <TextField
             id="input-password"
             variant="outlined"
@@ -122,7 +129,7 @@ const Accounts = () => {
               'data-testid': 'input-password',
             }}
           />
-
+          
           <Button
             id="button-save"
             data-testid="button-save"
