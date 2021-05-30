@@ -38,14 +38,15 @@ export const authRequest = async (data?: Record<string, unknown>) => {
 
 export async function fetchPostJSON(
   url: string,
-  data?: Record<string, unknown>
+  data?: Record<string, unknown>,
+  isPut?: boolean
 ) {
   const accessToken = getAccessToken();
 
   try {
     // Default options are marked with *
     const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      method: isPut ? 'PUT' : 'POST', // *GET, POST, PUT, DELETE, etc.
       headers: {
         'Content-Type': 'application/json',
         'x-access-token': accessToken,
