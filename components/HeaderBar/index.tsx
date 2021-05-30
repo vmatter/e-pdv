@@ -84,6 +84,7 @@ const HeaderBar = () => {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleUsers}>Usuários</MenuItem>
+      <MenuItem onClick={hendleProducts}>Produtos</MenuItem>
       <MenuItem onClick={handleLogout}>Sair</MenuItem>
     </Menu>
   );
