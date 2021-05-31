@@ -35,10 +35,13 @@ const CartSummary = () => {
 
     if (response.statusCode === 500) {
       console.error(response.message);
+      setLoading(false);
       return;
     }
 
     redirectToCheckout({ sessionId: response.id });
+
+    setLoading(false);
   };
 
   return (
