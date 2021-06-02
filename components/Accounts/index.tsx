@@ -1,7 +1,9 @@
-// comment
 import { useState } from 'react';
 import { Button, TextField, Typography, Card } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
+import Alert from '@material-ui/core/Alert';
+import AlertTitle from '@material-ui/core/AlertTitle';
+import { createUsers } from '../../utils/api-helpers';
 import {
   Wrapper,
   HeaderWrapper,
@@ -11,23 +13,38 @@ import {
 
 const Accounts = () => {
   const [showWarning, setShowWarning] = useState(false);
+  const [showError, setShowError] = useState(false);
   const [showNameError, setShowNameError] = useState(false);
-  const [showPersonError, setShowPersonError] = useState(false);
+  const [showScopeError, setShowScopeError] = useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
   const [showPasswordError, setShowPasswordError] = useState(false);
   const [name, setName] = useState('');
-  const [person, setPerson] = useState('');
+  const [scope, setScope] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const onSubmit = async (e: any) => {
     e?.preventDefault();
 
-    if (name === '' || person === '' || email === '' || password === '') {
+    if (name === '' || scope === '' || email === '' || password === '') {
       name === '' && setShowNameError(true);
-      person === '' && setShowPersonError(true);
+      scope === '' && setShowScopeError(true);
       email === '' && setShowEmailError(true);
       password === '' && setShowPasswordError(true);
+    }
+    else{
+      const response = await createUsers({
+        name,
+        email,
+        password,
+        "scope":[scope]
+      });
+
+      if (!response.message) {
+        setShowError(false);
+      } else {
+        setShowError(true);
+      }
     }
   };
 
@@ -45,22 +62,29 @@ const Accounts = () => {
           </FormHeader>
         </HeaderWrapper>
         
+        {showError && (
+          <Alert severity="error">
+            <AlertTitle>Erro</AlertTitle>
+            Erro ao cadastrar usuário, tente novamente.
+          </Alert>
+        )}
+
         <InputWrapper autoComplete="off">
 
           <TextField
-            id="select-type-person"
+            id="select-type-scope"
             variant="outlined"
-            name="typePerson"
+            name="scope"
             label="Tipo Usuário"
             fullWidth
-            value={person}
+            value={scope}
             select
-            helperText={showPersonError && 'Este campo deve ser preenchido.'}
-            error={showPersonError || showWarning}
+            helperText={showScopeError && 'Este campo deve ser preenchido.'}
+            error={showScopeError || showWarning}
             onChange={(e: any) => {
-              setShowPersonError(false);
+              setShowScopeError(false);
               setShowWarning(false);
-              setPerson(e.target.value);
+              setScope(e.target.value);
             }}
             inputProps={{
               'data-testid': 'select-type-person',
