@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import Snackbar from '@material-ui/core/Snackbar';
 
 export const Wrapper = styled.div`
   min-height: 100vh;
@@ -31,4 +32,12 @@ export const LogoWrapper = styled.a`
 
 export const LogoImg = styled.img`
   height: 45px;
+`;
+
+export const StyledSnackBar = styled(Snackbar)`
+  width: 400px;
+
+  ${({ theme }) => `${theme.breakpoints.down('md')} {
+    width: 100%;
+   }`}
 `;
