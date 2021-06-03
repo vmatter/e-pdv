@@ -2,18 +2,13 @@ import { useState } from 'react';
 import { Button, TextField, Typography, Card } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/core/Alert';
-import AlertTitle from '@material-ui/core/AlertTitle';
-import { createUsers } from '../../utils/api-helpers';
-import {
-  Wrapper,
-  HeaderWrapper,
-  InputWrapper,
-  FormHeader
-} from './styles';
+import { fetchPostJSON } from '../../utils/api-helpers';
+import { Wrapper, HeaderWrapper, InputWrapper, FormHeader, StyledSnackBar } from './styles';
 
 const Accounts = () => {
   const [showWarning, setShowWarning] = useState(false);
-  const [showError, setShowError] = useState(false);
+  const [openSucessAlert, setOpenSucessAlert] = useState(false);
+  const [openErrorAlert, setOpenErrorAlert] = useState(false);
   const [showNameError, setShowNameError] = useState(false);
   const [showScopeError, setShowScopeError] = useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
@@ -22,6 +17,13 @@ const Accounts = () => {
   const [scope, setScope] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const { API_URL } = process.env;
+
+  const handleClose = () => {
+    setOpenSucessAlert(false);
+    setOpenErrorAlert(false);
+  };
 
   const onSubmit = async (e: any) => {
     e?.preventDefault();
@@ -33,17 +35,22 @@ const Accounts = () => {
       password === '' && setShowPasswordError(true);
     }
     else{
-      const response = await createUsers({
-        name,
-        email,
-        password,
-        "scope":[scope]
-      });
+
+      const body = {
+        name: name,
+        email: email,
+        password: password,
+        scope: [scope]
+      };
+
+      const response = await fetchPostJSON(`${API_URL}users`, body);
 
       if (!response.message) {
-        setShowError(false);
+        openSucessAlert && setOpenSucessAlert(false);
+        setOpenSucessAlert(true);
       } else {
-        setShowError(true);
+        openErrorAlert && setOpenErrorAlert(false);
+        setOpenErrorAlert(true);
       }
     }
   };
@@ -62,12 +69,24 @@ const Accounts = () => {
           </FormHeader>
         </HeaderWrapper>
         
-        {showError && (
-          <Alert severity="error">
-            <AlertTitle>Erro</AlertTitle>
-            Erro ao cadastrar usuário, tente novamente.
+        <StyledSnackBar
+          open={openSucessAlert}
+          autoHideDuration={6000}
+          onClose={handleClose}
+        >
+          <Alert onClose={handleClose} severity="success">
+              Usuário atualizado com sucesso!
           </Alert>
-        )}
+        </StyledSnackBar>
+        <StyledSnackBar
+          open={openErrorAlert}
+          autoHideDuration={6000}
+          onClose={handleClose}
+        >
+          <Alert onClose={handleClose} severity="error">
+            Houve um erro ao atualizar o usuário :(
+          </Alert>
+        </StyledSnackBar>
 
         <InputWrapper autoComplete="off">
 
