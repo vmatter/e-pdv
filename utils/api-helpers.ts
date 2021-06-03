@@ -76,31 +76,3 @@ export async function fetchPostJSON(
     }
   }
 }
-
-export const createUsers = async (data?: Record<string, unknown>) => {
-  const accessToken = getAccessToken();
-  const valid = isTokenValid();
-  if (!valid) {
-    Router.push('/login');
-    return {
-      message: 'Invalid token',
-    };
-  } else {
-    try {
-      // Default options are marked with *
-      const response = await fetch(`${API_URL}users`, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        headers: {
-          'Content-Type': 'application/json',
-          'x-access-token': accessToken,
-        } as any,
-        referrerPolicy: 'no-referrer', // no-referrer, *client
-        body: JSON.stringify(data || {}), // body data type must match "Content-Type" header
-      });
-      const jsonRes = (await response.json()) as any; // parses JSON response into native JavaScript objects
-      return jsonRes;
-    } catch (err) {
-      throw new Error(err.message);
-    }
-  }
-};
