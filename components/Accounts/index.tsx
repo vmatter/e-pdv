@@ -48,6 +48,12 @@ const Accounts = () => {
       if (!response.message) {
         openSucessAlert && setOpenSucessAlert(false);
         setOpenSucessAlert(true);
+
+        setName('');
+        setScope('');
+        setEmail('');
+        setPassword('');
+
       } else {
         openErrorAlert && setOpenErrorAlert(false);
         setOpenErrorAlert(true);
