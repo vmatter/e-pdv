@@ -128,6 +128,7 @@ const Accounts = () => {
             label="Nome"
             placeholder="ex: João da Silva"
             fullWidth
+            value={name}
             helperText={showNameError && 'Este campo deve ser preenchido.'}
             error={showNameError || showWarning}
             onChange={(e: any) => {
@@ -148,6 +149,7 @@ const Accounts = () => {
             label="E-mail"
             placeholder="ex: exemplo@gmail.com"
             fullWidth
+            value={email}
             helperText={showEmailError && 'Este campo deve ser preenchido.'}
             error={showEmailError || showWarning}
             onChange={(e: any) => {
@@ -167,6 +169,7 @@ const Accounts = () => {
             name="password"
             label="Senha"
             fullWidth
+            value={password}
             helperText={showPasswordError && 'Este campo deve ser preenchido.'}
             error={showPasswordError || showWarning}
             onChange={(e: any) => {
