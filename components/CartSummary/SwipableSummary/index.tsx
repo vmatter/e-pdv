@@ -8,25 +8,14 @@ import { Root, StyledBox, Puller } from './styles';
 
 const drawerBleeding = 222;
 
-interface Props extends SummaryProps, SummaryItemsProps {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-}
+interface Props extends SummaryProps, SummaryItemsProps {}
 
 const SwipableSummary = (props: Props) => {
-  const { window } = props;
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
-
-  // This is used only for the example
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Root>
@@ -40,7 +29,6 @@ const SwipableSummary = (props: Props) => {
         }}
       />
       <SwipeableDrawer
-        container={container}
         anchor="bottom"
         open={open}
         onClose={toggleDrawer(false)}
