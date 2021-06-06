@@ -2,7 +2,7 @@
 
 E-PDV is a POS using TypeScript, Nextjs, and react-stripe-js
 
-Board Status: 
+Board Status:
 
 [![Board Status](https://dev.azure.com/DEVIII2021/6f3d04ba-6de8-4fab-b27c-24fef227c9b6/8371c6d6-8191-4e65-b628-8427df26c063/_apis/work/boardbadge/cab0b06f-1f3e-4d90-b789-1c92421b1eb7?columnOptions=1)](https://dev.azure.com/DEVIII2021/6f3d04ba-6de8-4fab-b27c-24fef227c9b6/_boards/board/t/8371c6d6-8191-4e65-b628-8427df26c063/Microsoft.RequirementCategory/)
 
@@ -70,7 +70,7 @@ Once created, you can click to reveal your webhook's signing secret. Copy the we
 
 After adding an environment variable you will need to rebuild your project for it to become within your code. Within your project Dashboard, navigate to the "Deployments" tab, select the most recent deployment, click the overflow menu button (next to the "Visit" button) and select "Redeploy".
 
-### Demo
+### Demo data
 
 The demo is running in test mode -- use `4242424242424242` as a test card number with any CVC + future expiration date.
 
