@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button';
 import { FormActions, InfoItem, InfoWrapper, SummaryWrapper } from '../styles';
 
-type Props = {
+export type SummaryProps = {
   cartCount: number;
   formattedTotalPrice: string;
   cartEmpty: boolean;
@@ -15,7 +15,7 @@ export const Summary = ({
   cartEmpty,
   loading,
   clearCart,
-}: Props) => {
+}: SummaryProps) => {
   return (
     <SummaryWrapper>
       <InfoWrapper>
