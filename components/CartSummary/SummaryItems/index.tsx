@@ -23,7 +23,6 @@ export const SummaryItems = ({
   incrementItem,
   decrementItem,
 }: Props) => {
-  console.log(`cartDetails`, cartDetails);
   return (
     <ItemsList>
       {Object.entries(cartDetails).map(product => {

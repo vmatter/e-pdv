@@ -30,16 +30,14 @@ const CartSummary = () => {
     event.preventDefault();
     setLoading(true);
 
-    const response = await fetchPostJSON(
-      `${API_URL}checkout`,
-      {
-        "cart_items": 
-          cartDetails,
-        
-        "success_url": "https://e-pdv-app.vercel.app/",
-        "cancel_url": "https://e-pdv-app.vercel.app/"
-      }
-    );
+    const response = await fetchPostJSON(`${API_URL}checkout`, {
+      cart_items: Object.values(cartDetails).map(product => ({
+        id: product.id,
+        quantity: product.quantity,
+      })),
+      success_url: `${window.location.href}/result?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${window.location.href}`,
+    });
 
     if (response.statusCode === 500) {
       console.error(response.message);
