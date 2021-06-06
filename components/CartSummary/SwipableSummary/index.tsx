@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Global } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-// import Skeleton from '@material-ui/core/Skeleton';
-// import Typography from '@material-ui/core/Typography';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { Summary, SummaryProps } from '../Summary';
 import { SummaryItems, SummaryItemsProps } from '../SummaryItems';
