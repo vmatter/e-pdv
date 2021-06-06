@@ -8,6 +8,8 @@ import { SummaryItems } from './SummaryItems';
 import { Summary } from './Summary';
 import { Container, Form, FormContent } from './styles';
 
+const { API_URL } = process.env;
+
 const CartSummary = () => {
   const [loading, setLoading] = useState(false);
   const [cartEmpty, setCartEmpty] = useState(true);
@@ -29,8 +31,14 @@ const CartSummary = () => {
     setLoading(true);
 
     const response = await fetchPostJSON(
-      '/api/checkout_sessions/cart',
-      cartDetails
+      `${API_URL}checkout`,
+      {
+        "cart_items": 
+          cartDetails,
+        
+        "success_url": "https://e-pdv-app.vercel.app/",
+        "cancel_url": "https://e-pdv-app.vercel.app/"
+      }
     );
 
     if (response.statusCode === 500) {

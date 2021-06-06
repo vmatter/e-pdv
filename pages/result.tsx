@@ -1,13 +1,13 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-
+import useSWR from 'swr';
+import { fetchGetJSON } from '../utils/api-helpers';
 import Layout from '../components/Layout';
 import PrintObject from '../components/PrintObject';
 import CartContainer from '../components/CartContainer';
 import ClearCart from '../components/ClearCart';
 
-import { fetchGetJSON } from '../utils/api-helpers';
-import useSWR from 'swr';
+const { API_URL } = process.env;
 
 const ResultPage: NextPage = () => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const ResultPage: NextPage = () => {
   // https://nextjs.org/docs/basic-features/data-fetching#static-generation
   const { data, error } = useSWR(
     router.query.session_id
-      ? `/api/checkout_sessions/${router.query.session_id}`
+      ? `${API_URL}checkout/${router.query.session_id}`
       : null,
     fetchGetJSON
   );
