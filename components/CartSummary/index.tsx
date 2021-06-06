@@ -63,6 +63,7 @@ const CartSummary = () => {
       cartEmpty={cartEmpty}
       loading={loading}
       clearCart={clearCart}
+      handleCheckout={handleCheckout}
     />
   ) : (
     <Paper elevation={3}>

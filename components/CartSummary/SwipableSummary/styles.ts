@@ -1,4 +1,4 @@
-import { experimentalStyled as styled } from '@material-ui/core/styles';
+import styled from '@emotion/styled';
 import { grey } from '@material-ui/core/colors';
 import Box from '@material-ui/core/Box';
 
@@ -22,3 +22,7 @@ export const Puller = styled(Box)(({ theme }) => ({
   top: 8,
   left: 'calc(50% - 15px)',
 }));
+
+export const Wrapper = styled.div`
+  margin-top: 6rem;
+`;

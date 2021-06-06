@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { FormEventHandler, useState } from 'react';
 import { Global } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { Summary, SummaryProps } from '../Summary';
 import { SummaryItems, SummaryItemsProps } from '../SummaryItems';
-import { Root, StyledBox, Puller } from './styles';
+import { Root, StyledBox, Puller, Wrapper } from './styles';
+import { Form } from '../styles';
 
-const drawerBleeding = 222;
+const drawerBleeding = 140;
 
-interface Props extends SummaryProps, SummaryItemsProps {}
+interface Props extends SummaryProps, SummaryItemsProps {
+  handleCheckout: FormEventHandler<HTMLFormElement>;
+}
 
 const SwipableSummary = (props: Props) => {
   const [open, setOpen] = useState(false);
@@ -51,7 +54,10 @@ const SwipableSummary = (props: Props) => {
           }}
         >
           <Puller />
-          <Summary {...props} />
+
+          <Form onSubmit={props.handleCheckout}>
+            <Summary {...props} />
+          </Form>
         </StyledBox>
         <StyledBox
           sx={{
@@ -61,7 +67,9 @@ const SwipableSummary = (props: Props) => {
             overflow: 'auto',
           }}
         >
-          <SummaryItems {...props} />
+          <Wrapper>
+            <SummaryItems {...props} />
+          </Wrapper>
         </StyledBox>
       </SwipeableDrawer>
     </Root>
