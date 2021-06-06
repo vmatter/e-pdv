@@ -1,26 +1,29 @@
 import { useState, MouseEvent } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+// import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import {
   FlexGrow,
   LogoImg,
   LogoWrapper,
-  Search,
-  SearchIconWrapper,
-  CustomInput,
+  // Search,
+  // SearchIconWrapper,
+  // CustomInput,
   MenuButton,
 } from './styles';
 import { DesktopSection, MobileSection } from '../Layout/styles';
+import { setAccessToken } from '../../utils/token';
 
 const HeaderBar = () => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [
     mobileMoreAnchorEl,
@@ -41,6 +44,22 @@ const HeaderBar = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
+  };
+
+  const handleUsers = () => {
+    handleMenuClose();
+    router.push('/accounts');
+  };
+
+  const handleLogout = () => {
+    handleMenuClose();
+    setAccessToken('');
+    router.push('/login');
+  };
+
+  const hendleProducts = () => {
+    handleMenuClose();
+    router.push('/products');
   };
 
   const handleMobileMenuOpen = (event: MouseEvent<HTMLElement>) => {
@@ -64,8 +83,9 @@ const HeaderBar = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Minha conta</MenuItem>
+      <MenuItem onClick={handleUsers}>Usuários</MenuItem>
+      <MenuItem onClick={hendleProducts}>Produtos</MenuItem>
+      <MenuItem onClick={handleLogout}>Sair</MenuItem>
     </Menu>
   );
 
@@ -113,7 +133,7 @@ const HeaderBar = () => {
             </LogoWrapper>
           </Link>
           <FlexGrow />
-          <Search>
+          {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -121,7 +141,7 @@ const HeaderBar = () => {
               placeholder="Buscar..."
               inputProps={{ 'aria-label': 'buscar' }}
             />
-          </Search>
+          </Search> */}
           <DesktopSection>
             <IconButton
               edge="end"

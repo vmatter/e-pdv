@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import Typography from '@material-ui/core/Typography';
+import Snackbar from '@material-ui/core/Snackbar';
 
 export const ProductList = styled.div`
   display: flex;
@@ -7,6 +9,7 @@ export const ProductList = styled.div`
   padding: 1.5rem;
   justify-content: center;
   overflow-y: auto;
+  width: 100%;
 
   /* width */
   ::-webkit-scrollbar {
@@ -36,4 +39,16 @@ export const ProductList = styled.div`
 export const ProductWrapper = styled.div`
   height: fit-content;
   width: 300px;
+`;
+
+export const Title = styled(Typography)`
+  margin-left: 2rem;
+`;
+
+export const StyledSnackBar = styled(Snackbar)`
+  width: 400px;
+
+  ${({ theme }) => `${theme.breakpoints.down('md')} {
+    width: 100%;
+   }`}
 `;

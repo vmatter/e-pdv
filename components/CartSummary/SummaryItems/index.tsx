@@ -33,7 +33,9 @@ export const SummaryItems = ({
           <ItemWrapper key={sku}>
             <ListItemAvatar>
               <Avatar>
-                <ProductIcon src={content.image} />
+                <ProductIcon
+                  src={content.images?.[0] || '/placeholder-image.png'}
+                />
               </Avatar>
             </ListItemAvatar>
             <ItemDescription

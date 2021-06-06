@@ -7,13 +7,13 @@ import { NextApiRequest, NextApiResponse } from 'next';
  *
  * The important thing is that the product info is loaded from somewhere trusted
  * so you know the pricing information is accurate.
- */
-import { validateCartItems } from 'use-shopping-cart/src/serverUtil';
-import inventory from '../../../data/products.json';
+//  */
+//  import { validateCartItems } from 'use-shopping-cart/src/serverUtil';
+//  import inventory from '../../../data/products.json';
 
 import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  // https://github.com/stripe/stripe-node#configuration
+  //  https:github.com/stripe/stripe-node#configuration
   apiVersion: '2020-03-02',
 });
 
@@ -25,7 +25,7 @@ export default async function handler(
     try {
       // Validate the cart details that were sent from the client.
       const cartItems = req.body;
-      const line_items = validateCartItems(inventory, cartItems);
+      // const line_items = validateCartItems(inventory, cartItems);
       // Create Checkout Sessions from body params.
       const params: Stripe.Checkout.SessionCreateParams = {
         submit_type: 'pay',
@@ -34,7 +34,7 @@ export default async function handler(
         shipping_address_collection: {
           allowed_countries: ['US', 'CA'],
         },
-        line_items,
+        line_items: cartItems,
         success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${req.headers.origin}`,
       };

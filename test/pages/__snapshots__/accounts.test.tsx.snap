@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accounts matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-y9ds5f-Wrapper e18dzjix5"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="css-5m6oo8-HeaderWrapper e18dzjix4"
+      >
+        <div
+          class="css-sdubf6-FormHeader e18dzjix3"
+        >
+          <h4
+            class="MuiTypography-root MuiTypography-h4 css-ggtcmo-MuiTypography-root"
+          >
+            Gerenciar usuários
+          </h4>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+          >
+            Crie usuários do tipo Administrador ou Operador de Caixa
+          </p>
+        </div>
+      </div>
+      <form
+        autocomplete="off"
+        class="css-1dpfc4n-InputWrapper e18dzjix2"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="select-type-person"
+            id="select-type-person-label"
+          >
+            Tipo Usuário
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <div
+              aria-haspopup="listbox"
+              aria-labelledby="select-type-person-label select-type-person"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              id="select-type-person"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput"
+              data-testid="select-type-person"
+              name="typePerson"
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-i4bv87-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-2s9zix"
+              >
+                <span>
+                  Tipo Usuário
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-name"
+            id="input-name-label"
+          >
+            Nome
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-name"
+              id="input-name"
+              name="name"
+              placeholder="ex: João da Silva"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-2s9zix"
+              >
+                <span>
+                  Nome
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-email"
+            id="input-email-label"
+          >
+            E-mail
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-email"
+              id="input-email"
+              name="email"
+              placeholder="ex: exemplo@gmail.com"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-2s9zix"
+              >
+                <span>
+                  E-mail
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="input-password"
+            id="input-password-label"
+          >
+            Senha
+          </label>
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1g6hcx9-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="input-password"
+              id="input-password"
+              name="password"
+              type="password"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1o2jng6-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-2s9zix"
+              >
+                <span>
+                  Senha
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <button
+          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1iqv7g7-MuiButtonBase-root-MuiButton-root"
+          data-testid="button-save"
+          id="button-save"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label css-8xplcm-MuiButton-label"
+          >
+            Salvar
+          </span>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

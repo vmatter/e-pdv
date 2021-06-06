@@ -13,10 +13,12 @@ export const MenuButton = styled(IconButton)`
 
 export const LogoWrapper = styled.a`
   height: 100%;
+  cursor: pointer;
 `;
 
 export const LogoImg = styled.img`
   height: 45px;
+  cursor:pointer;
 `;
 
 export const Search = styled.div`
