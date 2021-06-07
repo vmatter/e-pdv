@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
+// import MenuIcon from '@material-ui/icons/Menu';
 // import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
@@ -17,7 +17,7 @@ import {
   // Search,
   // SearchIconWrapper,
   // CustomInput,
-  MenuButton,
+  // MenuButton,
 } from './styles';
 import { DesktopSection, MobileSection } from '../Layout/styles';
 import { setAccessToken } from '../../utils/token';
@@ -124,9 +124,9 @@ const HeaderBar = () => {
     <FlexGrow>
       <AppBar position="static">
         <Toolbar>
-          <MenuButton edge="start" color="inherit" aria-label="open drawer">
+          {/* <MenuButton edge="start" color="inherit" aria-label="open drawer">
             <MenuIcon />
-          </MenuButton>
+          </MenuButton> */}
           <Link href="/">
             <LogoWrapper>
               <LogoImg src="/pdv-logo-white.png" />
