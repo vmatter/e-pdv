@@ -8,7 +8,7 @@ const AccountsPage: NextPage = () => (
   <Layout title="Usuários | e-PDV">
     <Container maxWidth="xl">
       <Accounts />
-      <TableAccounts />
+      <TableAccounts isAdmin />
     </Container>
   </Layout>
 );

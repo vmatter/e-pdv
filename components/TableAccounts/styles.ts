@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import TableCell, { tableCellClasses } from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
+import Snackbar from '@material-ui/core/Snackbar';
 
 export const Wrapper = styled.div`
   min-height: 100vh;
@@ -54,3 +55,11 @@ export const StyledTableRow = styled(TableRow)(({ theme }) => ({
     border: 0,
   },
 }));
+
+export const StyledSnackBar = styled(Snackbar)`
+  width: 400px;
+
+  ${({ theme }) => `${theme.breakpoints.down('md')} {
+    width: 100%;
+   }`}
+`;
