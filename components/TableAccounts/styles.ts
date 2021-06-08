@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import TableCell, { tableCellClasses } from '@material-ui/core/TableCell';
+import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Snackbar from '@material-ui/core/Snackbar';
 
@@ -36,14 +36,10 @@ export const LogoImg = styled.img`
   height: 45px;
 `;
 
-export const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
+export const StyledTableCell = styled(TableCell)(() => ({
+  /*[`&.${tableCellClasses.body}`]: {
     fontSize: 14,
-  },
+  },*/
 }));
 
 export const StyledTableRow = styled(TableRow)(({ theme }) => ({

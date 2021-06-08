@@ -71,12 +71,6 @@ const TableAccounts = ({ isAdmin = false }) => {
     handleAlerts(response);
   };
 
-  const toggleScope = async (id: any, scope: any) => {
-    const response = await fetchPutUser(id, { scope: [scope] });
-    !response.message && fetchUsers();
-    handleAlerts(response);
-  };
-
   const fetchPutUser = (id:any, body: any) =>
     fetchPostJSON(`${API_URL}users/${id}`, body, true);
 
