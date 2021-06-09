@@ -178,7 +178,7 @@ const ProductItem = ({
               disabled={!product.active}
             />
           ) : (
-            <Typography component="p">R${product.price}</Typography>
+            <Typography component="p">R${product.price.toFixed(2).replace('.', ',')}</Typography>
           )}
           {isAdmin && (
             <>

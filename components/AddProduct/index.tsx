@@ -122,7 +122,7 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
 
               <NumberInput
                 label="Preço do produto *"
-                placeholder="R$ 50.00"
+                placeholder="R$ 50,00"
                 handleChange={handleChange}
                 value={values?.price || ''}
                 error={errorObject.price}

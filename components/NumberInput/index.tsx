@@ -25,7 +25,7 @@ export const NumberFormatCustom = forwardRef<
           },
         });
       }}
-      decimalSeparator="."
+      decimalSeparator=","
       prefix="R$"
       fixedDecimalScale
     />
@@ -55,7 +55,7 @@ export const NumberInput = ({
     <TextField
       variant="standard"
       margin="dense"
-      defaultValue={defaultValue}
+      defaultValue={defaultValue?.toFixed(2).replace('.', ',')}
       onChange={handleChange}
       name="price"
       label={label}
