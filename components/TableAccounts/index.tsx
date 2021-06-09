@@ -7,7 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { fetchGetJSON, fetchPostJSON } from '../../utils/api-helpers';
-import { Wrapper, StyledTableCell, StyledTableRow, StyledSnackBar } from './styles';
+import { Wrapper, StyledTableCell, StyledTableRow, StyledSnackBar, Title } from './styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -91,6 +91,9 @@ const TableAccounts = ({ isAdmin = false }) => {
 
   return (
     <Wrapper>
+       <Title variant="h4" paddingBottom={1}>
+        Usuários
+      </Title>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>

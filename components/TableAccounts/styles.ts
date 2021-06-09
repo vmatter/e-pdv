@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Snackbar from '@material-ui/core/Snackbar';
+import Typography from '@material-ui/core/Typography';
 
 export const Wrapper = styled.div`
   min-height: 100vh;
@@ -58,4 +59,8 @@ export const StyledSnackBar = styled(Snackbar)`
   ${({ theme }) => `${theme.breakpoints.down('md')} {
     width: 100%;
    }`}
+`;
+
+export const Title = styled(Typography)`
+  margin-left: 2rem;
 `;
