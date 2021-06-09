@@ -48,7 +48,7 @@ export const SummaryItems = ({
                   content.quantity > 1 ? 'itens' : 'item'
                 }`}
               />
-              <ItemTotal secondary={content.formattedValue} />
+              <ItemTotal secondary={"R$"+(content.value).toFixed(2).replace('.', ',')} />
               <ListItemSecondaryAction>
                 <IconButton
                   aria-label="Remover item"
