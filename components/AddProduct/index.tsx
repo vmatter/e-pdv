@@ -6,7 +6,6 @@ import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import { fetchPostJSON } from '../../utils/api-helpers';
 import NumberFormat from 'react-number-format';
-import { NumberInput } from '../../components/NumberInput';
 import {
   Wrapper,
   StyledCard,
@@ -151,7 +150,7 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
                 error={errorObject.name}
               />
 
-              <NumberInput
+              <TextField
                 name="price"
                 type="number"
                 placeholder="0"
