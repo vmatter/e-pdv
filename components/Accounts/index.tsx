@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, TextField, Typography, Card } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/core/Alert';
+import TableAccounts from '../TableAccounts';
 import { fetchPostJSON } from '../../utils/api-helpers';
 import { Wrapper, HeaderWrapper, InputWrapper, FormHeader, StyledSnackBar } from './styles';
 
@@ -193,6 +194,9 @@ const Accounts = () => {
           </Button>
         </InputWrapper>
       </Card>
+
+      <TableAccounts isAdmin />
+
     </Wrapper>
   );
 };
