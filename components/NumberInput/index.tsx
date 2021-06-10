@@ -46,7 +46,7 @@ export const NumberInput = ({
   defaultValue,
   handleChange,
   disabled = false,
-  label = 'Preço',
+  label = 'Preço do produto',
   placeholder = '',
   value,
   error = false,

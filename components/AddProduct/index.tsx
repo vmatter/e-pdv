@@ -1,11 +1,11 @@
-import { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent, forwardRef } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import { fetchPostJSON } from '../../utils/api-helpers';
-import { NumberInput } from '../NumberInput';
+import NumberFormat from 'react-number-format';
 import {
   Wrapper,
   StyledCard,
@@ -14,6 +14,36 @@ import {
   FieldsWrapper,
   FieldContext,
 } from './styles';
+
+interface NumberFormatCustomProps {
+  onChange: (event: { target: { name: string; value: string } }) => void;
+  name: string;
+}
+
+export const NumberFormatCustom = forwardRef<
+  NumberFormat,
+  NumberFormatCustomProps
+>(function NumberFormatCustom(props, ref) {
+  const { onChange, ...other } = props;
+
+  return (
+    <NumberFormat
+      {...other}
+      getInputRef={ref}
+      onValueChange={values => {
+        onChange({
+          target: {
+            name: props.name,
+            value: values.value,
+          },
+        });
+      }}
+      decimalSeparator=","
+      prefix="R$"
+      fixedDecimalScale
+    />
+  );
+});
 
 type Props = {
   handleAlerts: (res: any) => void;
@@ -120,10 +150,15 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
                 error={errorObject.name}
               />
 
-              <NumberInput
+              <TextField
+                name="price"
+                type="number"
+                placeholder="0"
                 label="Preço do produto *"
-                placeholder="R$ 50,00"
-                handleChange={handleChange}
+                variant="standard"
+                margin="dense"
+                inputProps={{ inputComponent: NumberFormatCustom as any }}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
                 value={values?.price || ''}
                 error={errorObject.price}
               />

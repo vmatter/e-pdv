@@ -18,7 +18,7 @@ const CartSummary = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const {
-    formattedTotalPrice,
+    totalPrice,
     cartCount,
     clearCart,
     cartDetails,
@@ -59,7 +59,7 @@ const CartSummary = () => {
       incrementItem={incrementItem}
       decrementItem={decrementItem}
       cartCount={cartCount}
-      formattedTotalPrice={formattedTotalPrice}
+      formattedTotalPrice={'R$'+totalPrice.toFixed(2).replace('.', ',')}
       cartEmpty={cartEmpty}
       loading={loading}
       clearCart={clearCart}
@@ -78,7 +78,7 @@ const CartSummary = () => {
           </FormContent>
           <Summary
             cartCount={cartCount}
-            formattedTotalPrice={formattedTotalPrice}
+            formattedTotalPrice={'R$'+totalPrice.toFixed(2).replace('.', ',')}
             cartEmpty={cartEmpty}
             loading={loading}
             clearCart={clearCart}

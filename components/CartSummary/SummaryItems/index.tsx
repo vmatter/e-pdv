@@ -31,40 +31,45 @@ export const SummaryItems = ({
       </Typography>
       <ItemsList>
         {Object.entries(cartDetails).map(product => {
-          const sku = product[0];
-          const content = product[1] as CartEntry;
-          return (
-            <ItemWrapper key={sku}>
-              <ListItemAvatar>
-                <Avatar>
-                  <ProductIcon
-                    src={content.images?.[0] || '/placeholder-image.png'}
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ItemDescription
-                primary={content.name}
-                secondary={`${content.quantity} ${
-                  content.quantity > 1 ? 'itens' : 'item'
-                }`}
-              />
-              <ItemTotal secondary={"R$"+(content.value).toFixed(2).replace('.', ',')} />
-              <ListItemSecondaryAction>
-                <IconButton
-                  aria-label="Remover item"
-                  onClick={() => decrementItem(sku)}
-                >
-                  <RemoveIcon />
-                </IconButton>
-                <IconButton
-                  aria-label="Adicionar item"
-                  onClick={() => incrementItem(sku)}
-                >
-                  <AddIcon />
-                </IconButton>
-              </ListItemSecondaryAction>
-            </ItemWrapper>
-          );
+            const sku = product[0];
+            const content = product[1] as CartEntry;
+
+            console.log(product);
+
+            return (
+              content.active ? (
+              <ItemWrapper key={sku}>
+                <ListItemAvatar>
+                  <Avatar>
+                    <ProductIcon
+                      src={content.images?.[0] || '/placeholder-image.png'}
+                    />
+                  </Avatar>
+                </ListItemAvatar>
+                <ItemDescription
+                  primary={content.name}
+                  secondary={`${content.quantity} ${
+                    content.quantity > 1 ? 'itens' : 'item'
+                  }`}
+                />
+                <ItemTotal secondary={"R$"+(content.value).toFixed(2).replace('.', ',')} />
+                <ListItemSecondaryAction>
+                  <IconButton
+                    aria-label="Remover item"
+                    onClick={() => decrementItem(sku)}
+                  >
+                    <RemoveIcon />
+                  </IconButton>
+                  <IconButton
+                    aria-label="Adicionar item"
+                    onClick={() => incrementItem(sku)}
+                  >
+                    <AddIcon />
+                  </IconButton>
+                </ListItemSecondaryAction>
+              </ItemWrapper>
+              ) : ( console.log("nenhum produto ativo no carrinho") )
+            );
         })}
       </ItemsList>
     </>
