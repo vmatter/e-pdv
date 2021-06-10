@@ -34,8 +34,6 @@ export const SummaryItems = ({
             const sku = product[0];
             const content = product[1] as CartEntry;
 
-            console.log(product);
-
             return (
               content.active ? (
               <ItemWrapper key={sku}>
@@ -68,7 +66,11 @@ export const SummaryItems = ({
                   </IconButton>
                 </ListItemSecondaryAction>
               </ItemWrapper>
-              ) : ( console.log("nenhum produto ativo no carrinho") )
+              ) : ( 
+                <Typography component="h4" variant="h6" align="center" padding={1}>
+                  Seu carrinho está vazio
+                </Typography>
+                )
             );
         })}
       </ItemsList>
