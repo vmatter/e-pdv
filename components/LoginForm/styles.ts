@@ -32,3 +32,7 @@ export const LogoWrapper = styled.a`
 export const LogoImg = styled.img`
   height: 45px;
 `;
+
+export const LinkWrapper = styled.div`
+  padding: 0 2rem 2rem;
+`;

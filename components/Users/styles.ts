@@ -1,27 +1,23 @@
 import styled from '@emotion/styled';
 import Snackbar from '@material-ui/core/Snackbar';
+import Card from '@material-ui/core/Card';
 
 export const Wrapper = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
+  padding: 2rem;
+`;
+
+export const StyledCard = styled(Card)`
+  padding: 2rem;
 `;
 
 export const HeaderWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const FormHeader = styled.div`
-  padding: 40px 25px;
+  margin-bottom: 1rem;
 `;
 
 export const InputWrapper = styled.form`
   display: flex;
   flex-direction: column;
-  padding: 40px 25px;
+  padding: 2rem 0;
   gap: 12px;
 `;
 
