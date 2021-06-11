@@ -8,6 +8,7 @@ import { SummaryItems } from './SummaryItems';
 import { Summary } from './Summary';
 import { Container, Form, FormContent } from './styles';
 import SwipableSummary from './SwipableSummary';
+import { currencyFormatter } from 'utils/currency';
 
 const { API_URL } = process.env;
 
@@ -18,13 +19,13 @@ const CartSummary = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const {
-    formattedTotalPrice,
     cartCount,
     clearCart,
     cartDetails,
     redirectToCheckout,
     incrementItem,
     decrementItem,
+    totalPrice,
   } = useShoppingCart();
 
   useEffect(() => setCartEmpty(!cartCount), [cartCount]);
@@ -59,7 +60,7 @@ const CartSummary = () => {
       incrementItem={incrementItem}
       decrementItem={decrementItem}
       cartCount={cartCount}
-      formattedTotalPrice={formattedTotalPrice}
+      formattedTotalPrice={currencyFormatter(totalPrice)}
       cartEmpty={cartEmpty}
       loading={loading}
       clearCart={clearCart}
@@ -78,7 +79,7 @@ const CartSummary = () => {
           </FormContent>
           <Summary
             cartCount={cartCount}
-            formattedTotalPrice={formattedTotalPrice}
+            formattedTotalPrice={currencyFormatter(totalPrice)}
             cartEmpty={cartEmpty}
             loading={loading}
             clearCart={clearCart}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button, TextField, Typography, Card } from '@material-ui/core';
+import { Button, TextField, Typography, Card, Link } from '@material-ui/core';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import { useRouter } from 'next/router';
@@ -11,6 +11,7 @@ import {
   FormHeader,
   LogoWrapper,
   LogoImg,
+  LinkWrapper,
 } from './styles';
 
 const LoginForm = () => {
@@ -124,6 +125,9 @@ const LoginForm = () => {
             Log In
           </Button>
         </InputWrapper>
+        <LinkWrapper>
+          <Link href="/account">Criar nova conta</Link>
+        </LinkWrapper>
       </Card>
     </Wrapper>
   );

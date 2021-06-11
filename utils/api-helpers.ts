@@ -46,6 +46,27 @@ export const authRequest = async (data?: Record<string, unknown>) => {
   }
 };
 
+export const postRequest = async (
+  url: string,
+  data?: Record<string, unknown>
+) => {
+  try {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      referrerPolicy: 'no-referrer', // no-referrer, *client
+      body: JSON.stringify(data || {}), // body data type must match "Content-Type" header
+    });
+    const jsonRes = (await response.json()) as any; // parses JSON response into native JavaScript objects
+    return jsonRes;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+};
+
 export async function fetchPostJSON(
   url: string,
   data?: Record<string, unknown>,

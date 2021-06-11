@@ -1,7 +1,7 @@
-import Accounts from '../../components/Accounts';
+import Users from '../../components/Users';
 import { render, fireEvent, waitFor } from '../testUtils';
 
-describe('Accounts', () => {
+describe('Users', () => {
   const expectedRegister = jest.fn();
   const expectedTypePerson = 'admin';
   const expectedName = 'Vítor';
@@ -9,11 +9,15 @@ describe('Accounts', () => {
   const expectedPassword = 'admin';
 
   it('visible fields', async () => {
-    const { getByTestId, getAllByText } = render(<Accounts />);
+    const { getByTestId, getAllByText } = render(<Users />);
 
     expect(getAllByText('Gerenciar usuários')[0]).toBeInTheDocument();
 
-    expect(getAllByText('Crie usuários do tipo Administrador ou Operador de Caixa')[0]).toBeInTheDocument();
+    expect(
+      getAllByText(
+        'Crie usuários do tipo Administrador ou Operador de Caixa'
+      )[0]
+    ).toBeInTheDocument();
 
     expect(getByTestId('input-name')).toBeInTheDocument();
 
@@ -25,7 +29,7 @@ describe('Accounts', () => {
   });
 
   it('should show erros for required fields', async () => {
-    const { getByTestId, getAllByText } = render(<Accounts />);
+    const { getByTestId, getAllByText } = render(<Users />);
 
     fireEvent.click(getByTestId('button-save'));
 
@@ -37,12 +41,12 @@ describe('Accounts', () => {
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = render(<Accounts />, {});
+    const { asFragment } = render(<Users />, {});
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('expected form informations', () => {
-    const { getByTestId } = render(<Accounts />);
+    const { getByTestId } = render(<Users />);
 
     fireEvent.change(getByTestId('select-type-person'), {
       target: { value: expectedTypePerson },

@@ -5,11 +5,11 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
 
 export const Wrapper = styled.div`
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  padding-top: 2rem;
 `;
 
 export const HeaderWrapper = styled.div`

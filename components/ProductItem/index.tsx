@@ -10,6 +10,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import { fetchPostJSON } from 'utils/api-helpers';
+import { currencyFormatter } from 'utils/currency';
 import { Product } from '../Products';
 import { NumberInput } from '../../components/NumberInput';
 import { ReponsiveDialog } from '../../components/Dialog';
@@ -173,12 +174,15 @@ const ProductItem = ({
           )}
           {isAdmin ? (
             <NumberInput
+              id={`price-${product.id}`}
               defaultValue={product.price}
               handleChange={handleChange}
               disabled={!product.active}
             />
           ) : (
-            <Typography component="p">R${product.price.toFixed(2).replace('.', ',')}</Typography>
+            <Typography component="p">
+              {currencyFormatter(product.price)}
+            </Typography>
           )}
           {isAdmin && (
             <>
