@@ -2,6 +2,8 @@ import { FormEventHandler, useState } from 'react';
 import { Global } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 import { Summary, SummaryProps } from '../Summary';
 import { SummaryItems, SummaryItemsProps } from '../SummaryItems';
 import { Root, StyledBox, Puller, Wrapper } from './styles';
@@ -31,6 +33,9 @@ const SwipableSummary = (props: Props) => {
           },
         }}
       />
+      <Box sx={{ textAlign: 'center', pt: 1 }}>
+        <Button onClick={toggleDrawer(true)}>Visualizar o carrinho</Button>
+      </Box>
       <SwipeableDrawer
         anchor="bottom"
         open={open}
