@@ -14,6 +14,7 @@ export const Form = styled.form`
 
 export const FormContent = styled.div`
   flex: 1;
+  padding-top: 1rem;
 `;
 
 export const FormActions = styled.div`
