@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Typography from '@material-ui/core/Typography';
 
 export const Container = styled.aside`
-  min-width: 400px;
+  min-width: 430px;
   height: 100%;
 `;
 
