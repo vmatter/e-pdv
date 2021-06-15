@@ -49,7 +49,7 @@ export const SummaryItems = ({
                   content.quantity > 1 ? 'itens' : 'item'
                 }`}
               />
-              <ItemTotal secondary={currencyFormatter(content.value)} />
+              <ItemTotal secondary={content.value !== 0 ? currencyFormatter(content.value) : "R$ 0,00"} />
               <ListItemSecondaryAction>
                 <IconButton
                   aria-label="Remover item"

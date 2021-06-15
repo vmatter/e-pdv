@@ -1,4 +1,4 @@
-import { useEffect, useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -6,7 +6,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { fetchGetJSON, fetchPostJSON } from '../../../utils/api-helpers';
+import { fetchPostJSON } from '../../../utils/api-helpers';
 import {
   Wrapper,
   StyledTableCell,
@@ -33,31 +33,16 @@ export type User = {
   updateAt: string;
 };
 
-const UsersTable = ({ isAdmin = false }) => {
+type Props = {
+  isAdmin: boolean;
+  loaded: boolean;
+  renderedUsers: Array<User>;
+  updateList: () => Promise<void>;
+};
+
+const UsersTable = ({ isAdmin = false, loaded = true, renderedUsers = [], updateList }:Props) => {
   const [openSucessAlert, setOpenSucessAlert] = useState(false);
   const [openErrorAlert, setOpenErrorAlert] = useState(false);
-  const [users, setUsers]: any = useState(null);
-  const [renderedUsers, setRenderedUsers]: any = useState(null);
-  const [loaded, setLoaded] = useState(false);
-
-  const fetchUsers = async () => {
-    const response = await fetchGetJSON(`${API_URL}users`);
-    if (!response.message) {
-      setUsers(response.docs);
-    }
-    setLoaded(true);
-  };
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  useEffect(() => {
-    users &&
-      setRenderedUsers(
-        isAdmin ? users : users.filter((user: any) => !!user.active)
-      );
-  }, [users]);
 
   const handleChange = async (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -66,7 +51,7 @@ const UsersTable = ({ isAdmin = false }) => {
   ) => {
     if (event.target.value !== '') {
       const response = await fetchPutUser(id, { [campo]: event.target.value });
-      !response.message && fetchUsers();
+      !response.message && updateList();
       handleAlerts(response);
     } else {
       setOpenErrorAlert(true);
@@ -75,7 +60,7 @@ const UsersTable = ({ isAdmin = false }) => {
 
   const toggleActive = async (id: any, active: any) => {
     const response = await fetchPutUser(id, { active: !active });
-    !response.message && fetchUsers();
+    !response.message && updateList();
     handleAlerts(response);
   };
 

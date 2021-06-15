@@ -66,7 +66,7 @@ export const NumberInput = ({
     <TextField
       variant="standard"
       margin="dense"
-      defaultValue={defaultValue*100}
+      defaultValue={defaultValue ? defaultValue*100 : 0}
       onChange={handleChange}
       name="price"
       label={label}

@@ -6,11 +6,9 @@ import { useShoppingCart } from 'use-shopping-cart';
 import { fetchPostJSON, fetchGetJSON } from '../../utils/api-helpers';
 import { SummaryItems } from './SummaryItems';
 import { Summary } from './Summary';
-import { Container, Form, FormContent, StyledSnackBar } from './styles';
+import { Container, Form, FormContent } from './styles';
 import SwipableSummary from './SwipableSummary';
 import { currencyFormatter } from 'utils/currency';
-import Alert from '@material-ui/core/Alert';
-import AlertTitle from '@material-ui/core/AlertTitle';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -23,8 +21,6 @@ const { API_URL } = process.env;
 const CartSummary = () => {
   const [loading, setLoading] = useState(false);
   const [cartEmpty, setCartEmpty] = useState(true);
-  const [cartProducts, setCartProducts] = useState(null);
-  const [showWarning, setShowWarning] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
   const [dialogMessage, setDialogMessage] = useState('');
   const theme = useTheme();
@@ -50,8 +46,7 @@ const CartSummary = () => {
     const response = await fetchPostJSON(`${API_URL}checkout`, {
       cart_items: Object.values(cartDetails).map(product => ({
         id: product.id,
-        quantity: product.quantity,
-        images: product.images,
+        quantity: product.quantity
       })),
       success_url: `${window.location.href}result?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${window.location.href}`,
@@ -69,7 +64,6 @@ const CartSummary = () => {
   };
 
   const handleClose = () => {
-    setShowWarning(false);
     setShowDialog(false);
   };
 
@@ -85,7 +79,6 @@ const CartSummary = () => {
   const fetchCartProducts = async () => {
     const response = await fetchGetJSON(`${API_URL}products?id=`+allProducts+`&toPaginate=false`);
     if (!response.message) {
-      setCartProducts(response.docs);
       
       var _showDialog = false;
       var _message = "";
