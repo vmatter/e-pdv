@@ -46,7 +46,7 @@ const CartSummary = () => {
     const response = await fetchPostJSON(`${API_URL}checkout`, {
       cart_items: Object.values(cartDetails).map(product => ({
         id: product.id,
-        quantity: product.quantity
+        quantity: product.quantity,
       })),
       success_url: `${window.location.href}result?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${window.location.href}`,
@@ -67,59 +67,71 @@ const CartSummary = () => {
     setShowDialog(false);
   };
 
-  console.log(cartDetails);
-
-  var allProducts = "";
-  Object.entries(cartDetails).map(product => {
-    allProducts += product[1]["id"]+",";
+  let allProducts = '';
+  Object.values(cartDetails).map(product => {
+    allProducts += product['id'] + ',';
   });
 
-  allProducts = allProducts.substr(0, allProducts.length-1);
+  allProducts = allProducts.substr(0, allProducts.length - 1);
 
   const fetchCartProducts = async () => {
-    const response = await fetchGetJSON(`${API_URL}products?id=`+allProducts+`&toPaginate=false`);
+    const response = await fetchGetJSON(
+      `${API_URL}products?id=` + allProducts + `&toPaginate=false`
+    );
     if (!response.message) {
-      
-      var _showDialog = false;
-      var _message = "";
+      let _showDialog = false;
+      let _message = '';
 
-      Object.entries(cartDetails).map(product => {
-
-        for(var i=0; i<response.docs.length; i++){
-
-          if(product[1]["id"] == response.docs[i]["id"]){
-            
-            if(product[1]["price"] != response.docs[i]["price"]){
-              decrementItem(product[1].sku, product[1].quantity);
-              addItem(response.docs[i], product[1].quantity);
-              _message += "\r\n - O produto "+product[1]["name"]+" teve o seu pre\u00e7o alterado para R$ "+response.docs[i]["price"].toFixed(2).replace(".", ",")+".";
+      Object.values(cartDetails).map(product => {
+        for (let i = 0; i < response.docs.length; i++) {
+          if (product['id'] === response.docs[i]['id']) {
+            if (product['price'] !== response.docs[i]['price']) {
+              decrementItem(product.sku, product.quantity);
+              addItem(response.docs[i], product.quantity);
+              _message +=
+                '\r\n - O produto ' +
+                product['name'] +
+                ' teve o seu preço alterado para R$ ' +
+                response.docs[i]['price'].toFixed(2).replace('.', ',') +
+                '.';
               _showDialog = true;
             }
 
-            if(product[1]["name"] != response.docs[i]["name"]){
-              decrementItem(product[1].sku, product[1].quantity);
-              addItem(response.docs[i], product[1].quantity);
-              _message += "\r\n - O produto "+product[1]["name"]+" teve o seu nome alterado para "+response.docs[i]["name"]+".";
+            if (product['name'] !== response.docs[i]['name']) {
+              decrementItem(product.sku, product.quantity);
+              addItem(response.docs[i], product.quantity);
+              _message +=
+                '\r\n - O produto ' +
+                product['name'] +
+                ' teve o seu nome alterado para ' +
+                response.docs[i]['name'] +
+                '.';
               _showDialog = true;
             }
 
-            if(product[1]["quantity"] > response.docs[i]["quantity"]){
-              _message += "\r\n - O produto "+product[1]["name"]+" n\u00e3o possui estoque suficiente (estoque atual: "+response.docs[i]["quantity"]+"), favor ajustar o carrinho para prosseguir.";
+            if (product['quantity'] > response.docs[i]['quantity']) {
+              _message +=
+                '\r\n - O produto ' +
+                product['name'] +
+                ' n\u00e3o possui estoque suficiente (estoque atual: ' +
+                response.docs[i]['quantity'] +
+                '), favor ajustar o carrinho para prosseguir.';
               _showDialog = true;
             }
 
-            if(!response.docs[i]["active"]){
-              _message += "\r\n - O produto "+product[1]["name"]+" foi desativado e removido do seu carrinho.";
+            if (!response.docs[i]['active']) {
+              _message +=
+                '\r\n - O produto ' +
+                product['name'] +
+                ' foi desativado e removido do seu carrinho.';
               _showDialog = true;
             }
-
           }
         }
       });
 
       setDialogMessage(_message);
       setShowDialog(_showDialog);
-
     }
   };
 
@@ -158,24 +170,24 @@ const CartSummary = () => {
             clearCart={clearCart}
           />
         </Form>
-      <Dialog
-        open={showDialog}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          Atenção
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            {dialogMessage}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} autoFocus>Ok</Button>
-        </DialogActions>
-      </Dialog>
+        <Dialog
+          open={showDialog}
+          onClose={handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">Atenção</DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              {dialogMessage}
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} autoFocus>
+              Ok
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Container>
     </Paper>
   );

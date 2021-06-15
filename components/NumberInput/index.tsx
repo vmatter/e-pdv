@@ -8,7 +8,7 @@ interface NumberFormatCustomProps {
 }
 
 function currencyFormatter(value: any) {
-  if (!Number(value)) return '';
+  if (!Number(value)) return 'R$ 0,00';
 
   const amount = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -66,7 +66,7 @@ export const NumberInput = ({
     <TextField
       variant="standard"
       margin="dense"
-      defaultValue={defaultValue ? defaultValue*100 : 0}
+      defaultValue={defaultValue ? defaultValue * 100 : 0}
       onChange={handleChange}
       name="price"
       label={label}

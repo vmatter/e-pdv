@@ -92,7 +92,9 @@ const ProductItem = ({
   };
 
   const updateImage = async () => {
-    const response = await fetchPutProduct({ images: imgValue !== '' ? [imgValue] : [] });
+    const response = await fetchPutProduct({
+      images: imgValue !== '' ? [imgValue] : [],
+    });
     !response.message && updateList();
     setOpenDialog(false);
     handleAlerts(response);
@@ -181,7 +183,7 @@ const ProductItem = ({
             />
           ) : (
             <Typography component="p">
-              {product.price !== 0 ? currencyFormatter(product.price) : "R$ 0,00"}
+              {currencyFormatter(product.price)}
             </Typography>
           )}
           {isAdmin && (
