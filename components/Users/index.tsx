@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, TextField, Typography } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/core/Alert';
 import UsersTable from './UsersTable';
-import { fetchPostJSON } from '../../utils/api-helpers';
+import { fetchGetJSON, fetchPostJSON } from '../../utils/api-helpers';
 import {
   Wrapper,
   HeaderWrapper,
@@ -24,8 +24,30 @@ const Users = () => {
   const [scope, setScope] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [renderedUsers, setRenderedUsers]: any = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  const [users, setUsers]: any = useState(null);
 
   const { API_URL } = process.env;
+
+  const fetchUsers = async () => {
+    const response = await fetchGetJSON(`${API_URL}users?limit=50`);
+    if (!response.message) {
+      setUsers(response.docs);
+    }
+    setLoaded(true);
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  useEffect(() => {
+    users &&
+      setRenderedUsers(
+        users
+      );
+  }, [users]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
@@ -58,6 +80,8 @@ const Users = () => {
         setScope('');
         setEmail('');
         setPassword('');
+
+        fetchUsers();
       } else {
         openErrorAlert && setOpenErrorAlert(false);
         setOpenErrorAlert(true);
@@ -195,7 +219,12 @@ const Users = () => {
         </InputWrapper>
       </StyledCard>
 
-      <UsersTable isAdmin />
+      <UsersTable
+        isAdmin
+        loaded={loaded}
+        renderedUsers={renderedUsers}
+        updateList={fetchUsers}
+      />
     </Wrapper>
   );
 };
