@@ -1,13 +1,13 @@
 import { NextPage } from 'next';
 import Container from '@material-ui/core/Container';
 import Layout from 'components/Layout';
-import Accounts from '../components/Accounts';
+import Users from '../components/Users';
 
-const AccountsPage: NextPage = () => (
+const UsersPage: NextPage = () => (
   <Layout title="Usuários | e-PDV">
     <Container maxWidth="xl">
-      <Accounts />
+      <Users />
     </Container>
   </Layout>
 );
-export default AccountsPage;
+export default UsersPage;

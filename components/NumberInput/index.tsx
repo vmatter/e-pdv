@@ -7,6 +7,17 @@ interface NumberFormatCustomProps {
   name: string;
 }
 
+function currencyFormatter(value: any) {
+  if (!Number(value)) return 'R$ 0,00';
+
+  const amount = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(value / 100);
+
+  return amount;
+}
+
 export const NumberFormatCustom = forwardRef<
   NumberFormat,
   NumberFormatCustomProps
@@ -21,13 +32,11 @@ export const NumberFormatCustom = forwardRef<
         onChange({
           target: {
             name: props.name,
-            value: values.value,
+            value: (Number(values.value) / 100).toString(),
           },
         });
       }}
-      decimalSeparator="."
-      prefix="R$"
-      fixedDecimalScale
+      format={currencyFormatter}
     />
   );
 });
@@ -40,6 +49,7 @@ type Props = {
   placeholder?: string;
   value?: string;
   error?: boolean;
+  id: string;
 };
 
 export const NumberInput = ({
@@ -50,17 +60,18 @@ export const NumberInput = ({
   placeholder = '',
   value,
   error = false,
+  id = 'price',
 }: Props) => {
   return (
     <TextField
       variant="standard"
       margin="dense"
-      defaultValue={defaultValue}
+      defaultValue={defaultValue ? defaultValue * 100 : 0}
       onChange={handleChange}
       name="price"
       label={label}
       placeholder={placeholder}
-      id="formatted-numberformat-input"
+      id={id}
       InputProps={{
         inputComponent: NumberFormatCustom as any,
       }}

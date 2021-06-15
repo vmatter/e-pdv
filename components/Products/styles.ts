@@ -32,7 +32,7 @@ export const ProductList = styled.div`
   }
 
   ${({ theme }) => `${theme.breakpoints.down('md')} {
-    max-height: calc(100% - 225px);
+   height: calc(100% - 183px);
    }`}
 `;
 

@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 import Typography from '@material-ui/core/Typography';
+import Snackbar from '@material-ui/core/Snackbar';
 
 export const Container = styled.aside`
-  min-width: 400px;
+  min-width: 430px;
   height: 100%;
 `;
 
@@ -14,6 +15,7 @@ export const Form = styled.form`
 
 export const FormContent = styled.div`
   flex: 1;
+  padding-top: 1rem;
 `;
 
 export const FormActions = styled.div`
@@ -38,4 +40,12 @@ export const InfoItem = styled(Typography)`
   padding: 10px;
   display: flex;
   justify-content: space-between;
+`;
+
+export const StyledSnackBar = styled(Snackbar)`
+  width: 400px;
+
+  ${({ theme }) => `${theme.breakpoints.down('md')} {
+    width: 100%;
+   }`}
 `;

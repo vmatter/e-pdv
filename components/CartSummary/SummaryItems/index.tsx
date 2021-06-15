@@ -6,6 +6,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import { currencyFormatter } from 'utils/currency';
 import {
   ItemsList,
   ProductIcon,
@@ -48,7 +49,7 @@ export const SummaryItems = ({
                   content.quantity > 1 ? 'itens' : 'item'
                 }`}
               />
-              <ItemTotal secondary={content.formattedValue} />
+              <ItemTotal secondary={currencyFormatter(content.value)} />
               <ListItemSecondaryAction>
                 <IconButton
                   aria-label="Remover item"

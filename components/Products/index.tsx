@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Box from '@material-ui/core/Box';
 import { fetchGetJSON } from '../../utils/api-helpers';
 import ProductItem from '../ProductItem';
 import AddProduct from '../AddProduct';
@@ -71,7 +72,7 @@ const Products = ({ isAdmin = false }) => {
       )}
       <ProductList>
         {loaded ? (
-          renderedProducts ? (
+          renderedProducts.length > 0 ? (
             renderedProducts.map((product: Product) => (
               <ProductWrapper key={product.id}>
                 <ProductItem
@@ -83,7 +84,9 @@ const Products = ({ isAdmin = false }) => {
               </ProductWrapper>
             ))
           ) : (
-            <div>Sem produtos</div>
+            <Box sx={{ textAlign: 'center', pt: 1 }}>
+              <div>Sem produtos disponíveis</div>
+            </Box>
           )
         ) : (
           <CircularProgress />

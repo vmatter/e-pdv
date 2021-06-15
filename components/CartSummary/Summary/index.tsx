@@ -35,7 +35,11 @@ export const Summary = ({
         >
           Finalizar Compra
         </Button>
-        <Button variant="contained" color="secondary" onClick={clearCart}>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={clearCart}
+          disabled={!cartCount}>
           Limpar Carrinho
         </Button>
       </FormActions>

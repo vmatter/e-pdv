@@ -48,7 +48,7 @@ const HeaderBar = () => {
 
   const handleUsers = () => {
     handleMenuClose();
-    router.push('/accounts');
+    router.push('/users');
   };
 
   const handleLogout = () => {

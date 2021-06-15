@@ -1,11 +1,18 @@
-import { useState } from 'react';
-import { Button, TextField, Typography, Card } from '@material-ui/core';
+import { useEffect, useState } from 'react';
+import { Button, TextField, Typography } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/core/Alert';
-import { fetchPostJSON } from '../../utils/api-helpers';
-import { Wrapper, HeaderWrapper, InputWrapper, FormHeader, StyledSnackBar } from './styles';
+import UsersTable from './UsersTable';
+import { fetchGetJSON, fetchPostJSON } from '../../utils/api-helpers';
+import {
+  Wrapper,
+  HeaderWrapper,
+  InputWrapper,
+  StyledSnackBar,
+  StyledCard,
+} from './styles';
 
-const Accounts = () => {
+const Users = () => {
   const [showWarning, setShowWarning] = useState(false);
   const [openSucessAlert, setOpenSucessAlert] = useState(false);
   const [openErrorAlert, setOpenErrorAlert] = useState(false);
@@ -17,8 +24,30 @@ const Accounts = () => {
   const [scope, setScope] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [renderedUsers, setRenderedUsers]: any = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  const [users, setUsers]: any = useState(null);
 
   const { API_URL } = process.env;
+
+  const fetchUsers = async () => {
+    const response = await fetchGetJSON(`${API_URL}users?limit=50`);
+    if (!response.message) {
+      setUsers(response.docs);
+    }
+    setLoaded(true);
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  useEffect(() => {
+    users &&
+      setRenderedUsers(
+        users
+      );
+  }, [users]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
@@ -33,14 +62,12 @@ const Accounts = () => {
       scope === '' && setShowScopeError(true);
       email === '' && setShowEmailError(true);
       password === '' && setShowPasswordError(true);
-    }
-    else{
-
+    } else {
       const body = {
         name: name,
         email: email,
         password: password,
-        scope: [scope]
+        scope: [scope],
       };
 
       const response = await fetchPostJSON(`${API_URL}users`, body);
@@ -54,6 +81,7 @@ const Accounts = () => {
         setEmail('');
         setPassword('');
 
+        fetchUsers();
       } else {
         openErrorAlert && setOpenErrorAlert(false);
         setOpenErrorAlert(true);
@@ -63,25 +91,23 @@ const Accounts = () => {
 
   return (
     <Wrapper>
-      <Card variant="outlined" elevation={2}>
+      <StyledCard variant="outlined" elevation={2}>
         <HeaderWrapper>
-          <FormHeader>
-            <Typography variant="h4" paddingBottom={1}>
-              Gerenciar usuários
-            </Typography>
-            <Typography component="p">
-              Crie usuários do tipo Administrador ou Operador de Caixa
-            </Typography>
-          </FormHeader>
+          <Typography variant="h4" paddingBottom={1}>
+            Gerenciar usuários
+          </Typography>
+          <Typography component="p">
+            Crie usuários do tipo Administrador ou Operador de Caixa
+          </Typography>
         </HeaderWrapper>
-        
+
         <StyledSnackBar
           open={openSucessAlert}
           autoHideDuration={6000}
           onClose={handleClose}
         >
           <Alert onClose={handleClose} severity="success">
-              Usuário atualizado com sucesso!
+            Usuário atualizado com sucesso!
           </Alert>
         </StyledSnackBar>
         <StyledSnackBar
@@ -95,7 +121,6 @@ const Accounts = () => {
         </StyledSnackBar>
 
         <InputWrapper autoComplete="off">
-
           <TextField
             id="select-type-scope"
             variant="outlined"
@@ -116,9 +141,9 @@ const Accounts = () => {
             }}
           >
             <MenuItem value="">Selecione</MenuItem>
-            <MenuItem value={"admin"}>Administrador</MenuItem>
-            <MenuItem value={"buyer"}>Operador de Caixa</MenuItem>
-          </TextField> 
+            <MenuItem value={'admin'}>Administrador</MenuItem>
+            <MenuItem value={'buyer'}>Operador de Caixa</MenuItem>
+          </TextField>
 
           <TextField
             id="input-name"
@@ -139,8 +164,8 @@ const Accounts = () => {
             inputProps={{
               'data-testid': 'input-name',
             }}
-          />       
-         
+          />
+
           <TextField
             id="input-email"
             variant="outlined"
@@ -161,7 +186,7 @@ const Accounts = () => {
               'data-testid': 'input-email',
             }}
           />
-         
+
           <TextField
             id="input-password"
             variant="outlined"
@@ -181,7 +206,7 @@ const Accounts = () => {
               'data-testid': 'input-password',
             }}
           />
-          
+
           <Button
             id="button-save"
             data-testid="button-save"
@@ -192,9 +217,16 @@ const Accounts = () => {
             Salvar
           </Button>
         </InputWrapper>
-      </Card>
+      </StyledCard>
+
+      <UsersTable
+        isAdmin
+        loaded={loaded}
+        renderedUsers={renderedUsers}
+        updateList={fetchUsers}
+      />
     </Wrapper>
   );
 };
 
-export default Accounts;
+export default Users;
