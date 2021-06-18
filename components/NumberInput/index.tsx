@@ -8,7 +8,7 @@ interface NumberFormatCustomProps {
 }
 
 function currencyFormatter(value: any) {
-  if (!Number(value)) return '';
+  if (!Number(value)) return 'R$ 0,00';
 
   const amount = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -32,7 +32,7 @@ export const NumberFormatCustom = forwardRef<
         onChange({
           target: {
             name: props.name,
-            value: (Number(values.value)).toString(),
+            value: (Number(values.value) / 100).toString(),
           },
         });
       }}
