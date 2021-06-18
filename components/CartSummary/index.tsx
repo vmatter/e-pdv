@@ -150,6 +150,7 @@ const CartSummary = () => {
       loading={loading}
       clearCart={clearCart}
       handleCheckout={handleCheckout}
+      totalPrice={totalPrice}
     />
   ) : (
     <Paper elevation={3}>
