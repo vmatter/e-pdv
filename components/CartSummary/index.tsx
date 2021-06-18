@@ -89,7 +89,7 @@ const CartSummary = () => {
               decrementItem(product.sku, product.quantity);
               addItem(response.docs[i], product.quantity);
               _message +=
-                '\r\n - O produto ' +
+                ' O produto ' +
                 product['name'] +
                 ' teve o seu preço alterado para R$ ' +
                 response.docs[i]['price'].toFixed(2).replace('.', ',') +
@@ -101,7 +101,7 @@ const CartSummary = () => {
               decrementItem(product.sku, product.quantity);
               addItem(response.docs[i], product.quantity);
               _message +=
-                '\r\n - O produto ' +
+                ' O produto ' +
                 product['name'] +
                 ' teve o seu nome alterado para ' +
                 response.docs[i]['name'] +
@@ -111,7 +111,7 @@ const CartSummary = () => {
 
             if (product['quantity'] > response.docs[i]['quantity']) {
               _message +=
-                '\r\n - O produto ' +
+                ' O produto ' +
                 product['name'] +
                 ' n\u00e3o possui estoque suficiente (estoque atual: ' +
                 response.docs[i]['quantity'] +
@@ -121,7 +121,7 @@ const CartSummary = () => {
 
             if (!response.docs[i]['active']) {
               _message +=
-                '\r\n - O produto ' +
+                ' O produto ' +
                 product['name'] +
                 ' foi desativado e removido do seu carrinho.';
               _showDialog = true;
@@ -150,6 +150,7 @@ const CartSummary = () => {
       loading={loading}
       clearCart={clearCart}
       handleCheckout={handleCheckout}
+      totalPrice={totalPrice}
     />
   ) : (
     <Paper elevation={3}>
@@ -164,10 +165,11 @@ const CartSummary = () => {
           </FormContent>
           <Summary
             cartCount={cartCount}
-            formattedTotalPrice={currencyFormatter(totalPrice)}
+            formattedTotalPrice={ (totalPrice > 0) ? currencyFormatter(totalPrice) : "R$ 0,00"}
             cartEmpty={cartEmpty}
             loading={loading}
             clearCart={clearCart}
+            totalPrice={totalPrice}
           />
         </Form>
         <Dialog

@@ -7,6 +7,7 @@ export type SummaryProps = {
   cartEmpty: boolean;
   loading: boolean;
   clearCart: () => void;
+  totalPrice: number;
 };
 
 export const Summary = ({
@@ -15,6 +16,7 @@ export const Summary = ({
   cartEmpty,
   loading,
   clearCart,
+  totalPrice
 }: SummaryProps) => {
   return (
     <SummaryWrapper>
@@ -31,7 +33,7 @@ export const Summary = ({
           variant="contained"
           color="primary"
           type="submit"
-          disabled={cartEmpty || loading}
+          disabled={cartEmpty || loading || totalPrice < 0.5}
         >
           Finalizar Compra
         </Button>
