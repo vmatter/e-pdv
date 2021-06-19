@@ -187,7 +187,6 @@ const ProductItem = ({
               defaultValue={product.price}
               handleChange={handleChange}
               disabled={!product.active}
-              isEdit
             />
           ) : (
             <Typography component="p">
