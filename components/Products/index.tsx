@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box';
 import { fetchGetJSON } from '../../utils/api-helpers';
 import ProductItem from '../ProductItem';
 import AddProduct from '../AddProduct';
+import InfiniteScroll from '../InfiniteScroll';
 import { Alert } from '../Alert';
 import { ProductList, ProductWrapper, Title, StyledSnackBar } from './styles';
 
@@ -22,28 +23,43 @@ export type Product = {
 const Products = ({ isAdmin = false }) => {
   const [openSucessAlert, setOpenSucessAlert] = useState(false);
   const [openErrorAlert, setOpenErrorAlert] = useState(false);
-  const [products, setProducts]: any = useState(null);
-  const [renderedProducts, setRenderedProducts]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalDocs, setTotalDocs] = useState(0);
+  const [products, setProducts] = useState([]);
+  const [hasMoreData, setHasMoreData] = useState(true);
 
-  const fetchProducts = async () => {
-    const response = await fetchGetJSON(`${API_URL}products`);
+  const fetchProducts = async (fetchPage = 1) => {
+    const activeInfo = !isAdmin ? `&active=true` : '';
+    const response = await fetchGetJSON(
+      `${API_URL}products?page=${fetchPage}${activeInfo}`
+    );
+
     if (!response.message) {
-      setProducts(response.docs);
+      const oldList = currentPage === 1 ? [] : products;
+      const newList =
+        response.docs.length > 0 ? [...oldList, ...response.docs] : oldList;
+
+      const { page, totalDocs } = response;
+
+      setProducts(newList as any);
+      setCurrentPage(page);
+      setTotalDocs(totalDocs);
     }
     setLoaded(true);
+  };
+
+  const fetchMoreData = () => {
+    if (products.length >= totalDocs) {
+      setHasMoreData(false);
+      return;
+    }
+    fetchProducts(currentPage + 1);
   };
 
   useEffect(() => {
     fetchProducts();
   }, []);
-
-  useEffect(() => {
-    products &&
-      setRenderedProducts(
-        isAdmin ? products : products.filter((product: any) => !!product.active)
-      );
-  }, [products]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
@@ -72,17 +88,23 @@ const Products = ({ isAdmin = false }) => {
       )}
       <ProductList>
         {loaded ? (
-          renderedProducts.length > 0 ? (
-            renderedProducts.map((product: Product) => (
-              <ProductWrapper key={product.id}>
-                <ProductItem
-                  product={product}
-                  isAdmin={isAdmin}
-                  updateList={fetchProducts}
-                  handleAlerts={handleAlerts}
-                />
-              </ProductWrapper>
-            ))
+          products.length > 0 ? (
+            <InfiniteScroll
+              fetchMore={fetchMoreData}
+              hasMoreData={hasMoreData}
+              currentPage={currentPage}
+            >
+              {products.map((product: Product) => (
+                <ProductWrapper key={product.id}>
+                  <ProductItem
+                    product={product}
+                    isAdmin={isAdmin}
+                    updateList={fetchProducts}
+                    handleAlerts={handleAlerts}
+                  />
+                </ProductWrapper>
+              ))}
+            </InfiniteScroll>
           ) : (
             <Box sx={{ textAlign: 'center', pt: 1 }}>
               <div>Sem produtos disponíveis</div>

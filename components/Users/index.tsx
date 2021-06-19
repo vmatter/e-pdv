@@ -24,30 +24,39 @@ const Users = () => {
   const [scope, setScope] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [renderedUsers, setRenderedUsers]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
-  const [users, setUsers]: any = useState(null);
+  const [users, setUsers]: any = useState([]);
+  const [hasMoreData, setHasMoreData] = useState(true);
+  const [totalDocs, setTotalDocs] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const { API_URL } = process.env;
 
-  const fetchUsers = async () => {
-    const response = await fetchGetJSON(`${API_URL}users?limit=50`);
+  const fetchUsers = async (page = 1) => {
+    const response = await fetchGetJSON(`${API_URL}users?page=${page}`);
     if (!response.message) {
-      setUsers(response.docs);
+      const oldList = page === 1 ? [] : users;
+      const newList =
+        response.docs.length > 0 ? [...oldList, ...response.docs] : oldList;
+      setUsers(newList);
+      setCurrentPage(response.page);
+      setTotalDocs(response.totalDocs);
     }
+
     setLoaded(true);
+  };
+
+  const fetchMoreData = () => {
+    if (users.length >= totalDocs) {
+      setHasMoreData(false);
+      return;
+    }
+    fetchUsers(currentPage + 1);
   };
 
   useEffect(() => {
     fetchUsers();
   }, []);
-
-  useEffect(() => {
-    users &&
-      setRenderedUsers(
-        users
-      );
-  }, [users]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
@@ -91,7 +100,7 @@ const Users = () => {
 
   return (
     <Wrapper>
-      <StyledCard variant="outlined" elevation={2}>
+      <StyledCard variant="outlined">
         <HeaderWrapper>
           <Typography variant="h4" paddingBottom={1}>
             Gerenciar usuários
@@ -222,8 +231,10 @@ const Users = () => {
       <UsersTable
         isAdmin
         loaded={loaded}
-        renderedUsers={renderedUsers}
-        updateList={fetchUsers}
+        renderedUsers={users}
+        updateList={fetchMoreData}
+        hasMoreData={hasMoreData}
+        currentPage={currentPage}
       />
     </Wrapper>
   );
