@@ -50,7 +50,7 @@ const AddProduct = ({ handleAlerts, updateList }: Props) => {
     const body = {
       sku: values?.sku,
       name: values?.name,
-      price: values?.price,
+      price: values?.price / 100,
       images: values?.image ? [values?.image] : undefined,
       quantity: values?.quantity,
     };

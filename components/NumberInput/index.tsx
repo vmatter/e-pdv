@@ -32,7 +32,7 @@ export const NumberFormatCustom = forwardRef<
         onChange({
           target: {
             name: props.name,
-            value: (Number(values.value) / 100).toString(),
+            value: values.value,
           },
         });
       }}
@@ -50,6 +50,7 @@ type Props = {
   value?: string;
   error?: boolean;
   id: string;
+  isEdit: boolean;
 };
 
 export const NumberInput = ({

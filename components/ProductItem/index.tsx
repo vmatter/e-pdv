@@ -81,7 +81,14 @@ const ProductItem = ({
     fetchPostJSON(`${API_URL}products/${product.id}`, body, true);
 
   const editProduct = async () => {
-    const response = await fetchPutProduct(values);
+    const { image, name, price, sku, quantity } = values;
+    const response = await fetchPutProduct({
+      image,
+      name,
+      price: price / 100,
+      sku,
+      quantity,
+    });
     handleAlerts(response);
   };
 
@@ -180,6 +187,7 @@ const ProductItem = ({
               defaultValue={product.price}
               handleChange={handleChange}
               disabled={!product.active}
+              isEdit
             />
           ) : (
             <Typography component="p">
