@@ -3,9 +3,7 @@ import { Button, TextField, Typography } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/core/Alert';
 import UsersTable from './UsersTable';
-//import BasicPagination from '../BasicPagination';
 import { fetchGetJSON, fetchPostJSON } from '../../utils/api-helpers';
-// import TablePagination from '@material-ui/core/TablePagination';
 import {
   Wrapper,
   HeaderWrapper,
@@ -47,14 +45,6 @@ const Users = () => {
 
     setLoaded(true);
   };
-
-  // const fetchMoreData = () => {
-  //   if (users.length >= totalDocs) {
-  //     setHasMoreData(false);
-  //     return;
-  //   }
-  //   fetchUsers(currentPage + 1);
-  // };
 
   useEffect(() => {
     fetchUsers(page, rowsPerPage);
