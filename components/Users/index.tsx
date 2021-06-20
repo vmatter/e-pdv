@@ -3,8 +3,9 @@ import { Button, TextField, Typography } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/core/Alert';
 import UsersTable from './UsersTable';
-import BasicPagination from '../BasicPagination';
+//import BasicPagination from '../BasicPagination';
 import { fetchGetJSON, fetchPostJSON } from '../../utils/api-helpers';
+import TablePagination from '@material-ui/core/TablePagination';
 import {
   Wrapper,
   HeaderWrapper,
@@ -29,14 +30,17 @@ const Users = () => {
   const [loaded, setLoaded] = useState(false);
   const [users, setUsers]: any = useState(null);
   const [totalUsers, setTotalUsers]: any = useState(0);
-  const [page, setPage]: any = useState(1);
+  const [page, setPage]: any = useState(0);
+  const [rowsPerPage, setRowsPerPage]: any = useState(1);
 
   const { API_URL } = process.env;
 
   const fetchUsers = async () => {
-    const response = await fetchGetJSON(`${API_URL}users?limit=2&page=`+page);
+    console.log(page);
+    var aux = parseInt(page)+1;
+    const response = await fetchGetJSON(`${API_URL}users?limit=`+rowsPerPage+`&page=`+aux);
 
-    setTotalUsers(Math.ceil(parseInt(response.totalDocs)/2));
+    setTotalUsers(Math.ceil(parseInt(response.totalDocs)/rowsPerPage));
     if (!response.message) {
       setUsers(response.docs);
     }
@@ -58,13 +62,20 @@ const Users = () => {
     setOpenSucessAlert(false);
     setOpenErrorAlert(false);
   };
-
-  const handleChangePage = (e: any, newPage: any) => {
+  
+  const handleChangePage = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null, newPage: number) => {
     e?.preventDefault();
-
-    console.log(newPage);
-
+    
     setPage(newPage);
+    fetchUsers();
+  };
+
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+
     fetchUsers();
   };
 
@@ -240,10 +251,13 @@ const Users = () => {
         updateList={fetchUsers}
       />
 
-      <BasicPagination
+      <TablePagination
         count={totalUsers}
         page={page}
-        onChangePage={handleChangePage}
+        onPageChange={handleChangePage}
+        rowsPerPage={rowsPerPage}
+        onChangeRowsPerPage={handleChangeRowsPerPage}
+        labelRowsPerPage="Resultados por página"
       />
 
     </Wrapper>

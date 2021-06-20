@@ -1,26 +1,23 @@
-import { makeStyles } from '@material-ui/core/styles';
-import Pagination from '@material-ui/lab/Pagination';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      marginTop: theme.spacing(2),
-    },
-  },
-}));
+import TablePagination from '@material-ui/core/TablePagination';
 
 type Props = {
   count: number;
   page: number;
-  onChangePage: () => Promise<void>;
+  onChangePage: (e: object, newPage: number) => void
+  rowsPerPage: number;
+  onChangeRowsPerPage: (e: any) => void
 };
 
-const BasicPagination = ({ count, page, onChangePage }:Props) => {
-  const classes = useStyles();   
+const BasicPagination = ({ count, page, onChangePage, rowsPerPage, onChangeRowsPerPage }:Props) => {
   return (
-    <div className={classes.root}>
-      <Pagination count={count} page={page} onChange={onChangePage} />
-    </div>
+      <TablePagination
+        count={count}
+        page={page}
+        onChangePage={onChangePage}
+        rowsPerPage={rowsPerPage}
+        onChangeRowsPerPage={onChangeRowsPerPage}
+        labelRowsPerPage="Resultados por página"
+      />  
   );
 }
 
