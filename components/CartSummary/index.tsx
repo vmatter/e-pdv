@@ -2,19 +2,19 @@ import { useState, useEffect } from 'react';
 import Paper from '@material-ui/core/Paper';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useShoppingCart } from 'use-shopping-cart';
-import { fetchPostJSON, fetchGetJSON } from '../../utils/api-helpers';
-import { SummaryItems } from './SummaryItems';
-import { Summary } from './Summary';
-import { Container, Form, FormContent } from './styles';
-import SwipableSummary from './SwipableSummary';
-import { currencyFormatter } from 'utils/currency';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { useShoppingCart } from 'use-shopping-cart';
+import { fetchPostJSON, fetchGetJSON } from '../../utils/api-helpers';
+import { currencyFormatter } from '../../utils/currency';
+import { SummaryItems } from './SummaryItems';
+import { Summary } from './Summary';
+import SwipableSummary from './SwipableSummary';
+import { Container, Form, FormContent } from './styles';
 
 const { API_URL } = process.env;
 
@@ -165,7 +165,9 @@ const CartSummary = () => {
           </FormContent>
           <Summary
             cartCount={cartCount}
-            formattedTotalPrice={ (totalPrice > 0) ? currencyFormatter(totalPrice) : "R$ 0,00"}
+            formattedTotalPrice={
+              totalPrice > 0 ? currencyFormatter(totalPrice) : 'R$ 0,00'
+            }
             cartEmpty={cartEmpty}
             loading={loading}
             clearCart={clearCart}

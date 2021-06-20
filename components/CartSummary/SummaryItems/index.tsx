@@ -6,7 +6,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-import { currencyFormatter } from 'utils/currency';
+import { currencyFormatter } from '../../../utils/currency';
 import {
   ItemsList,
   ProductIcon,

@@ -1,146 +1,391 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HeaderBar matches snapshot 1`] = `
-<DocumentFragment>
-  <div
-    class="css-19op8cy-FlexGrow e9powp66"
+.emotion-0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-2 {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: static;
+  background-color: #556cd6;
+  color: #fff;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 56px;
+}
+
+@media (min-width:600px) {
+  .emotion-3 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-3 {
+    min-height: 48px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-3 {
+    min-height: 64px;
+  }
+}
+
+.emotion-4 {
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  height: 45px;
+  cursor: pointer;
+}
+
+.emotion-10 {
+  display: none;
+}
+
+@media (min-width:960px) {
+  .emotion-10 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 12px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  margin-right: -12px;
+  color: inherit;
+}
+
+.emotion-12::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-12.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-12 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-12:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-12:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-12.Mui-disabled {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.emotion-13 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: inherit;
+  -webkit-box-align: inherit;
+  -ms-flex-align: inherit;
+  align-items: inherit;
+  -webkit-box-pack: inherit;
+  -ms-flex-pack: inherit;
+  -webkit-justify-content: inherit;
+  justify-content: inherit;
+}
+
+.emotion-14 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-15 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width:960px) {
+  .emotion-16 {
+    display: none;
+  }
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 12px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+}
+
+.emotion-18::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-18.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-18 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-18:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-18:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-18.Mui-disabled {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic emotion-2"
   >
-    <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-eyxyjd-MuiPaper-root-MuiAppBar-root"
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular emotion-3"
     >
+      <a
+        class="emotion-4 emotion-5"
+      >
+        <img
+          class="emotion-6 emotion-7"
+          src="/pdv-logo-white.png"
+        />
+      </a>
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+        class="emotion-0 emotion-1"
+      />
+      <div
+        class="emotion-10 emotion-11"
       >
         <button
-          aria-label="open drawer"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium e9powp65 css-1j7p0oc-MuiButtonBase-root-MuiIconButton-root-MenuButton"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          aria-label="conta do usuário"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd MuiIconButton-sizeMedium emotion-12"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
+            class="MuiIconButton-label emotion-13"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-              data-testid="MenuIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-14"
+              data-testid="AccountCircleIcon"
               focusable="false"
               viewBox="0 0 24 24"
             >
               <path
-                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
               />
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            class="MuiTouchRipple-root emotion-15"
           />
         </button>
-        <a
-          class="css-e68bn9-LogoWrapper e9powp64"
+      </div>
+      <div
+        class="emotion-16 emotion-17"
+      >
+        <button
+          aria-controls="primary-search-account-menu-mobile"
+          aria-haspopup="true"
+          aria-label="mostrar mais"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium emotion-18"
+          tabindex="0"
+          type="button"
         >
-          <img
-            class="css-1l9u5cb-LogoImg e9powp63"
-            src="/pdv-logo-white.png"
-          />
-        </a>
-        <div
-          class="css-19op8cy-FlexGrow e9powp66"
-        />
-        <div
-          class="css-1rlmors-Search e9powp62"
-        >
-          <div
-            class="css-14y7r15-SearchIconWrapper e9powp61"
+          <span
+            class="MuiIconButton-label emotion-13"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-              data-testid="SearchIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-14"
+              data-testid="MoreVertIcon"
               focusable="false"
               viewBox="0 0 24 24"
             >
               <path
-                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
               />
             </svg>
-          </div>
-          <div
-            class="MuiInputBase-root MuiInputBase-colorPrimary e9powp60 css-179im7i-MuiInputBase-root-CustomInput"
-          >
-            <input
-              aria-label="buscar"
-              class="MuiInputBase-input css-gga68z-MuiInputBase-input"
-              placeholder="Buscar..."
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-        <div
-          class="css-odgcyt-DesktopSection e1sq2t0a1"
-        >
-          <button
-            aria-controls="primary-search-account-menu"
-            aria-haspopup="true"
-            aria-label="conta do usuário"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-e74czq-MuiButtonBase-root-MuiIconButton-root"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="AccountCircleIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
-                />
-              </svg>
-            </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
-          </button>
-        </div>
-        <div
-          class="css-n5dn9s-MobileSection e1sq2t0a0"
-        >
-          <button
-            aria-controls="primary-search-account-menu-mobile"
-            aria-haspopup="true"
-            aria-label="mostrar mais"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1drqkcs-MuiButtonBase-root-MuiIconButton-root"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="MoreVertIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                />
-              </svg>
-            </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
-          </button>
-        </div>
+          </span>
+          <span
+            class="MuiTouchRipple-root emotion-15"
+          />
+        </button>
       </div>
-    </header>
-  </div>
-</DocumentFragment>
+    </div>
+  </header>
+</div>
 `;

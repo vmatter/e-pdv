@@ -5,12 +5,12 @@ import TableBody from '@material-ui/core/TableBody';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import TablePagination from '@material-ui/core/TablePagination';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Alert } from '../../Alert';
-import InfiniteScroll from '../../InfiniteScroll';
 import { fetchPostJSON } from '../../../utils/api-helpers';
 import {
   Wrapper,
@@ -18,6 +18,7 @@ import {
   StyledTableRow,
   StyledSnackBar,
   Title,
+  LoaderWrapper,
 } from './styles';
 
 const { API_URL } = process.env;
@@ -38,18 +39,24 @@ type Props = {
   isAdmin: boolean;
   loaded: boolean;
   renderedUsers: Array<User>;
-  updateList: () => void;
-  hasMoreData: boolean;
-  currentPage: number;
+  updateList: () => Promise<void>;
+  count: number;
+  page: number;
+  handleChangePage: (event: unknown, newPage: number) => void;
+  rowsPerPage: number;
+  handleChangeRowsPerPage: (e: any) => void;
 };
 
 const UsersTable = ({
   isAdmin = false,
-  loaded = false,
+  loaded = true,
   renderedUsers = [],
   updateList,
-  hasMoreData,
-  currentPage,
+  handleChangePage,
+  rowsPerPage,
+  handleChangeRowsPerPage,
+  count,
+  page,
 }: Props) => {
   const [openSucessAlert, setOpenSucessAlert] = useState(false);
   const [openErrorAlert, setOpenErrorAlert] = useState(false);
@@ -97,113 +104,115 @@ const UsersTable = ({
       <Title variant="h4" paddingBottom={1}>
         Usuários
       </Title>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Nome</StyledTableCell>
-              <StyledTableCell>Email</StyledTableCell>
-              <StyledTableCell>Tipo Usuário</StyledTableCell>
-              <StyledTableCell></StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {loaded ? (
-              renderedUsers ? (
-                <InfiniteScroll
-                  fetchMore={updateList}
-                  hasMoreData={hasMoreData}
-                  currentPage={currentPage}
-                >
-                  {renderedUsers.map((user: User) => (
-                    <StyledTableRow key={user.id}>
-                      <StyledTableCell component="th" scope="row">
-                        {isAdmin ? (
-                          <TextField
-                            defaultValue={user.name}
-                            disabled={!user.active}
-                            name="name"
-                            fullWidth
-                            variant="standard"
-                            margin="dense"
-                            inputProps={{
-                              'aria-label': `Nome do usuário: ${user.name}`,
-                            }}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                              handleChange(e, user.id, 'name')
-                            }
-                          />
-                        ) : (
-                          user.name
-                        )}
-                      </StyledTableCell>
-                      <StyledTableCell>
-                        {isAdmin ? (
-                          <TextField
-                            defaultValue={user.email}
-                            disabled={!user.active}
-                            name="email"
-                            fullWidth
-                            variant="standard"
-                            margin="dense"
-                            inputProps={{
-                              'aria-label': `E-mail do usuário: ${user.email}`,
-                            }}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                              handleChange(e, user.id, 'email')
-                            }
-                          />
-                        ) : (
-                          user.email
-                        )}
-                      </StyledTableCell>
-                      <StyledTableCell>
-                        {isAdmin ? (
-                          <TextField
-                            defaultValue={user.scope}
-                            disabled={!user.active}
-                            select
-                            name="scope"
-                            fullWidth
-                            variant="standard"
-                            margin="dense"
-                            inputProps={{
-                              'aria-label': `Tipo do usuário: ${user.scope}`,
-                            }}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                              handleChange(e, user.id, 'scope')
-                            }
-                          >
-                            <MenuItem value={'admin'}>Administrador</MenuItem>
-                            <MenuItem value={'buyer'}>
-                              Operador de Caixa
-                            </MenuItem>
-                          </TextField>
-                        ) : (
-                          user.scope
-                        )}
-                      </StyledTableCell>
-                      <StyledTableCell>
-                        <Button
-                          size="small"
-                          color="primary"
-                          onClick={() => toggleActive(user.id, user.active)}
+      {loaded && (
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Nome</StyledTableCell>
+                <StyledTableCell>Email</StyledTableCell>
+                <StyledTableCell>Tipo Usuário</StyledTableCell>
+                <StyledTableCell></StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {renderedUsers?.length > 0 &&
+                renderedUsers.map((user: User) => (
+                  <StyledTableRow key={user.id}>
+                    <StyledTableCell component="th" scope="row">
+                      {isAdmin ? (
+                        <TextField
+                          defaultValue={user.name}
+                          disabled={!user.active}
+                          name="name"
+                          fullWidth
+                          variant="standard"
+                          margin="dense"
+                          inputProps={{
+                            'aria-label': `Nome do usuário: ${user.name}`,
+                          }}
+                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                            handleChange(e, user.id, 'name')
+                          }
+                        />
+                      ) : (
+                        user.name
+                      )}
+                    </StyledTableCell>
+                    <StyledTableCell>
+                      {isAdmin ? (
+                        <TextField
+                          defaultValue={user.email}
+                          disabled={!user.active}
+                          name="email"
+                          fullWidth
+                          variant="standard"
+                          margin="dense"
+                          inputProps={{
+                            'aria-label': `E-mail do usuário: ${user.email}`,
+                          }}
+                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                            handleChange(e, user.id, 'email')
+                          }
+                        />
+                      ) : (
+                        user.email
+                      )}
+                    </StyledTableCell>
+                    <StyledTableCell>
+                      {isAdmin ? (
+                        <TextField
+                          defaultValue={user.scope}
+                          disabled={!user.active}
+                          select
+                          name="scope"
+                          fullWidth
+                          variant="standard"
+                          margin="dense"
+                          inputProps={{
+                            'aria-label': `Tipo do usuário: ${user.scope}`,
+                          }}
+                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                            handleChange(e, user.id, 'scope')
+                          }
                         >
-                          {user.active ? 'Inativar' : 'Ativar'} usuário
-                        </Button>
-                      </StyledTableCell>
-                    </StyledTableRow>
-                  ))}
-                </InfiniteScroll>
-              ) : (
-                <div>Sem usuários</div>
-              )
-            ) : (
-              <CircularProgress />
-            )}
-          </TableBody>
-        </Table>
-      </TableContainer>
+                          <MenuItem value={'admin'}>Administrador</MenuItem>
+                          <MenuItem value={'buyer'}>Operador de Caixa</MenuItem>
+                        </TextField>
+                      ) : (
+                        user.scope
+                      )}
+                    </StyledTableCell>
+                    <StyledTableCell>
+                      <Button
+                        size="small"
+                        color="primary"
+                        onClick={() => toggleActive(user.id, user.active)}
+                      >
+                        {user.active ? 'Inativar' : 'Ativar'} usuário
+                      </Button>
+                    </StyledTableCell>
+                  </StyledTableRow>
+                ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25]}
+        component="div"
+        count={count}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+      {!loaded && (
+        <LoaderWrapper>
+          <CircularProgress />
+        </LoaderWrapper>
+      )}
+      {loaded && !renderedUsers?.length && <div>Sem usuários</div>}
       <StyledSnackBar
         open={openSucessAlert}
         autoHideDuration={6000}

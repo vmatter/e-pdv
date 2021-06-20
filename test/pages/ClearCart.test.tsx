@@ -4,7 +4,7 @@ import ClearCart from '../../components/ClearCart';
 
 describe('ClearCart', () => {
   it('matches snapshot', () => {
-    const { asFragment } = render(<ClearCart />, {});
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<ClearCart />, {});
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

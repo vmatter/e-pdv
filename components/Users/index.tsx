@@ -25,42 +25,46 @@ const Users = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loaded, setLoaded] = useState(false);
-  const [users, setUsers]: any = useState([]);
-  const [hasMoreData, setHasMoreData] = useState(true);
-  const [totalDocs, setTotalDocs] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [users, setUsers]: any = useState(null);
+  const [totalUsers, setTotalUsers] = useState<number>(0);
+  const [page, setPage] = useState<number>(0);
+  const [rowsPerPage, setRowsPerPage] = useState<number>(5);
 
   const { API_URL } = process.env;
 
-  const fetchUsers = async (page = 1) => {
-    const response = await fetchGetJSON(`${API_URL}users?page=${page}`);
+  const fetchUsers = async (page = 1, rows = 5) => {
+    const fetchPage = page + 1;
+    const response = await fetchGetJSON(
+      `${API_URL}users?limit=` + rows + `&page=` + fetchPage
+    );
+
     if (!response.message) {
-      const oldList = page === 1 ? [] : users;
-      const newList =
-        response.docs.length > 0 ? [...oldList, ...response.docs] : oldList;
-      setUsers(newList);
-      setCurrentPage(response.page);
-      setTotalDocs(response.totalDocs);
+      setTotalUsers(response.totalDocs);
+      setUsers(response.docs);
     }
 
     setLoaded(true);
   };
 
-  const fetchMoreData = () => {
-    if (users.length >= totalDocs) {
-      setHasMoreData(false);
-      return;
-    }
-    fetchUsers(currentPage + 1);
-  };
-
   useEffect(() => {
-    fetchUsers();
-  }, []);
+    fetchUsers(page, rowsPerPage);
+  }, [page, rowsPerPage]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
     setOpenErrorAlert(false);
+  };
+
+  const handleChangePage = (e: any, newPage: number) => {
+    e?.preventDefault();
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
   };
 
   const onSubmit = async (e: any) => {
@@ -90,7 +94,7 @@ const Users = () => {
         setEmail('');
         setPassword('');
 
-        fetchUsers();
+        fetchUsers(page, rowsPerPage);
       } else {
         openErrorAlert && setOpenErrorAlert(false);
         setOpenErrorAlert(true);
@@ -232,9 +236,12 @@ const Users = () => {
         isAdmin
         loaded={loaded}
         renderedUsers={users}
-        updateList={fetchMoreData}
-        hasMoreData={hasMoreData}
-        currentPage={currentPage}
+        updateList={fetchUsers}
+        count={totalUsers}
+        page={page}
+        handleChangePage={handleChangePage}
+        rowsPerPage={rowsPerPage}
+        handleChangeRowsPerPage={handleChangeRowsPerPage}
       />
     </Wrapper>
   );
