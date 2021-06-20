@@ -1,5 +1,5 @@
 {
-  "name": "with-stripe-typescript",
+  "name": "e-pdv-app",
   "author": "@GiselaMD",
   "version": "2.0.0",
   "description": "Full-stack TypeScript example using Next.js, react-stripe-js, and stripe-node.",
@@ -12,7 +12,7 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "coverage": "jest --coverage",
+    "coverage": "jest -u --coverage --runInBand --coverage --verbose",
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "husky": {

@@ -22,28 +22,19 @@ export type Product = {
 const Products = ({ isAdmin = false }) => {
   const [openSucessAlert, setOpenSucessAlert] = useState(false);
   const [openErrorAlert, setOpenErrorAlert] = useState(false);
-  const [products, setProducts]: any = useState(null);
-  const [renderedProducts, setRenderedProducts]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const response = await fetchGetJSON(`${API_URL}products`);
-    if (!response.message) {
-      setProducts(response.docs);
-    }
+    const response = await fetchGetJSON(`${API_URL}products?toPaginate=false`);
+
+    setProducts(response.docs);
     setLoaded(true);
   };
 
   useEffect(() => {
     fetchProducts();
   }, []);
-
-  useEffect(() => {
-    products &&
-      setRenderedProducts(
-        isAdmin ? products : products.filter((product: any) => !!product.active)
-      );
-  }, [products]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
@@ -72,8 +63,8 @@ const Products = ({ isAdmin = false }) => {
       )}
       <ProductList>
         {loaded ? (
-          renderedProducts.length > 0 ? (
-            renderedProducts.map((product: Product) => (
+          products.length > 0 ? (
+            products.map((product: Product) => (
               <ProductWrapper key={product.id}>
                 <ProductItem
                   product={product}

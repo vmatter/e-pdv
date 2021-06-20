@@ -16,5 +16,6 @@ module.exports = {
   },
   collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
   clearMocks: true,
-  setupFilesAfterEnv: ["<rootDir>/setupTests.ts"],
+  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  snapshotSerializers: ['@emotion/jest/serializer'],
 };

@@ -3,6 +3,8 @@ import { render } from '../testUtils';
 import '@testing-library/jest-dom';
 import ProductItem from '../../components/ProductItem';
 
+jest.mock('next/router');
+
 const expectedProps = {
   name: 'Notebook Dell XPS',
   sku: 'sku_notebook',
@@ -23,8 +25,8 @@ describe('ProductItem', () => {
   });
 
   test('matches snapshot', () => {
-    const { asFragment } = render(<ProductItem product={expectedProps} />);
+    const { container } = render(<ProductItem product={expectedProps} />);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

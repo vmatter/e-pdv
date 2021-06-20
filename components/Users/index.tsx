@@ -24,34 +24,47 @@ const Users = () => {
   const [scope, setScope] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [renderedUsers, setRenderedUsers]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [users, setUsers]: any = useState(null);
+  const [totalUsers, setTotalUsers] = useState<number>(0);
+  const [page, setPage] = useState<number>(0);
+  const [rowsPerPage, setRowsPerPage] = useState<number>(5);
 
   const { API_URL } = process.env;
 
-  const fetchUsers = async () => {
-    const response = await fetchGetJSON(`${API_URL}users?limit=50`);
+  const fetchUsers = async (page = 1, rows = 5) => {
+    const fetchPage = page + 1;
+    const response = await fetchGetJSON(
+      `${API_URL}users?limit=` + rows + `&page=` + fetchPage
+    );
+
     if (!response.message) {
+      setTotalUsers(response.totalDocs);
       setUsers(response.docs);
     }
+
     setLoaded(true);
   };
 
   useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  useEffect(() => {
-    users &&
-      setRenderedUsers(
-        users
-      );
-  }, [users]);
+    fetchUsers(page, rowsPerPage);
+  }, [page, rowsPerPage]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
     setOpenErrorAlert(false);
+  };
+
+  const handleChangePage = (e: any, newPage: number) => {
+    e?.preventDefault();
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
   };
 
   const onSubmit = async (e: any) => {
@@ -81,7 +94,7 @@ const Users = () => {
         setEmail('');
         setPassword('');
 
-        fetchUsers();
+        fetchUsers(page, rowsPerPage);
       } else {
         openErrorAlert && setOpenErrorAlert(false);
         setOpenErrorAlert(true);
@@ -91,7 +104,7 @@ const Users = () => {
 
   return (
     <Wrapper>
-      <StyledCard variant="outlined" elevation={2}>
+      <StyledCard variant="outlined">
         <HeaderWrapper>
           <Typography variant="h4" paddingBottom={1}>
             Gerenciar usuários
@@ -222,8 +235,13 @@ const Users = () => {
       <UsersTable
         isAdmin
         loaded={loaded}
-        renderedUsers={renderedUsers}
+        renderedUsers={users}
         updateList={fetchUsers}
+        count={totalUsers}
+        page={page}
+        handleChangePage={handleChangePage}
+        rowsPerPage={rowsPerPage}
+        handleChangeRowsPerPage={handleChangeRowsPerPage}
       />
     </Wrapper>
   );

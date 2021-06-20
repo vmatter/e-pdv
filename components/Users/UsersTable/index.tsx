@@ -5,7 +5,12 @@ import TableBody from '@material-ui/core/TableBody';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import TablePagination from '@material-ui/core/TablePagination';
 import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import { Alert } from '../../Alert';
 import { fetchPostJSON } from '../../../utils/api-helpers';
 import {
   Wrapper,
@@ -13,11 +18,8 @@ import {
   StyledTableRow,
   StyledSnackBar,
   Title,
+  LoaderWrapper,
 } from './styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
-import { Alert } from '../../Alert';
 
 const { API_URL } = process.env;
 
@@ -38,9 +40,24 @@ type Props = {
   loaded: boolean;
   renderedUsers: Array<User>;
   updateList: () => Promise<void>;
+  count: number;
+  page: number;
+  handleChangePage: (event: unknown, newPage: number) => void;
+  rowsPerPage: number;
+  handleChangeRowsPerPage: (e: any) => void;
 };
 
-const UsersTable = ({ isAdmin = false, loaded = true, renderedUsers = [], updateList }:Props) => {
+const UsersTable = ({
+  isAdmin = false,
+  loaded = true,
+  renderedUsers = [],
+  updateList,
+  handleChangePage,
+  rowsPerPage,
+  handleChangeRowsPerPage,
+  count,
+  page,
+}: Props) => {
   const [openSucessAlert, setOpenSucessAlert] = useState(false);
   const [openErrorAlert, setOpenErrorAlert] = useState(false);
 
@@ -87,19 +104,19 @@ const UsersTable = ({ isAdmin = false, loaded = true, renderedUsers = [], update
       <Title variant="h4" paddingBottom={1}>
         Usuários
       </Title>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Nome</StyledTableCell>
-              <StyledTableCell>Email</StyledTableCell>
-              <StyledTableCell>Tipo Usuário</StyledTableCell>
-              <StyledTableCell></StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {loaded ? (
-              renderedUsers ? (
+      {loaded && (
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Nome</StyledTableCell>
+                <StyledTableCell>Email</StyledTableCell>
+                <StyledTableCell>Tipo Usuário</StyledTableCell>
+                <StyledTableCell></StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {renderedUsers?.length > 0 &&
                 renderedUsers.map((user: User) => (
                   <StyledTableRow key={user.id}>
                     <StyledTableCell component="th" scope="row">
@@ -176,16 +193,26 @@ const UsersTable = ({ isAdmin = false, loaded = true, renderedUsers = [], update
                       </Button>
                     </StyledTableCell>
                   </StyledTableRow>
-                ))
-              ) : (
-                <div>Sem usuários</div>
-              )
-            ) : (
-              <CircularProgress />
-            )}
-          </TableBody>
-        </Table>
-      </TableContainer>
+                ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25]}
+        component="div"
+        count={count}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+      {!loaded && (
+        <LoaderWrapper>
+          <CircularProgress />
+        </LoaderWrapper>
+      )}
+      {loaded && !renderedUsers?.length && <div>Sem usuários</div>}
       <StyledSnackBar
         open={openSucessAlert}
         autoHideDuration={6000}

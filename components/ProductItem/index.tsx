@@ -9,8 +9,8 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
-import { fetchPostJSON } from 'utils/api-helpers';
-import { currencyFormatter } from 'utils/currency';
+import { fetchPostJSON } from '../../utils/api-helpers';
+import { currencyFormatter } from '../../utils/currency';
 import { Product } from '../Products';
 import { NumberInput } from '../../components/NumberInput';
 import { ReponsiveDialog } from '../../components/Dialog';
@@ -81,7 +81,14 @@ const ProductItem = ({
     fetchPostJSON(`${API_URL}products/${product.id}`, body, true);
 
   const editProduct = async () => {
-    const response = await fetchPutProduct(values);
+    const { image, name, price, sku, quantity } = values;
+    const response = await fetchPutProduct({
+      image,
+      name,
+      price: price / 100,
+      sku,
+      quantity,
+    });
     handleAlerts(response);
   };
 
