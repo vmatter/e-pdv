@@ -5,7 +5,7 @@ import Alert from '@material-ui/core/Alert';
 import UsersTable from './UsersTable';
 //import BasicPagination from '../BasicPagination';
 import { fetchGetJSON, fetchPostJSON } from '../../utils/api-helpers';
-import TablePagination from '@material-ui/core/TablePagination';
+// import TablePagination from '@material-ui/core/TablePagination';
 import {
   Wrapper,
   HeaderWrapper,
@@ -29,18 +29,19 @@ const Users = () => {
   const [renderedUsers, setRenderedUsers]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [users, setUsers]: any = useState(null);
-  const [totalUsers, setTotalUsers]: any = useState(0);
-  const [page, setPage]: any = useState(0);
-  const [rowsPerPage, setRowsPerPage]: any = useState(1);
+  const [totalUsers, setTotalUsers] = useState<number>(0);
+  const [page, setPage] = useState<number>(0);
+  const [rowsPerPage, setRowsPerPage] = useState<number>(5);
 
   const { API_URL } = process.env;
 
-  const fetchUsers = async () => {
-    console.log(page);
-    var aux = parseInt(page)+1;
-    const response = await fetchGetJSON(`${API_URL}users?limit=`+rowsPerPage+`&page=`+aux);
+  const fetchUsers = async (page = 1, rows = 5) => {
+    const fetchPage = page + 1;
+    const response = await fetchGetJSON(
+      `${API_URL}users?limit=` + rows + `&page=` + fetchPage
+    );
 
-    setTotalUsers(Math.ceil(parseInt(response.totalDocs)/rowsPerPage));
+    setTotalUsers(response.totalDocs);
     if (!response.message) {
       setUsers(response.docs);
     }
@@ -48,35 +49,27 @@ const Users = () => {
   };
 
   useEffect(() => {
-    fetchUsers();
-  }, []);
+    fetchUsers(page, rowsPerPage);
+  }, [page, rowsPerPage]);
 
   useEffect(() => {
-    users &&
-      setRenderedUsers(
-        users
-      );
+    users && setRenderedUsers(users);
   }, [users]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
     setOpenErrorAlert(false);
   };
-  
-  const handleChangePage = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null, newPage: number) => {
-    e?.preventDefault();
-    
+
+  const handleChangePage = (e: unknown, newPage: number) => {
     setPage(newPage);
-    fetchUsers();
   };
 
   const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
-
-    fetchUsers();
   };
 
   const onSubmit = async (e: any) => {
@@ -106,7 +99,7 @@ const Users = () => {
         setEmail('');
         setPassword('');
 
-        fetchUsers();
+        fetchUsers(page, rowsPerPage);
       } else {
         openErrorAlert && setOpenErrorAlert(false);
         setOpenErrorAlert(true);
@@ -249,17 +242,13 @@ const Users = () => {
         loaded={loaded}
         renderedUsers={renderedUsers}
         updateList={fetchUsers}
-      />
-
-      <TablePagination
         count={totalUsers}
         page={page}
-        onPageChange={handleChangePage}
+        handleChangePage={handleChangePage}
         rowsPerPage={rowsPerPage}
-        onChangeRowsPerPage={handleChangeRowsPerPage}
-        labelRowsPerPage="Resultados por página"
+        handleChangeRowsPerPage={handleChangeRowsPerPage}
+        // labelRowsPerPage="Resultados por página"
       />
-
     </Wrapper>
   );
 };

@@ -5,6 +5,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import TablePagination from '@material-ui/core/TablePagination';
 import Paper from '@material-ui/core/Paper';
 import { fetchPostJSON } from '../../../utils/api-helpers';
 import {
@@ -38,9 +39,24 @@ type Props = {
   loaded: boolean;
   renderedUsers: Array<User>;
   updateList: () => Promise<void>;
+  count: number;
+  page: number;
+  handleChangePage: (event: unknown, newPage: number) => void;
+  rowsPerPage: number;
+  handleChangeRowsPerPage: (e: any) => void;
 };
 
-const UsersTable = ({ isAdmin = false, loaded = true, renderedUsers = [], updateList }:Props) => {
+const UsersTable = ({
+  isAdmin = false,
+  loaded = true,
+  renderedUsers = [],
+  updateList,
+  handleChangePage,
+  rowsPerPage,
+  handleChangeRowsPerPage,
+  count,
+  page,
+}: Props) => {
   const [openSucessAlert, setOpenSucessAlert] = useState(false);
   const [openErrorAlert, setOpenErrorAlert] = useState(false);
 
@@ -186,6 +202,15 @@ const UsersTable = ({ isAdmin = false, loaded = true, renderedUsers = [], update
           </TableBody>
         </Table>
       </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25]}
+        component="div"
+        count={count}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
       <StyledSnackBar
         open={openSucessAlert}
         autoHideDuration={6000}
