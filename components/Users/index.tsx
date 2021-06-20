@@ -65,7 +65,8 @@ const Users = () => {
     setOpenErrorAlert(false);
   };
 
-  const handleChangePage = (e: unknown, newPage: number) => {
+  const handleChangePage = (e: any, newPage: number) => {
+    e?.preventDefault();
     setPage(newPage);
   };
 
