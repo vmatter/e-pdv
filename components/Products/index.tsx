@@ -27,7 +27,7 @@ const Products = ({ isAdmin = false }) => {
   const [loaded, setLoaded] = useState(false);
 
   const fetchProducts = async () => {
-    const response = await fetchGetJSON(`${API_URL}products`);
+    const response = await fetchGetJSON(`${API_URL}products?toPaginate=false`);
     if (!response.message) {
       setProducts(response.docs);
     }

@@ -3,6 +3,7 @@ import { Button, TextField, Typography } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/core/Alert';
 import UsersTable from './UsersTable';
+import BasicPagination from '../BasicPagination';
 import { fetchGetJSON, fetchPostJSON } from '../../utils/api-helpers';
 import {
   Wrapper,
@@ -27,11 +28,15 @@ const Users = () => {
   const [renderedUsers, setRenderedUsers]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [users, setUsers]: any = useState(null);
+  const [totalUsers, setTotalUsers]: any = useState(0);
+  const [page, setPage]: any = useState(1);
 
   const { API_URL } = process.env;
 
   const fetchUsers = async () => {
-    const response = await fetchGetJSON(`${API_URL}users?limit=50`);
+    const response = await fetchGetJSON(`${API_URL}users?limit=2&page=`+page);
+
+    setTotalUsers(Math.ceil(parseInt(response.totalDocs)/2));
     if (!response.message) {
       setUsers(response.docs);
     }
@@ -52,6 +57,15 @@ const Users = () => {
   const handleClose = () => {
     setOpenSucessAlert(false);
     setOpenErrorAlert(false);
+  };
+
+  const handleChangePage = (e: any, newPage: any) => {
+    e?.preventDefault();
+
+    console.log(newPage);
+
+    setPage(newPage);
+    fetchUsers();
   };
 
   const onSubmit = async (e: any) => {
@@ -225,6 +239,13 @@ const Users = () => {
         renderedUsers={renderedUsers}
         updateList={fetchUsers}
       />
+
+      <BasicPagination
+        count={totalUsers}
+        page={page}
+        onChangePage={handleChangePage}
+      />
+
     </Wrapper>
   );
 };
