@@ -26,7 +26,6 @@ const Users = () => {
   const [scope, setScope] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [renderedUsers, setRenderedUsers]: any = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [users, setUsers]: any = useState(null);
   const [totalUsers, setTotalUsers] = useState<number>(0);
@@ -41,20 +40,25 @@ const Users = () => {
       `${API_URL}users?limit=` + rows + `&page=` + fetchPage
     );
 
-    setTotalUsers(response.totalDocs);
     if (!response.message) {
+      setTotalUsers(response.totalDocs);
       setUsers(response.docs);
     }
+
     setLoaded(true);
   };
+
+  // const fetchMoreData = () => {
+  //   if (users.length >= totalDocs) {
+  //     setHasMoreData(false);
+  //     return;
+  //   }
+  //   fetchUsers(currentPage + 1);
+  // };
 
   useEffect(() => {
     fetchUsers(page, rowsPerPage);
   }, [page, rowsPerPage]);
-
-  useEffect(() => {
-    users && setRenderedUsers(users);
-  }, [users]);
 
   const handleClose = () => {
     setOpenSucessAlert(false);
@@ -109,7 +113,7 @@ const Users = () => {
 
   return (
     <Wrapper>
-      <StyledCard variant="outlined" elevation={2}>
+      <StyledCard variant="outlined">
         <HeaderWrapper>
           <Typography variant="h4" paddingBottom={1}>
             Gerenciar usuários
@@ -240,7 +244,7 @@ const Users = () => {
       <UsersTable
         isAdmin
         loaded={loaded}
-        renderedUsers={renderedUsers}
+        renderedUsers={users}
         updateList={fetchUsers}
         count={totalUsers}
         page={page}

@@ -7,6 +7,10 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TablePagination from '@material-ui/core/TablePagination';
 import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import { Alert } from '../../Alert';
 import { fetchPostJSON } from '../../../utils/api-helpers';
 import {
   Wrapper,
@@ -15,10 +19,6 @@ import {
   StyledSnackBar,
   Title,
 } from './styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
-import { Alert } from '../../Alert';
 
 const { API_URL } = process.env;
 
