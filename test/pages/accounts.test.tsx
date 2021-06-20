@@ -30,12 +30,12 @@ describe('Users', () => {
     expect(getByTestId('input-password')).toBeInTheDocument();
   });
 
-  it('should show erros for required fields', async () => {
+  it('should show erros for required fields', () => {
     const { getByTestId, getAllByText } = render(<Users />);
 
     fireEvent.click(getByTestId('button-save'));
 
-    await waitFor(() => {
+    waitFor(() => {
       expect(
         getAllByText('Este campo deve ser preenchido.')[0]
       ).toBeInTheDocument();
@@ -43,8 +43,8 @@ describe('Users', () => {
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = render(<Users />, {});
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<Users />, {});
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('expected form informations', () => {

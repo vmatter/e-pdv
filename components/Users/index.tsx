@@ -242,7 +242,6 @@ const Users = () => {
         handleChangePage={handleChangePage}
         rowsPerPage={rowsPerPage}
         handleChangeRowsPerPage={handleChangeRowsPerPage}
-        // labelRowsPerPage="Resultados por página"
       />
     </Wrapper>
   );

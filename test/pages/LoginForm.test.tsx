@@ -6,7 +6,7 @@ jest.mock('next/router');
 
 describe('LoginForm', () => {
   it('matches snapshot', () => {
-    const { asFragment } = render(<LoginForm />, {});
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<LoginForm />, {});
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

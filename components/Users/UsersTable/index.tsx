@@ -18,6 +18,7 @@ import {
   StyledTableRow,
   StyledSnackBar,
   Title,
+  LoaderWrapper,
 } from './styles';
 
 const { API_URL } = process.env;
@@ -103,19 +104,19 @@ const UsersTable = ({
       <Title variant="h4" paddingBottom={1}>
         Usuários
       </Title>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Nome</StyledTableCell>
-              <StyledTableCell>Email</StyledTableCell>
-              <StyledTableCell>Tipo Usuário</StyledTableCell>
-              <StyledTableCell></StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {loaded ? (
-              renderedUsers ? (
+      {loaded && (
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Nome</StyledTableCell>
+                <StyledTableCell>Email</StyledTableCell>
+                <StyledTableCell>Tipo Usuário</StyledTableCell>
+                <StyledTableCell></StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {renderedUsers?.length > 0 &&
                 renderedUsers.map((user: User) => (
                   <StyledTableRow key={user.id}>
                     <StyledTableCell component="th" scope="row">
@@ -192,16 +193,11 @@ const UsersTable = ({
                       </Button>
                     </StyledTableCell>
                   </StyledTableRow>
-                ))
-              ) : (
-                <div>Sem usuários</div>
-              )
-            ) : (
-              <CircularProgress />
-            )}
-          </TableBody>
-        </Table>
-      </TableContainer>
+                ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
       <TablePagination
         rowsPerPageOptions={[5, 10, 25]}
         component="div"
@@ -211,6 +207,12 @@ const UsersTable = ({
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
+      {!loaded && (
+        <LoaderWrapper>
+          <CircularProgress />
+        </LoaderWrapper>
+      )}
+      {loaded && !renderedUsers?.length && <div>Sem usuários</div>}
       <StyledSnackBar
         open={openSucessAlert}
         autoHideDuration={6000}

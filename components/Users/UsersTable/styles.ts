@@ -64,3 +64,7 @@ export const StyledSnackBar = styled(Snackbar)`
 export const Title = styled(Typography)`
   margin-left: 2rem;
 `;
+
+export const LoaderWrapper = styled.div`
+  margin: 0 auto;
+`;

@@ -6,7 +6,7 @@ jest.mock('next/router');
 
 describe('Checkout', () => {
   it('matches snapshot', () => {
-    const { asFragment } = render(<ResultPage />, {});
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<ResultPage />, {});
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

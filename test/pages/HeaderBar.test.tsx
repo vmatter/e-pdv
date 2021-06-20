@@ -3,8 +3,8 @@ import HeaderBar from '../../components/HeaderBar';
 
 describe('HeaderBar', () => {
   it('matches snapshot', () => {
-    const { asFragment } = render(<HeaderBar />, {});
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<HeaderBar />, {});
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('User account', async () => {

@@ -25,8 +25,8 @@ describe('ProductItem', () => {
   });
 
   test('matches snapshot', () => {
-    const { asFragment } = render(<ProductItem product={expectedProps} />);
+    const { container } = render(<ProductItem product={expectedProps} />);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
