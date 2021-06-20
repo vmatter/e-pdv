@@ -1,34 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accounts matches snapshot 1`] = `
+exports[`Users matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-y9ds5f-Wrapper e18dzjix5"
+    class="css-1npaw5w-Wrapper ebl4w0m6"
   >
     <div
-      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root ebl4w0m5 css-wf6g2y-MuiPaper-root-MuiCard-root-StyledCard"
     >
       <div
-        class="css-5m6oo8-HeaderWrapper e18dzjix4"
+        class="css-1a8kx7z-HeaderWrapper ebl4w0m4"
       >
-        <div
-          class="css-sdubf6-FormHeader e18dzjix3"
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-ggtcmo-MuiTypography-root"
         >
-          <h4
-            class="MuiTypography-root MuiTypography-h4 css-ggtcmo-MuiTypography-root"
-          >
-            Gerenciar usuários
-          </h4>
-          <p
-            class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
-          >
-            Crie usuários do tipo Administrador ou Operador de Caixa
-          </p>
-        </div>
+          Gerenciar usuários
+        </h4>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1m0ae9b-MuiTypography-root"
+        >
+          Crie usuários do tipo Administrador ou Operador de Caixa
+        </p>
       </div>
       <form
         autocomplete="off"
-        class="css-1dpfc4n-InputWrapper e18dzjix2"
+        class="css-1pzuhtb-InputWrapper ebl4w0m3"
       >
         <div
           class="MuiFormControl-root MuiFormControl-marginNone MuiFormControl-fullWidth MuiTextField-root css-q8hpuo-MuiFormControl-root"
@@ -36,8 +32,8 @@ exports[`Accounts matches snapshot 1`] = `
           <label
             class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-16yrtjo-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="select-type-person"
-            id="select-type-person-label"
+            for="select-type-scope"
+            id="select-type-scope-label"
           >
             Tipo Usuário
           </label>
@@ -46,9 +42,9 @@ exports[`Accounts matches snapshot 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="select-type-person-label select-type-person"
+              aria-labelledby="select-type-scope-label select-type-scope"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-weuz2y-MuiInputBase-input-MuiOutlinedInput-input"
-              id="select-type-person"
+              id="select-type-scope"
               role="button"
               tabindex="0"
             >
@@ -62,7 +58,7 @@ exports[`Accounts matches snapshot 1`] = `
               aria-hidden="true"
               class="MuiSelect-nativeInput"
               data-testid="select-type-person"
-              name="typePerson"
+              name="scope"
               tabindex="-1"
               value=""
             />
@@ -220,6 +216,181 @@ exports[`Accounts matches snapshot 1`] = `
           />
         </button>
       </form>
+    </div>
+    <div
+      class="css-14io7i7-Wrapper e19qt2o29"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 e19qt2o20 css-v6hr99-MuiTypography-root-Title"
+      >
+        Usuários
+      </h4>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-11xur9t-MuiPaper-root-MuiTableContainer-root"
+      >
+        <span
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1fb48mb-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 40px; height: 40px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-odafvm-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20.2"
+              stroke-width="3.6"
+            />
+          </svg>
+        </span>
+        <table
+          aria-label="customized table"
+          class="MuiTable-root css-1ml8vms-MuiTable-root"
+        >
+          <thead
+            class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+          >
+            <tr
+              class="MuiTableRow-root MuiTableRow-head css-1hagz1s-MuiTableRow-root"
+            >
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium e19qt2o23 css-1dj6rfq-MuiTableCell-root-StyledTableCell"
+                scope="col"
+              >
+                Nome
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium e19qt2o23 css-1dj6rfq-MuiTableCell-root-StyledTableCell"
+                scope="col"
+              >
+                Email
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium e19qt2o23 css-1dj6rfq-MuiTableCell-root-StyledTableCell"
+                scope="col"
+              >
+                Tipo Usuário
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium e19qt2o23 css-1dj6rfq-MuiTableCell-root-StyledTableCell"
+                scope="col"
+              />
+            </tr>
+          </thead>
+          <tbody
+            class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+          />
+        </table>
+      </div>
+      <div
+        class="MuiTablePagination-root"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar css-1t29gy6-MuiToolbar-root"
+        >
+          <div
+            class="MuiTablePagination-spacer"
+          />
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTablePagination-selectLabel css-1faso25-MuiTypography-root"
+            id="mui-40858"
+          >
+            Linhas por página:
+          </p>
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary MuiTablePagination-input MuiTablePagination-selectRoot css-1rls8xk-MuiInputBase-root"
+          >
+            <div
+              aria-haspopup="listbox"
+              aria-labelledby="mui-40858 mui-29150"
+              class="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input css-gga68z-MuiInputBase-input"
+              id="mui-29150"
+              role="button"
+              tabindex="0"
+            >
+              5
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput"
+              tabindex="-1"
+              value="5"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiTablePagination-selectIcon css-i4bv87-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTablePagination-displayedRows css-1faso25-MuiTypography-root"
+          >
+            0-0 de 0
+          </p>
+          <div
+            class="MuiTablePagination-actions"
+          >
+            <button
+              aria-label="Ir para a página anterior"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1drqkcs-MuiButtonBase-root-MuiIconButton-root"
+              disabled=""
+              tabindex="-1"
+              title="Ir para a página anterior"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="KeyboardArrowLeftIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              aria-label="Ir para a próxima página"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1drqkcs-MuiButtonBase-root-MuiIconButton-root"
+              disabled=""
+              tabindex="-1"
+              title="Ir para a próxima página"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label css-4jkopv-MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="KeyboardArrowRightIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>

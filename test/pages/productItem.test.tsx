@@ -3,6 +3,8 @@ import { render } from '../testUtils';
 import '@testing-library/jest-dom';
 import ProductItem from '../../components/ProductItem';
 
+jest.mock('next/router');
+
 const expectedProps = {
   name: 'Notebook Dell XPS',
   sku: 'sku_notebook',

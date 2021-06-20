@@ -3,16 +3,16 @@
 exports[`LoginForm matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-y9ds5f-Wrapper e16kqbw65"
+    class="css-y9ds5f-Wrapper e16kqbw66"
   >
     <div
       class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
     >
       <div
-        class="css-5m6oo8-HeaderWrapper e16kqbw64"
+        class="css-5m6oo8-HeaderWrapper e16kqbw65"
       >
         <div
-          class="css-sdubf6-FormHeader e16kqbw63"
+          class="css-sdubf6-FormHeader e16kqbw64"
         >
           <h4
             class="MuiTypography-root MuiTypography-h4 css-ggtcmo-MuiTypography-root"
@@ -26,17 +26,17 @@ exports[`LoginForm matches snapshot 1`] = `
           </p>
         </div>
         <a
-          class="css-5dglsj-LogoWrapper e16kqbw61"
+          class="css-5dglsj-LogoWrapper e16kqbw62"
         >
           <img
-            class="css-1l9u5cb-LogoImg e16kqbw60"
+            class="css-1l9u5cb-LogoImg e16kqbw61"
             src="/pdv-logo.png"
           />
         </a>
       </div>
       <form
         autocomplete="off"
-        class="css-1dpfc4n-InputWrapper e16kqbw62"
+        class="css-1dpfc4n-InputWrapper e16kqbw63"
         novalidate=""
       >
         <div
@@ -127,6 +127,16 @@ exports[`LoginForm matches snapshot 1`] = `
           </span>
         </button>
       </form>
+      <div
+        class="css-cqnk7b-LinkWrapper e16kqbw60"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-1hx5te5-MuiTypography-root-MuiLink-root"
+          href="/account"
+        >
+          Criar nova conta
+        </a>
+      </div>
     </div>
   </div>
 </DocumentFragment>

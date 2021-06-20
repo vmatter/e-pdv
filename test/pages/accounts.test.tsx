@@ -1,6 +1,8 @@
 import Users from '../../components/Users';
 import { render, fireEvent, waitFor } from '../testUtils';
 
+jest.mock('next/router');
+
 describe('Users', () => {
   const expectedRegister = jest.fn();
   const expectedTypePerson = 'admin';
