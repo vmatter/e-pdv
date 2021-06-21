@@ -22,7 +22,7 @@ const CartSummary = () => {
   const [loading, setLoading] = useState(false);
   const [cartEmpty, setCartEmpty] = useState(true);
   const [showDialog, setShowDialog] = useState(false);
-  const [dialogMessage, setDialogMessage] = useState('');
+  const [dialogMessages, setDialogMessages] = useState(['']);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -33,6 +33,7 @@ const CartSummary = () => {
     redirectToCheckout,
     incrementItem,
     decrementItem,
+    removeItem,
     addItem,
     totalPrice,
   } = useShoppingCart();
@@ -69,7 +70,7 @@ const CartSummary = () => {
 
   let allProducts = '';
   Object.values(cartDetails).map(product => {
-    allProducts += product['id'] + ',';
+    allProducts += product.id + ',';
   });
 
   allProducts = allProducts.substr(0, allProducts.length - 1);
@@ -80,57 +81,63 @@ const CartSummary = () => {
     );
     if (!response.message) {
       let _showDialog = false;
-      let _message = '';
+      const _messages = [''] as string[];
 
       Object.values(cartDetails).map(product => {
         for (let i = 0; i < response.docs.length; i++) {
-          if (product['id'] === response.docs[i]['id']) {
-            if (product['price'] !== response.docs[i]['price']) {
-              decrementItem(product.sku, product.quantity);
+          if (product.id === response.docs[i].id) {
+            if (product.price !== response.docs[i].price) {
+              removeItem(product.sku);
               addItem(response.docs[i], product.quantity);
-              _message +=
-                ' O produto ' +
-                product['name'] +
-                ' teve o seu preço alterado para R$ ' +
-                response.docs[i]['price'].toFixed(2).replace('.', ',') +
-                '.';
+              _messages.push(
+                ` O produto "${
+                  product.name
+                }" teve seu preço alterado para R$ ${response.docs[i].price
+                  .toFixed(2)
+                  .replace('.', ',')}.`
+              );
+
               _showDialog = true;
             }
 
-            if (product['name'] !== response.docs[i]['name']) {
-              decrementItem(product.sku, product.quantity);
+            if (product.name !== response.docs[i].name) {
+              removeItem(product.sku);
               addItem(response.docs[i], product.quantity);
-              _message +=
-                ' O produto ' +
-                product['name'] +
-                ' teve o seu nome alterado para ' +
-                response.docs[i]['name'] +
-                '.';
+              _messages.push(
+                ` O produto "${product.name}" teve o seu nome alterado para "${response.docs[i].name}".`
+              );
+
               _showDialog = true;
             }
 
-            if (product['quantity'] > response.docs[i]['quantity']) {
-              _message +=
-                ' O produto ' +
-                product['name'] +
-                ' n\u00e3o possui estoque suficiente (estoque atual: ' +
-                response.docs[i]['quantity'] +
-                '), favor ajustar o carrinho para prosseguir.';
+            if (product.quantity > response.docs[i].quantity) {
+              _messages.push(
+                ` O produto "${product.name}" não possui estoque suficiente. Estoque atual = ${response.docs[i].quantity}. Favor ajustar o carrinho para prosseguir.`
+              );
+
               _showDialog = true;
             }
 
-            if (!response.docs[i]['active']) {
-              _message +=
-                ' O produto ' +
-                product['name'] +
-                ' foi desativado e removido do seu carrinho.';
+            if (!response.docs[i].active) {
+              removeItem(product.sku);
+              _messages.push(
+                ` O produto "${product.name}" foi desativado e removido do seu carrinho.`
+              );
+
               _showDialog = true;
             }
+          }
+          // Se não achar o produto, remover do carrinho
+          const found = response.docs.find(
+            (item: any) => item.id === product.id
+          );
+          if (!found) {
+            removeItem(product.sku);
           }
         }
       });
 
-      setDialogMessage(_message);
+      setDialogMessages(_messages);
       setShowDialog(_showDialog);
     }
   };
@@ -183,7 +190,9 @@ const CartSummary = () => {
           <DialogTitle id="alert-dialog-title">Atenção</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              {dialogMessage}
+              {dialogMessages.map((message: string, idx: number) => (
+                <p key={idx}>{message}</p>
+              ))}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
