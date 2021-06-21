@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { currencyFormatter } from '../../../utils/currency';
+import { Product } from '../../Products';
 import {
   ItemsList,
   ProductIcon,
@@ -19,12 +20,26 @@ export type SummaryItemsProps = {
   cartDetails: CartDetails;
   incrementItem: (sku: string, count?: number | undefined) => void;
   decrementItem: (sku: string, count?: number | undefined) => void;
+  products: Product[];
 };
+
 export const SummaryItems = ({
   cartDetails,
   incrementItem,
   decrementItem,
+  products,
 }: SummaryItemsProps) => {
+  const foundProduct = (sku: string): Product | undefined =>
+    products.find(product => product.sku === sku);
+
+  const checkDisableAdd = (sku: string): boolean | undefined => {
+    const found = foundProduct(sku);
+    if (cartDetails[sku] && found) {
+      return found?.quantity <= cartDetails[sku]?.quantity;
+    }
+    return false;
+  };
+
   return (
     <>
       <Typography component="h2" variant="h6" align="center" padding={1}>
@@ -59,6 +74,7 @@ export const SummaryItems = ({
                 </IconButton>
                 <IconButton
                   aria-label="Adicionar item"
+                  disabled={checkDisableAdd(sku)}
                   onClick={() => incrementItem(sku)}
                 >
                   <AddIcon />

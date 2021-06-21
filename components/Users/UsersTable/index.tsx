@@ -39,7 +39,7 @@ type Props = {
   isAdmin: boolean;
   loaded: boolean;
   renderedUsers: Array<User>;
-  updateList: () => Promise<void>;
+  updateList: (page: number, rows: number) => Promise<void>;
   count: number;
   page: number;
   handleChangePage: (event: unknown, newPage: number) => void;
@@ -68,7 +68,7 @@ const UsersTable = ({
   ) => {
     if (event.target.value !== '') {
       const response = await fetchPutUser(id, { [campo]: event.target.value });
-      !response.message && updateList();
+      !response.message && updateList(page, rowsPerPage);
       handleAlerts(response);
     } else {
       setOpenErrorAlert(true);
@@ -77,7 +77,8 @@ const UsersTable = ({
 
   const toggleActive = async (id: any, active: any) => {
     const response = await fetchPutUser(id, { active: !active });
-    !response.message && updateList();
+    !response.message && updateList(page, rowsPerPage);
+
     handleAlerts(response);
   };
 

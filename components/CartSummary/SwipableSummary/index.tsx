@@ -69,7 +69,7 @@ const SwipableSummary = (props: Props) => {
             px: 2,
             pb: 2,
             height: '100%',
-            overflow: 'auto',
+            overflow: 'hidden',
           }}
         >
           <Wrapper>
