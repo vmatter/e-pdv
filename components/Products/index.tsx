@@ -26,7 +26,10 @@ const Products = ({ isAdmin = false }) => {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const response = await fetchGetJSON(`${API_URL}products?toPaginate=false`);
+    const activeParam = !isAdmin ? '&active=true' : '';
+    const response = await fetchGetJSON(
+      `${API_URL}products?toPaginate=false${activeParam}`
+    );
 
     setProducts(response.docs);
     setLoaded(true);

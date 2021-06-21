@@ -85,7 +85,7 @@ const ProductItem = ({
     const response = await fetchPutProduct({
       image,
       name,
-      price: price / 100,
+      price: price !== product.price ? price / 100 : price,
       sku,
       quantity,
     });
