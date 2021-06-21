@@ -31,7 +31,9 @@ const Products = ({ isAdmin = false }) => {
       `${API_URL}products?toPaginate=false${activeParam}`
     );
 
-    setProducts(response.docs);
+    if (!response.message) {
+      setProducts(response.docs);
+    }
     setLoaded(true);
   };
 

@@ -40,7 +40,7 @@ const ProductItem = ({
   updateList,
   handleAlerts,
 }: Props) => {
-  const { addItem, decrementItem } = useShoppingCart();
+  const { addItem, decrementItem, cartDetails } = useShoppingCart();
   const [changedValues, setChangedValues] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
   const [imgValue, setImgValue] = useState('');
@@ -239,6 +239,11 @@ const ProductItem = ({
             <Button
               size="small"
               color="primary"
+              disabled={
+                cartDetails[product.sku]
+                  ? product.quantity <= cartDetails[product.sku]?.quantity
+                  : false
+              }
               onClick={() => addItem(product as any)}
             >
               Adicionar
