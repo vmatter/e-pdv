@@ -32,7 +32,7 @@ const Users = () => {
 
   const { API_URL } = process.env;
 
-  const fetchUsers = async (page = 1, rows = 5) => {
+  const fetchUsers = async (page = 0, rows = 5) => {
     const fetchPage = page + 1;
     const response = await fetchGetJSON(
       `${API_URL}users?limit=` + rows + `&page=` + fetchPage
