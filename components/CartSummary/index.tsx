@@ -83,7 +83,6 @@ const CartSummary = () => {
       `${API_URL}products?id=` + allProducts + `&toPaginate=false`
     );
     if (!response.message) {
-      console.log(`response.docs`, response.docs);
       setProducts(response.docs);
       setLoaded(true);
     }
