@@ -27,6 +27,7 @@ const CartSummary = () => {
   const [openAlert, setOpenAlert] = useState(false);
   const [dialogMessages, setDialogMessages] = useState(['']);
   const [products, setProducts] = useState([]) as any[];
+  const [loaded, setLoaded] = useState(false);
   const [checkoutMessage, setCheckoutMessage] = useState('');
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -82,7 +83,9 @@ const CartSummary = () => {
       `${API_URL}products?id=` + allProducts + `&toPaginate=false`
     );
     if (!response.message) {
+      console.log(`response.docs`, response.docs);
       setProducts(response.docs);
+      setLoaded(true);
     }
   };
 
@@ -91,64 +94,70 @@ const CartSummary = () => {
   }, []);
 
   useEffect(() => {
-    let _showDialog = false;
-    const _messages = [''] as string[];
+    if (loaded) {
+      let _showDialog = false;
+      const _messages = [''] as string[];
 
-    Object.values(cartDetails).map(product => {
-      for (let i = 0; i < products.length; i++) {
-        if (product.id === products[i].id) {
-          if (product.price !== products[i].price) {
-            removeItem(product.sku);
-            addItem(products[i], product.quantity);
-            _messages.push(
-              ` O produto "${
-                product.name
-              }" teve seu preço alterado para R$ ${products[i].price
-                .toFixed(2)
-                .replace('.', ',')}.`
-            );
+      Object.values(cartDetails).map(product => {
+        for (let i = 0; i < products.length; i++) {
+          if (product.id === products[i].id) {
+            if (product.price !== products[i].price) {
+              removeItem(product.sku);
+              addItem(products[i], product.quantity);
+              _messages.push(
+                ` O produto "${
+                  product.name
+                }" teve seu preço alterado para R$ ${products[i].price
+                  .toFixed(2)
+                  .replace('.', ',')}.`
+              );
 
-            _showDialog = true;
+              _showDialog = true;
+            }
+
+            if (product.name !== products[i].name) {
+              removeItem(product.sku);
+              addItem(products[i], product.quantity);
+              _messages.push(
+                ` O produto "${product.name}" teve o seu nome alterado para "${products[i].name}".`
+              );
+
+              _showDialog = true;
+            }
+
+            if (product.quantity > products[i].quantity) {
+              _messages.push(
+                ` O produto "${product.name}" não possui estoque suficiente. Estoque atual = ${products[i].quantity}. Favor ajustar o carrinho para prosseguir.`
+              );
+
+              _showDialog = true;
+            }
+
+            if (!products[i].active) {
+              removeItem(product.sku);
+              _messages.push(
+                ` O produto "${product.name}" foi desativado e removido do seu carrinho.`
+              );
+
+              _showDialog = true;
+            }
           }
-
-          if (product.name !== products[i].name) {
+          // Se não achar o produto, remover do carrinho
+          const found = products.find((item: any) => item.id === product.id);
+          if (!found) {
             removeItem(product.sku);
-            addItem(products[i], product.quantity);
-            _messages.push(
-              ` O produto "${product.name}" teve o seu nome alterado para "${products[i].name}".`
-            );
-
-            _showDialog = true;
-          }
-
-          if (product.quantity > products[i].quantity) {
-            _messages.push(
-              ` O produto "${product.name}" não possui estoque suficiente. Estoque atual = ${products[i].quantity}. Favor ajustar o carrinho para prosseguir.`
-            );
-
-            _showDialog = true;
-          }
-
-          if (!products[i].active) {
-            removeItem(product.sku);
-            _messages.push(
-              ` O produto "${product.name}" foi desativado e removido do seu carrinho.`
-            );
-
-            _showDialog = true;
           }
         }
-        // Se não achar o produto, remover do carrinho
-        const found = products.find((item: any) => item.id === product.id);
-        if (!found) {
+        // Se não retornou nenhum produto e tem itens no carrinho quer dizer que são de outra conta
+        if (products.length === 0 && Object.values(cartDetails).length > 0) {
           removeItem(product.sku);
         }
-      }
-    });
+      });
 
-    setDialogMessages(_messages);
-    setShowDialog(_showDialog);
-  }, [products]);
+      setDialogMessages(_messages);
+      setShowDialog(_showDialog);
+    }
+  }, [products, loaded]);
 
   return (
     <>
